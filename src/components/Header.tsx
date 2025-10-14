@@ -9,7 +9,6 @@ const Header = () => {
     { label: "INICIO", href: "/" },
     { label: "PROGRAMA", href: "/programa" },
     { label: "TESTIMONIOS", href: "/testimonios" },
-    { label: "RECURSO GRATIS", href: "/lead-magnet" },
     { label: "EQUIPO", href: "/equipo" },
     { label: "BLOG", href: "/blog" },
     { label: "TIENDA", href: "/tienda" },
