@@ -33,21 +33,48 @@ const Hero = () => {
     <section className="min-h-screen bg-card pt-20">
       <div className="container mx-auto px-4 py-12 lg:py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left: Form */}
-          <div className="space-y-8">
+          {/* Image - First on mobile, second on desktop */}
+          <div className="relative lg:h-[700px] h-[400px] rounded-lg overflow-hidden lg:order-2 order-1">
+            <img
+              src={heroImage}
+              alt="Entrenador ayudando a persona a mejorar el dolor de espalda con ejercicios guiados"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Content - Second on mobile, first on desktop */}
+          <div className="space-y-8 lg:order-1 order-2">
             <div className="space-y-6">
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                <span className="text-foreground">Elimina el </span>
-                <span className="text-primary uppercase">Dolor Crónico de Espalda</span>{" "}
-                <span className="text-foreground">y vuelve a tu vida de siempre</span>
+              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-foreground">
+                Di adiós al dolor de espalda y recupera tu vida de siempre
               </h1>
               
-              <p className="text-lg text-foreground leading-relaxed">
-                Programa de entrenamiento personalizado online especializado en patologías de columna
-              </p>
+              <h2 className="text-xl lg:text-2xl text-foreground leading-relaxed">
+                Programa online personalizado que elimina el dolor crónico de espalda fortaleciendo tu columna desde la raíz.
+                <span className="block mt-2 font-semibold text-primary">Sin medicación, sin reposo, sin cirugías.</span>
+              </h2>
+
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3 text-foreground">
+                  <span className="text-primary text-xl">🔹</span>
+                  <span className="text-lg">Mejora tu movilidad y fuerza real en pocas semanas.</span>
+                </li>
+                <li className="flex items-start gap-3 text-foreground">
+                  <span className="text-primary text-xl">🔹</span>
+                  <span className="text-lg">100% adaptado a tu nivel y condición.</span>
+                </li>
+                <li className="flex items-start gap-3 text-foreground">
+                  <span className="text-primary text-xl">🔹</span>
+                  <span className="text-lg">Acompañamiento profesional en cada fase.</span>
+                </li>
+                <li className="flex items-start gap-3 text-foreground">
+                  <span className="text-primary text-xl">🔹</span>
+                  <span className="text-lg">Resultados respaldados por evidencia científica.</span>
+                </li>
+              </ul>
 
               <div className="bg-card border-2 border-primary/20 p-6 rounded-lg space-y-4">
-                <h2 className="text-xl font-bold text-primary">¿Por qué sé esto?</h2>
+                <h3 className="text-xl font-bold text-primary">¿Por qué sé esto?</h3>
                 
                 <p className="text-foreground leading-relaxed">
                   Porque el ejercicio y concretamente, <strong>un plan hecho para ti</strong>, consigue una mejoría importante en lo que respecta al Dolor Crónico de espalda.
@@ -85,10 +112,6 @@ const Hero = () => {
             </div>
 
             <div className="bg-muted p-8 rounded-lg space-y-6">
-              <h2 className="text-xl font-bold text-foreground uppercase text-center">
-                Solicita tu primera entrevista
-              </h2>
-              
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <Input
@@ -124,20 +147,27 @@ const Hero = () => {
                   </label>
                 </div>
 
-                <Button type="submit" variant="hero" className="w-full text-lg">
-                  QUIERO CONOCER MEJOR TU PROGRAMA
+                <Button type="submit" variant="hero" className="w-full text-lg h-14">
+                  QUIERO UNA ESPALDA INDESTRUCTIBLE
                 </Button>
-              </form>
-            </div>
-          </div>
 
-          {/* Right: Image */}
-          <div className="relative lg:h-[700px] h-[400px] rounded-lg overflow-hidden">
-            <img
-              src={heroImage}
-              alt="Entrenamiento personalizado para recuperación de espalda"
-              className="w-full h-full object-cover"
-            />
+                <p className="text-center text-sm text-muted-foreground">
+                  Solicita tu primera entrevista y descubre cómo eliminar el dolor desde casa.
+                </p>
+              </form>
+
+              {/* Micro-testimonial */}
+              <div className="pt-4 border-t border-border">
+                <div className="flex gap-1 justify-center mb-2">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-primary text-lg">⭐</span>
+                  ))}
+                </div>
+                <p className="text-center text-sm text-foreground italic">
+                  "Llevaba años con dolor lumbar y ahora entreno sin miedo." — <strong>Ana M.</strong>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
