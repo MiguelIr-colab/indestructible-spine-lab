@@ -135,6 +135,15 @@ const VideoTestimonials = () => {
           <CarouselPrevious className="left-2 h-8 w-8 md:h-10 md:w-10" />
           <CarouselNext className="right-2 h-8 w-8 md:h-10 md:w-10" />
         </Carousel>
+
+        <div className="text-center mt-8">
+          <a 
+            href="/testimonios" 
+            className="inline-block bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+          >
+            Escucha a más alumnos
+          </a>
+        </div>
       </div>
     </section>
   );

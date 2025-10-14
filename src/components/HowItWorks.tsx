@@ -4,23 +4,23 @@ const HowItWorks = () => {
   const steps = [
     {
       icon: FileCheck,
-      title: "Evaluación inicial",
-      description: "Análisis completo de tu situación y objetivos mediante videollamada.",
+      title: "ENTREVISTA INICIAL",
+      description: "Por videollamada conoceremos los detalles de tu dolor y tus objetivos, así como tu forma física actual. Te contaremos cómo funciona el programa y si realmente puede ayudarte.",
     },
     {
       icon: Calendar,
-      title: "Plan semanal",
-      description: "Rutinas personalizadas adaptadas a tu nivel y patología específica.",
+      title: "EVALUACIÓN",
+      description: "Ya dentro del programa, te evaluaremos por medio de una serie de vídeos. En base a ello diseñaremos tu programa con la secuencia de ejercicios que debes hacer para recuperarte.",
     },
     {
       icon: RefreshCw,
-      title: "Ajustes quincenales",
-      description: "Revisión y progresión del programa según tu evolución.",
+      title: "TU PROGRAMACIÓN",
+      description: "No es ninguna tabla, tendrás una App personal sólo para ti, en la que podrás reproducir los ejercicios explicados a la perfección para que sepas la técnica correcta de ejecución.",
     },
     {
       icon: TrendingUp,
-      title: "Resultados medibles",
-      description: "Seguimiento de tu progreso con métricas claras y objetivos alcanzables.",
+      title: "SEGUIMIENTO DIARIO",
+      description: "Además diariamente tendremos contacto, para corregirte tus ejercicios que enviarás a un entrenador asignado para un seguimiento personalizado (nada de grupos ni cosas genéricas).",
     },
   ];
 
