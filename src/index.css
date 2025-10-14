@@ -9,39 +9,39 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Espalda Indestructible - Color System */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 5.5%;
+    --background: 0 0% 5.5%; /* Negro #0E0E0E */
+    --foreground: 0 0% 100%; /* Blanco para texto principal */
 
-    --card: 0 0% 5.5%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 5.5%; /* Tarjetas negras */
+    --card-foreground: 0 0% 100%; /* Texto blanco en tarjetas */
 
     --popover: 0 0% 5.5%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 38.5 94% 58.8%;
-    --primary-foreground: 0 0% 5.5%;
+    --primary: 38.5 94% 58.8%; /* Naranja #F9B233 */
+    --primary-foreground: 0 0% 5.5%; /* Negro en botones naranjas */
 
-    --secondary: 0 0% 100%;
-    --secondary-foreground: 0 0% 5.5%;
+    --secondary: 0 0% 100%; /* Blanco */
+    --secondary-foreground: 0 0% 5.5%; /* Negro en fondos blancos */
 
     --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 70%;
+    --muted-foreground: 0 0% 70%; /* Gris claro para texto secundario */
 
-    --accent: 38.5 94% 58.8%;
+    --accent: 38.5 94% 58.8%; /* Naranja */
     --accent-foreground: 0 0% 5.5%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 0 0% 20%;
-    --input: 0 0% 15%;
+    --input: 0 0% 20%;
     --ring: 38.5 94% 58.8%;
 
     --radius: 0.5rem;
 
     /* Custom tokens */
-    --dark-bg: 0 0% 5.5%;
-    --orange: 38.5 94% 58.8%;
+    --dark-bg: 0 0% 5.5%; /* #0E0E0E */
+    --orange: 38.5 94% 58.8%; /* #F9B233 */
     --orange-glow: 38.5 94% 68.8%;
     
     /* Gradients */
@@ -54,11 +54,6 @@ All colors MUST be HSL.
     
     /* Animation */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .dark {
-    --background: 0 0% 5.5%;
-    --foreground: 0 0% 100%;
   }
 }
 

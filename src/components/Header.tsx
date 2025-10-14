@@ -6,11 +6,12 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    { label: "ESPALDA INDESTRUCTIBLE", href: "#programa" },
-    { label: "TESTIMONIOS", href: "#testimonios" },
-    { label: "PREGÚNTAME", href: "#preguntame" },
-    { label: "BLOG", href: "#blog" },
-    { label: "TIENDA", href: "#tienda" },
+    { label: "INICIO", href: "/" },
+    { label: "TESTIMONIOS", href: "/testimonios" },
+    { label: "RECURSO GRATIS", href: "/lead-magnet" },
+    { label: "EQUIPO", href: "/equipo" },
+    { label: "BLOG", href: "/blog" },
+    { label: "TIENDA", href: "/tienda" },
   ];
 
   return (
