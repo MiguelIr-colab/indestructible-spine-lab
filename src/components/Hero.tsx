@@ -25,7 +25,7 @@ const Hero = () => {
       return;
     }
 
-    toast.success("¡Gracias! Te enviaremos tu regalo pronto");
+    toast.success("¡Gracias! Nos pondremos en contacto contigo pronto para agendar tu entrevista");
     setFormData({ nombre: "", email: "", privacidad: false });
   };
 
@@ -35,40 +35,58 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: Form */}
           <div className="space-y-8">
-            <div className="space-y-4">
+            <div className="space-y-6">
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                <span className="text-primary uppercase">Manual para aliviar el dolor</span>{" "}
-                <span className="text-foreground">provocado por una discopatía</span>
+                <span className="text-foreground">Elimina el </span>
+                <span className="text-primary uppercase">Dolor Crónico de Espalda</span>{" "}
+                <span className="text-foreground">y vuelve a tu vida de siempre</span>
               </h1>
               
-              <div className="space-y-3 text-foreground">
-                <p className="text-lg font-medium">INCLUYE 3 SESIONES COMPLETAS DE EJERCICIOS:</p>
-                <div className="space-y-2">
-                  <div className="flex items-center gap-3">
-                    <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-base">Sin salir de casa</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-base">Sin material</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-base">En solo 15'</span>
-                  </div>
+              <p className="text-lg text-foreground leading-relaxed">
+                Programa de entrenamiento personalizado online especializado en patologías de columna
+              </p>
+
+              <div className="bg-card border-2 border-primary/20 p-6 rounded-lg space-y-4">
+                <h2 className="text-xl font-bold text-primary">¿Por qué sé esto?</h2>
+                
+                <p className="text-foreground leading-relaxed">
+                  Porque el ejercicio y concretamente, <strong>un plan hecho para ti</strong>, consigue una mejoría importante en lo que respecta al Dolor Crónico de espalda.
+                </p>
+
+                <p className="text-foreground leading-relaxed">
+                  En algún momento de su vida, el <strong>80% de la población mundial</strong> sufrirá dolor de espalda y, la solución que te ofrecen es:
+                </p>
+
+                <ul className="space-y-2 text-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Hacer reposo y no hacer grandes esfuerzos.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Todo tipo de medicación</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Masajes, infiltraciones u operarte.</span>
+                  </li>
+                </ul>
+
+                <p className="text-foreground leading-relaxed font-semibold">
+                  Cosas que la propia ciencia ha demostrado que es ineficiente.
+                </p>
+
+                <div className="pt-4 border-t border-primary/20">
+                  <p className="text-foreground leading-relaxed">
+                    Por eso he creado mi programa <strong className="text-primary">ESPALDA INDESTRUCTIBLE</strong>, para ayudar a personas como tú, a Eliminar Dolor Crónico de Espalda y volver a su vida de siempre.
+                  </p>
                 </div>
               </div>
             </div>
 
             <div className="bg-muted p-8 rounded-lg space-y-6">
               <h2 className="text-xl font-bold text-foreground uppercase text-center">
-                Rellena el siguiente formulario para recibir tu regalo
+                Solicita tu primera entrevista
               </h2>
               
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -106,8 +124,8 @@ const Hero = () => {
                   </label>
                 </div>
 
-                <Button type="submit" variant="hero" className="w-full">
-                  ENVIAR
+                <Button type="submit" variant="hero" className="w-full text-lg">
+                  QUIERO CONOCER MEJOR TU PROGRAMA
                 </Button>
               </form>
             </div>
