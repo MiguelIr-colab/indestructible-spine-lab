@@ -7,6 +7,7 @@ const Header = () => {
 
   const menuItems = [
     { label: "INICIO", href: "/" },
+    { label: "PROGRAMA", href: "/programa" },
     { label: "TESTIMONIOS", href: "/testimonios" },
     { label: "RECURSO GRATIS", href: "/lead-magnet" },
     { label: "EQUIPO", href: "/equipo" },

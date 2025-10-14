@@ -9,6 +9,7 @@ import LeadMagnet from "./pages/LeadMagnet";
 import Equipo from "./pages/Equipo";
 import Blog from "./pages/Blog";
 import Tienda from "./pages/Tienda";
+import Programa from "./pages/Programa";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/equipo" element={<Equipo />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/tienda" element={<Tienda />} />
+          <Route path="/programa" element={<Programa />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
