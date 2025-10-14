@@ -103,9 +103,17 @@ const Testimonials = () => {
           <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-primary">
             Personas como ellos nos avalan
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
             Resultados reales de personas que superaron el dolor de espalda y recuperaron su vida
           </p>
+          <Button 
+            variant="hero" 
+            size="lg"
+            className="text-lg h-14 px-12"
+            onClick={() => window.location.href = '/programa'}
+          >
+            RESERVA AQUÍ TU PRIMERA ENTREVISTA
+          </Button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
