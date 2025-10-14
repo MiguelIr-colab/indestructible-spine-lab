@@ -117,17 +117,90 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Testimonials Carousel Section */}
-      <div className="container mx-auto px-4 py-12">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-primary">
-            Personas como ellos nos avalan
-          </h2>
+      {/* Micro-Testimonials Carousel Section */}
+      <div className="container mx-auto px-4 py-8">
+        <div className="text-center mb-6">
           <div className="flex gap-1 justify-center mb-4">
             {[...Array(5)].map((_, i) => (
               <Star key={i} className="w-6 h-6 fill-primary text-primary" />
             ))}
           </div>
+        </div>
+
+        <Carousel
+          opts={{
+            align: "center",
+            loop: true,
+          }}
+          plugins={[
+            Autoplay({
+              delay: 7000,
+              stopOnInteraction: false,
+            }),
+          ]}
+          className="w-full max-w-2xl mx-auto"
+        >
+          <CarouselContent>
+            <CarouselItem>
+              <div className="text-center px-4">
+                <p className="text-lg italic text-foreground">
+                  "Llevaba años con dolor lumbar y ahora entreno sin miedo." — <span className="font-semibold">Ana M.</span>
+                </p>
+              </div>
+            </CarouselItem>
+            <CarouselItem>
+              <div className="text-center px-4">
+                <p className="text-lg italic text-foreground">
+                  "Después de 2 hernias, ahora puedo trabajar jornadas completas sin dolor." — <span className="font-semibold">David R.</span>
+                </p>
+              </div>
+            </CarouselItem>
+            <CarouselItem>
+              <div className="text-center px-4">
+                <p className="text-lg italic text-foreground">
+                  "Evité la cirugía y recuperé mi vida activa al 100%." — <span className="font-semibold">Marcos L.</span>
+                </p>
+              </div>
+            </CarouselItem>
+            <CarouselItem>
+              <div className="text-center px-4">
+                <p className="text-lg italic text-foreground">
+                  "Con 71 años y 2 hernias, ahora me muevo sin limitaciones." — <span className="font-semibold">Pilar G.</span>
+                </p>
+              </div>
+            </CarouselItem>
+            <CarouselItem>
+              <div className="text-center px-4">
+                <p className="text-lg italic text-foreground">
+                  "Pasé de no poder agacharme a levantar más de 50 kg sin problemas." — <span className="font-semibold">Javi S.</span>
+                </p>
+              </div>
+            </CarouselItem>
+          </CarouselContent>
+          <CarouselPrevious className="left-0 h-8 w-8" />
+          <CarouselNext className="right-0 h-8 w-8" />
+        </Carousel>
+
+        <div className="text-center mt-6">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => window.location.href = '/testimonios'}
+          >
+            Ver todos los testimonios
+          </Button>
+        </div>
+      </div>
+
+      {/* Video Testimonials Carousel Section */}
+      <div className="container mx-auto px-4 py-12">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-primary">
+            Personas como ellos nos avalan
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Resultados reales de personas que superaron el dolor de espalda y recuperaron su vida
+          </p>
         </div>
 
         <Carousel
@@ -199,16 +272,6 @@ const Hero = () => {
           <CarouselPrevious className="left-2 h-8 w-8 md:h-10 md:w-10" />
           <CarouselNext className="right-2 h-8 w-8 md:h-10 md:w-10" />
         </Carousel>
-
-        <div className="text-center mt-8">
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => window.location.href = '/testimonios'}
-          >
-            Ver todos los testimonios
-          </Button>
-        </div>
       </div>
     </section>
   );
