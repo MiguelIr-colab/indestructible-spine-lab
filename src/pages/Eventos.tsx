@@ -5,6 +5,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CountdownTimer from "@/components/CountdownTimer";
 
 const Eventos = () => {
   const [formData, setFormData] = useState({
@@ -36,11 +37,11 @@ const Eventos = () => {
       
       <main className="pt-20">
         {/* VSL Section */}
-        <section className="py-16 md:py-24">
+        <section className="py-12 md:py-16">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              {/* Video Container */}
-              <div className="relative w-full aspect-video bg-muted rounded-lg overflow-hidden mb-12">
+            <div className="max-w-5xl mx-auto">
+              {/* Video Container - Smaller */}
+              <div className="relative w-full max-w-3xl mx-auto aspect-video bg-muted rounded-lg overflow-hidden mb-8">
                 {/* Placeholder for video - replace with actual video embed */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
@@ -61,6 +62,11 @@ const Eventos = () => {
                     allowFullScreen
                   />
                 */}
+              </div>
+
+              {/* Countdown Timer */}
+              <div className="mb-8">
+                <CountdownTimer />
               </div>
 
               {/* Form Section */}
