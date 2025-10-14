@@ -98,22 +98,22 @@ const Testimonials = () => {
 
   return (
     <section id="testimonios" className="py-20 bg-background">
-      <div className="container mx-auto px-4 max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl lg:text-6xl font-bold mb-6 text-primary">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-primary">
             Personas como ellos nos avalan
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Resultados reales de personas que superaron el dolor de espalda y recuperaron su vida
           </p>
         </div>
 
-        <div className="space-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-card overflow-hidden hover:shadow-[var(--shadow-card)] transition-all">
-              <div className="grid md:grid-cols-2 gap-6 p-6">
+            <Card key={index} className="bg-card overflow-hidden hover:shadow-[var(--shadow-card)] transition-all h-full">
+              <div className="flex flex-col h-full">
                 {/* Video Section */}
-                <div className="relative aspect-video rounded-lg overflow-hidden bg-muted group cursor-pointer">
+                <div className="relative aspect-video bg-muted group cursor-pointer">
                   <iframe
                     className="w-full h-full"
                     src={`https://www.youtube.com/embed/${testimonial.videoId}`}
@@ -122,37 +122,37 @@ const Testimonials = () => {
                     allowFullScreen
                   />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors flex items-center justify-center pointer-events-none">
-                    <div className="bg-primary/90 rounded-full p-4">
-                      <Play className="w-8 h-8 text-primary-foreground fill-current" />
+                    <div className="bg-primary/90 rounded-full p-3">
+                      <Play className="w-6 h-6 text-primary-foreground fill-current" />
                     </div>
                   </div>
                 </div>
 
                 {/* Content Section */}
-                <div className="space-y-4 flex flex-col justify-center">
-                  <div className="flex items-start justify-between gap-4 flex-wrap">
+                <div className="p-4 space-y-3 flex flex-col flex-1">
+                  <div className="flex items-start justify-between gap-2">
                     <div>
-                      <h3 className="text-2xl lg:text-3xl font-bold text-primary">{testimonial.name}</h3>
-                      <p className="text-lg text-muted-foreground">{testimonial.age} años</p>
+                      <h3 className="text-xl font-bold text-primary">{testimonial.name}</h3>
+                      <p className="text-sm text-muted-foreground">{testimonial.age} años</p>
                     </div>
-                    <span className="bg-primary text-primary-foreground px-4 py-2 rounded-md text-sm font-bold uppercase whitespace-nowrap">
+                    <span className="bg-primary text-primary-foreground px-2 py-1 rounded-md text-xs font-bold uppercase whitespace-nowrap">
                       {testimonial.condition}
                     </span>
                   </div>
 
                   <div className="flex gap-1">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                      <Star key={i} className="w-4 h-4 fill-primary text-primary" />
                     ))}
                   </div>
 
-                  <div className="bg-primary/10 p-4 rounded-lg">
-                    <p className="text-foreground font-medium italic text-lg">"{testimonial.quote}"</p>
+                  <div className="bg-primary/10 p-3 rounded-lg">
+                    <p className="text-foreground font-medium italic text-sm">"{testimonial.quote}"</p>
                   </div>
 
-                  <div>
-                    <p className="text-sm font-semibold text-foreground mb-2">Resultados:</p>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                  <div className="flex-1">
+                    <p className="text-xs font-semibold text-foreground mb-1">Resultados:</p>
+                    <p className="text-xs text-muted-foreground leading-relaxed">
                       {testimonial.result}
                     </p>
                   </div>
