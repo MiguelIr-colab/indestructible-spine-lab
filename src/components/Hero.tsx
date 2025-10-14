@@ -5,10 +5,10 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen bg-card pt-20">
-      <div className="container mx-auto px-4 py-12 lg:py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 py-6 lg:py-10">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Image - First on mobile, second on desktop */}
-          <div className="relative lg:h-[700px] h-[400px] rounded-lg overflow-hidden lg:order-2 order-1">
+          <div className="relative lg:h-[500px] h-[300px] rounded-lg overflow-hidden lg:order-2 order-1">
             <img
               src={heroImage}
               alt="Entrenador ayudando a persona a mejorar el dolor de espalda con ejercicios guiados"
@@ -17,40 +17,40 @@ const Hero = () => {
           </div>
 
           {/* Content - Second on mobile, first on desktop */}
-          <div className="space-y-8 lg:order-1 order-2">
-            <div className="space-y-6">
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-foreground">
+          <div className="space-y-6 lg:order-1 order-2">
+            <div className="space-y-4">
+              <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight text-foreground">
                 Di adiós al dolor de espalda y recupera tu vida de siempre
               </h1>
               
-              <h2 className="text-xl lg:text-2xl text-foreground leading-relaxed">
+              <h2 className="text-lg lg:text-xl text-foreground leading-relaxed">
                 Programa online personalizado que elimina el dolor crónico de espalda fortaleciendo tu columna desde la raíz.
                 <span className="block mt-2 font-semibold text-primary">Sin medicación, sin reposo, sin cirugías.</span>
               </h2>
 
-              <ul className="space-y-3">
+              <ul className="space-y-2">
                 <li className="flex items-start gap-3 text-foreground">
                   <span className="text-primary text-xl">🔹</span>
-                  <span className="text-lg">Mejora tu movilidad y fuerza real en pocas semanas.</span>
+                  <span className="text-base">Mejora tu movilidad y fuerza real en pocas semanas.</span>
                 </li>
                 <li className="flex items-start gap-3 text-foreground">
                   <span className="text-primary text-xl">🔹</span>
-                  <span className="text-lg">100% adaptado a tu nivel y condición.</span>
+                  <span className="text-base">100% adaptado a tu nivel y condición.</span>
                 </li>
                 <li className="flex items-start gap-3 text-foreground">
                   <span className="text-primary text-xl">🔹</span>
-                  <span className="text-lg">Acompañamiento profesional en cada fase.</span>
+                  <span className="text-base">Acompañamiento profesional en cada fase.</span>
                 </li>
                 <li className="flex items-start gap-3 text-foreground">
                   <span className="text-primary text-xl">🔹</span>
-                  <span className="text-lg">Resultados respaldados por evidencia científica.</span>
+                  <span className="text-base">Resultados respaldados por evidencia científica.</span>
                 </li>
               </ul>
 
               <div className="text-center">
                 <Button 
                   variant="hero" 
-                  className="text-lg h-14 px-12"
+                  className="text-base lg:text-lg h-12 lg:h-14 px-8 lg:px-12"
                   onClick={() => window.location.href = '/programa'}
                 >
                   QUIERO UNA ESPALDA INDESTRUCTIBLE
@@ -60,7 +60,7 @@ const Hero = () => {
                 </p>
 
                 {/* Micro-testimonial */}
-                <div className="pt-6 border-t border-border mt-8">
+                <div className="pt-4 border-t border-border mt-6">
                   <div className="flex gap-1 justify-center mb-2">
                     {[...Array(5)].map((_, i) => (
                       <span key={i} className="text-primary text-lg">⭐</span>
