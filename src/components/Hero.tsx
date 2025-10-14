@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import heroImage from "@/assets/hero-image.jpg";
 
@@ -82,11 +82,11 @@ const Hero = () => {
                     }}
                     plugins={[
                       Autoplay({
-                        delay: 6000,
+                        delay: 7000,
                         stopOnInteraction: false,
                       }),
                     ]}
-                    className="w-full"
+                    className="w-full relative px-8"
                   >
                     <CarouselContent>
                       {microTestimonials.map((testimonial, index) => (
@@ -97,7 +97,17 @@ const Hero = () => {
                         </CarouselItem>
                       ))}
                     </CarouselContent>
+                    <CarouselPrevious className="left-0 h-6 w-6 md:h-8 md:w-8" />
+                    <CarouselNext className="right-0 h-6 w-6 md:h-8 md:w-8" />
                   </Carousel>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="mt-6 mx-auto block"
+                    onClick={() => window.location.href = '/testimonios'}
+                  >
+                    Ver todos los testimonios
+                  </Button>
                 </div>
               </div>
             </div>
