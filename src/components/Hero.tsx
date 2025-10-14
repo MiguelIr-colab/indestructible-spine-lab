@@ -1,7 +1,16 @@
 import { Button } from "@/components/ui/button";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import heroImage from "@/assets/hero-image.jpg";
 
 const Hero = () => {
+  const microTestimonials = [
+    { text: "Llevaba años con dolor lumbar y ahora entreno sin miedo.", author: "Ana M." },
+    { text: "Ya no necesito pastillas para el dolor, mi espalda está más fuerte que nunca.", author: "Carlos R." },
+    { text: "Pensé que tendría que vivir con el dolor, pero este programa cambió mi vida.", author: "Laura G." },
+    { text: "De estar de baja a volver a trabajar sin limitaciones en 3 meses.", author: "Miguel S." },
+    { text: "No podía jugar con mis hijos, ahora disfruto cada momento sin dolor.", author: "Patricia V." },
+  ];
 
   return (
     <section className="min-h-screen bg-card pt-20">
@@ -59,16 +68,36 @@ const Hero = () => {
                   Solicita tu primera entrevista y descubre cómo eliminar el dolor desde casa.
                 </p>
 
-                {/* Micro-testimonial */}
+                {/* Micro-testimonial Carousel */}
                 <div className="pt-4 border-t border-border mt-6">
                   <div className="flex gap-1 justify-center mb-2">
                     {[...Array(5)].map((_, i) => (
                       <span key={i} className="text-primary text-lg">⭐</span>
                     ))}
                   </div>
-                  <p className="text-center text-sm text-foreground italic">
-                    "Llevaba años con dolor lumbar y ahora entreno sin miedo." — <strong>Ana M.</strong>
-                  </p>
+                  <Carousel
+                    opts={{
+                      align: "center",
+                      loop: true,
+                    }}
+                    plugins={[
+                      Autoplay({
+                        delay: 6000,
+                        stopOnInteraction: false,
+                      }),
+                    ]}
+                    className="w-full"
+                  >
+                    <CarouselContent>
+                      {microTestimonials.map((testimonial, index) => (
+                        <CarouselItem key={index}>
+                          <p className="text-center text-sm text-foreground italic px-4">
+                            "{testimonial.text}" — <strong>{testimonial.author}</strong>
+                          </p>
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                  </Carousel>
                 </div>
               </div>
             </div>
