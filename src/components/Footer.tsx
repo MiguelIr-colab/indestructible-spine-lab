@@ -12,7 +12,7 @@ const Footer = () => {
       { label: "Equipo", href: "/equipo" },
       { label: "Blog", href: "/blog" },
       { label: "Regalo", href: "/lead-magnet" },
-      { label: "Contacto", href: "#preguntame" },
+      { label: "Contacto", href: "/#preguntame" },
     ],
   };
 
