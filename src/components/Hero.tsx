@@ -112,83 +112,84 @@ const Hero = () => {
                   Solicita tu primera entrevista y descubre cómo eliminar el dolor desde casa.
                 </p>
               </div>
+
+              {/* Micro-Testimonials Carousel Section - Compact */}
+              <div className="mt-6">
+                <div className="text-center mb-3">
+                  <div className="flex gap-1 justify-center">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                    ))}
+                  </div>
+                </div>
+
+                <Carousel
+                  opts={{
+                    align: "center",
+                    loop: true,
+                  }}
+                  plugins={[
+                    Autoplay({
+                      delay: 7000,
+                      stopOnInteraction: false,
+                    }),
+                  ]}
+                  className="w-full max-w-xl mx-auto"
+                >
+                  <CarouselContent>
+                    <CarouselItem>
+                      <div className="text-center px-4">
+                        <p className="text-sm italic text-foreground">
+                          "Llevaba años con dolor lumbar y ahora entreno sin miedo." — <span className="font-semibold">Ana M.</span>
+                        </p>
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="text-center px-4">
+                        <p className="text-sm italic text-foreground">
+                          "Después de 2 hernias, ahora puedo trabajar jornadas completas sin dolor." — <span className="font-semibold">David R.</span>
+                        </p>
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="text-center px-4">
+                        <p className="text-sm italic text-foreground">
+                          "Evité la cirugía y recuperé mi vida activa al 100%." — <span className="font-semibold">Marcos L.</span>
+                        </p>
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="text-center px-4">
+                        <p className="text-sm italic text-foreground">
+                          "Con 71 años y 2 hernias, ahora me muevo sin limitaciones." — <span className="font-semibold">Pilar G.</span>
+                        </p>
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="text-center px-4">
+                        <p className="text-sm italic text-foreground">
+                          "Pasé de no poder agacharme a levantar más de 50 kg sin problemas." — <span className="font-semibold">Javi S.</span>
+                        </p>
+                      </div>
+                    </CarouselItem>
+                  </CarouselContent>
+                  <CarouselPrevious className="left-0 h-6 w-6" />
+                  <CarouselNext className="right-0 h-6 w-6" />
+                </Carousel>
+
+                <div className="text-center mt-3">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => window.location.href = '/testimonios'}
+                    className="text-xs"
+                  >
+                    Ver todos los testimonios
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* Micro-Testimonials Carousel Section */}
-      <div className="container mx-auto px-4 py-8">
-        <div className="text-center mb-6">
-          <div className="flex gap-1 justify-center mb-4">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-6 h-6 fill-primary text-primary" />
-            ))}
-          </div>
-        </div>
-
-        <Carousel
-          opts={{
-            align: "center",
-            loop: true,
-          }}
-          plugins={[
-            Autoplay({
-              delay: 7000,
-              stopOnInteraction: false,
-            }),
-          ]}
-          className="w-full max-w-2xl mx-auto"
-        >
-          <CarouselContent>
-            <CarouselItem>
-              <div className="text-center px-4">
-                <p className="text-lg italic text-foreground">
-                  "Llevaba años con dolor lumbar y ahora entreno sin miedo." — <span className="font-semibold">Ana M.</span>
-                </p>
-              </div>
-            </CarouselItem>
-            <CarouselItem>
-              <div className="text-center px-4">
-                <p className="text-lg italic text-foreground">
-                  "Después de 2 hernias, ahora puedo trabajar jornadas completas sin dolor." — <span className="font-semibold">David R.</span>
-                </p>
-              </div>
-            </CarouselItem>
-            <CarouselItem>
-              <div className="text-center px-4">
-                <p className="text-lg italic text-foreground">
-                  "Evité la cirugía y recuperé mi vida activa al 100%." — <span className="font-semibold">Marcos L.</span>
-                </p>
-              </div>
-            </CarouselItem>
-            <CarouselItem>
-              <div className="text-center px-4">
-                <p className="text-lg italic text-foreground">
-                  "Con 71 años y 2 hernias, ahora me muevo sin limitaciones." — <span className="font-semibold">Pilar G.</span>
-                </p>
-              </div>
-            </CarouselItem>
-            <CarouselItem>
-              <div className="text-center px-4">
-                <p className="text-lg italic text-foreground">
-                  "Pasé de no poder agacharme a levantar más de 50 kg sin problemas." — <span className="font-semibold">Javi S.</span>
-                </p>
-              </div>
-            </CarouselItem>
-          </CarouselContent>
-          <CarouselPrevious className="left-0 h-8 w-8" />
-          <CarouselNext className="right-0 h-8 w-8" />
-        </Carousel>
-
-        <div className="text-center mt-6">
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => window.location.href = '/testimonios'}
-          >
-            Ver todos los testimonios
-          </Button>
         </div>
       </div>
     </section>
