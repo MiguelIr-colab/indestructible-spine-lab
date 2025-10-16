@@ -9,9 +9,9 @@ const Footer = () => {
       { label: "Términos y Condiciones", href: "#terminos" },
     ],
     resources: [
-      { label: "Sobre Mí", href: "#sobre-mi" },
-      { label: "Blog", href: "#blog" },
-      { label: "Recursos Gratuitos", href: "#recursos" },
+      { label: "Equipo", href: "/equipo" },
+      { label: "Blog", href: "/blog" },
+      { label: "Regalo", href: "/lead-magnet" },
       { label: "Contacto", href: "#preguntame" },
     ],
   };
