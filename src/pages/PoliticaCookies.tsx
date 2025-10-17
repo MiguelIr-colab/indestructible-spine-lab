@@ -5,7 +5,7 @@ const PoliticaCookies = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1 bg-background">
+      <main className="flex-1 bg-background pt-24">
         <div className="container mx-auto px-4 py-16 max-w-4xl">
           <h1 className="text-4xl font-bold mb-8">Política de Cookies – Unbreakable Back LLC ("Espalda Indestructible")</h1>
           
