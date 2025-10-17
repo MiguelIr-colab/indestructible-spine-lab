@@ -12,6 +12,8 @@ import Tienda from "./pages/Tienda";
 import Programa from "./pages/Programa";
 import Eventos from "./pages/Eventos";
 import NotFound from "./pages/NotFound";
+import AvisoLegal from "./pages/AvisoLegal";
+import PoliticaCookies from "./pages/PoliticaCookies";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +32,8 @@ const App = () => (
           <Route path="/tienda" element={<Tienda />} />
           <Route path="/programa" element={<Programa />} />
           <Route path="/eventos" element={<Eventos />} />
+          <Route path="/aviso-legal" element={<AvisoLegal />} />
+          <Route path="/politica-cookies" element={<PoliticaCookies />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
