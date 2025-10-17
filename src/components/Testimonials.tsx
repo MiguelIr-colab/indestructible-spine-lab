@@ -104,7 +104,7 @@ const Testimonials = () => {
             Personas como ellos nos avalan
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
-            Resultados reales de personas que superaron el dolor de espalda y recuperaron su vida
+            Resultados reales de personas que superaron el dolor de espalda y recuperaron su vida gracias al programa espalda indestructible diseñado por Roberto Galván
           </p>
           <Button 
             variant="hero" 
@@ -116,7 +116,7 @@ const Testimonials = () => {
           </Button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="bg-card overflow-hidden hover:shadow-[var(--shadow-card)] transition-all h-full">
               <div className="flex flex-col h-full">
