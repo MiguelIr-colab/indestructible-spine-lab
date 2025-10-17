@@ -104,7 +104,7 @@ const Testimonials = () => {
             Personas como ellos nos avalan
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
-            Resultados reales de personas que superaron el dolor de espalda y recuperaron su vida gracias al programa espalda indestructible diseñado por Roberto Galván
+            Resultados reales de personas que superaron el dolor de espalda y recuperaron su vida gracias al programa <span className="font-bold">ESPALDA INDESTRUCTIBLE</span> diseñado por Roberto Galván
           </p>
           <Button 
             variant="hero" 
