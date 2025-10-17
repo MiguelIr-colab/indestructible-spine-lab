@@ -4,9 +4,9 @@ const Footer = () => {
   const footerLinks = {
     legal: [
       { label: "Aviso Legal", href: "/aviso-legal" },
-      { label: "Política de Privacidad", href: "#privacidad" },
+      { label: "Política de Privacidad", href: "/politica-privacidad" },
       { label: "Política de Cookies", href: "/politica-cookies" },
-      { label: "Términos y Condiciones", href: "#terminos" },
+      { label: "Declaración de Accesibilidad", href: "/declaracion-accesibilidad" },
     ],
     resources: [
       { label: "Equipo", href: "/equipo" },
