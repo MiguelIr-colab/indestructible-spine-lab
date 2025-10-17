@@ -1,3 +1,5 @@
+import { Youtube, Instagram } from "lucide-react";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -19,7 +21,7 @@ const Footer = () => {
   return (
     <footer className="bg-card border-t border-border py-12">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
             <div className="mb-4">
@@ -66,6 +68,31 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
+          </div>
+
+          {/* Social Media */}
+          <div>
+            <h3 className="font-bold text-foreground mb-4">Síguenos</h3>
+            <div className="flex gap-4">
+              <a
+                href="https://www.youtube.com/@RoberGalvan"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="YouTube"
+              >
+                <Youtube className="w-6 h-6" />
+              </a>
+              <a
+                href="https://www.instagram.com/robertogalvan.hernias?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-6 h-6" />
+              </a>
+            </div>
           </div>
         </div>
 
