@@ -59,9 +59,9 @@ const Hero = () => {
   return (
     <section className="min-h-screen bg-card pt-20">
       <div className="container mx-auto px-4 py-6 lg:py-10">
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-center">
           {/* Image - First on mobile, second on desktop */}
-          <div className="relative lg:h-[500px] h-[300px] rounded-lg overflow-hidden lg:order-2 order-1">
+          <div className="relative lg:h-[500px] h-[250px] rounded-lg overflow-hidden lg:order-2 order-1">
             <img
               src={heroImage}
               alt="Entrenador ayudando a persona a mejorar el dolor de espalda con ejercicios guiados"
@@ -70,55 +70,55 @@ const Hero = () => {
           </div>
 
           {/* Content - Second on mobile, first on desktop */}
-          <div className="space-y-6 lg:order-1 order-2">
-            <div className="space-y-4">
-              <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight text-foreground">
+          <div className="space-y-4 lg:space-y-6 lg:order-1 order-2">
+            <div className="space-y-3 lg:space-y-4">
+              <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight text-foreground">
                 Di adiós al dolor de espalda y recupera tu vida de siempre
               </h1>
               
-              <h2 className="text-lg lg:text-xl text-foreground leading-relaxed">
+              <h2 className="text-base md:text-lg lg:text-xl text-foreground leading-relaxed">
                 Programa online personalizado que elimina el dolor crónico de espalda fortaleciendo tu columna desde la raíz.
                 <span className="block mt-2 font-semibold text-primary">Sin medicación, sin reposo, sin cirugías.</span>
               </h2>
 
               <ul className="space-y-2">
-                <li className="flex items-start gap-3 text-foreground">
-                  <span className="text-primary text-xl">🔹</span>
-                  <span className="text-base">Mejora tu movilidad y fuerza real en pocas semanas.</span>
+                <li className="flex items-start gap-2 lg:gap-3 text-foreground">
+                  <span className="text-primary text-lg lg:text-xl">🔹</span>
+                  <span className="text-sm lg:text-base">Mejora tu movilidad y fuerza real en pocas semanas.</span>
                 </li>
-                <li className="flex items-start gap-3 text-foreground">
-                  <span className="text-primary text-xl">🔹</span>
-                  <span className="text-base">100% adaptado a tu nivel y condición.</span>
+                <li className="flex items-start gap-2 lg:gap-3 text-foreground">
+                  <span className="text-primary text-lg lg:text-xl">🔹</span>
+                  <span className="text-sm lg:text-base">100% adaptado a tu nivel y condición.</span>
                 </li>
-                <li className="flex items-start gap-3 text-foreground">
-                  <span className="text-primary text-xl">🔹</span>
-                  <span className="text-base">Acompañamiento profesional en cada fase.</span>
+                <li className="flex items-start gap-2 lg:gap-3 text-foreground">
+                  <span className="text-primary text-lg lg:text-xl">🔹</span>
+                  <span className="text-sm lg:text-base">Acompañamiento profesional en cada fase.</span>
                 </li>
-                <li className="flex items-start gap-3 text-foreground">
-                  <span className="text-primary text-xl">🔹</span>
-                  <span className="text-base">Resultados respaldados por evidencia científica.</span>
+                <li className="flex items-start gap-2 lg:gap-3 text-foreground">
+                  <span className="text-primary text-lg lg:text-xl">🔹</span>
+                  <span className="text-sm lg:text-base">Resultados respaldados por evidencia científica.</span>
                 </li>
               </ul>
 
-              <div className="text-center">
+              <div className="text-center pt-2 lg:pt-0">
                 <Button 
                   variant="hero" 
-                  className="text-base lg:text-lg h-12 lg:h-14 px-8 lg:px-12"
+                  className="text-sm md:text-base lg:text-lg h-11 md:h-12 lg:h-14 px-6 md:px-8 lg:px-12 w-full lg:w-auto"
                   onClick={() => window.location.href = '/programa'}
                 >
                   QUIERO UNA ESPALDA INDESTRUCTIBLE
                 </Button>
-                <p className="text-center text-sm text-muted-foreground mt-4">
+                <p className="text-center text-xs md:text-sm text-muted-foreground mt-3 lg:mt-4">
                   Solicita tu primera entrevista y descubre cómo eliminar el dolor desde casa.
                 </p>
               </div>
 
               {/* Micro-Testimonials Carousel Section - Compact */}
-              <div className="mt-6">
-                <div className="text-center mb-3">
-                  <div className="flex gap-1 justify-center">
+              <div className="mt-4 lg:mt-6">
+                <div className="text-center mb-2 lg:mb-3">
+                  <div className="flex gap-0.5 lg:gap-1 justify-center">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                      <Star key={i} className="w-3 h-3 lg:w-4 lg:h-4 fill-primary text-primary" />
                     ))}
                   </div>
                 </div>
@@ -138,51 +138,51 @@ const Hero = () => {
                 >
                   <CarouselContent>
                     <CarouselItem>
-                      <div className="text-center px-4">
-                        <p className="text-sm italic text-foreground">
+                      <div className="text-center px-2 lg:px-4">
+                        <p className="text-xs lg:text-sm italic text-foreground">
                           "Llevaba años con dolor lumbar y ahora entreno sin miedo." — <span className="font-semibold">Ana M.</span>
                         </p>
                       </div>
                     </CarouselItem>
                     <CarouselItem>
-                      <div className="text-center px-4">
-                        <p className="text-sm italic text-foreground">
+                      <div className="text-center px-2 lg:px-4">
+                        <p className="text-xs lg:text-sm italic text-foreground">
                           "Después de 2 hernias, ahora puedo trabajar jornadas completas sin dolor." — <span className="font-semibold">David R.</span>
                         </p>
                       </div>
                     </CarouselItem>
                     <CarouselItem>
-                      <div className="text-center px-4">
-                        <p className="text-sm italic text-foreground">
+                      <div className="text-center px-2 lg:px-4">
+                        <p className="text-xs lg:text-sm italic text-foreground">
                           "Evité la cirugía y recuperé mi vida activa al 100%." — <span className="font-semibold">Marcos L.</span>
                         </p>
                       </div>
                     </CarouselItem>
                     <CarouselItem>
-                      <div className="text-center px-4">
-                        <p className="text-sm italic text-foreground">
+                      <div className="text-center px-2 lg:px-4">
+                        <p className="text-xs lg:text-sm italic text-foreground">
                           "Con 71 años y 2 hernias, ahora me muevo sin limitaciones." — <span className="font-semibold">Pilar G.</span>
                         </p>
                       </div>
                     </CarouselItem>
                     <CarouselItem>
-                      <div className="text-center px-4">
-                        <p className="text-sm italic text-foreground">
+                      <div className="text-center px-2 lg:px-4">
+                        <p className="text-xs lg:text-sm italic text-foreground">
                           "Pasé de no poder agacharme a levantar más de 50 kg sin problemas." — <span className="font-semibold">Javi S.</span>
                         </p>
                       </div>
                     </CarouselItem>
                   </CarouselContent>
-                  <CarouselPrevious className="left-0 h-6 w-6" />
-                  <CarouselNext className="right-0 h-6 w-6" />
+                  <CarouselPrevious className="left-0 h-5 w-5 lg:h-6 lg:w-6" />
+                  <CarouselNext className="right-0 h-5 w-5 lg:h-6 lg:w-6" />
                 </Carousel>
 
-                <div className="text-center mt-3">
+                <div className="text-center mt-2 lg:mt-3">
                   <Button
                     variant="outline"
                     size="sm"
                     onClick={() => window.location.href = '/testimonios'}
-                    className="text-xs"
+                    className="text-xs h-8"
                   >
                     Ver todos los testimonios
                   </Button>

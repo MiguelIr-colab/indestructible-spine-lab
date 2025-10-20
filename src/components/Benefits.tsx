@@ -20,14 +20,14 @@ const Benefits = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-12 lg:py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+        <div className="text-center mb-10 lg:mb-16">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 lg:mb-4">
             <span className="text-primary">Entrenamiento online</span>{" "}
             <span className="text-foreground">para hernia, protrusión y dolor lumbar</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto">
             Método progresivo y seguro para volver a entrenar sin miedo
           </p>
         </div>
@@ -36,13 +36,13 @@ const Benefits = () => {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="bg-card p-8 rounded-lg hover:shadow-[var(--shadow-card)] transition-all hover:scale-105"
+              className="bg-card p-6 lg:p-8 rounded-lg hover:shadow-[var(--shadow-card)] transition-all hover:scale-105"
             >
-              <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-                <benefit.icon className="w-8 h-8 text-primary" />
+              <div className="w-12 h-12 lg:w-16 lg:h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4 lg:mb-6">
+                <benefit.icon className="w-6 h-6 lg:w-8 lg:h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">{benefit.title}</h3>
-              <p className="text-muted-foreground">{benefit.description}</p>
+              <h3 className="text-lg lg:text-xl font-bold text-foreground mb-3 lg:mb-4">{benefit.title}</h3>
+              <p className="text-sm lg:text-base text-muted-foreground">{benefit.description}</p>
             </div>
           ))}
         </div>
