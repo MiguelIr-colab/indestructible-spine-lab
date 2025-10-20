@@ -9,24 +9,48 @@ const Equipo = () => {
       role: "Entrenador Personal Especializado",
       description: "Experto en readaptación de patologías de columna. Más de 10 años ayudando a personas a recuperar su vida activa sin dolor.",
       specialties: ["Hernia Discal", "Estenosis Lumbar", "Protusión Discal"],
+      certifications: [
+        "Graduado en Ciencias de la Actividad Física y el Deporte",
+        "Especialización en Readaptación Funcional",
+        "Certificación en Métodos McGill de Estabilización Lumbar",
+        "Formación continua en patologías de columna vertebral",
+      ],
     },
     {
       name: "María Fernández",
       role: "Fisioterapeuta Deportiva",
       description: "Especializada en rehabilitación funcional y prevención de lesiones. Enfoque integral para recuperar movilidad y fuerza.",
       specialties: ["Rehabilitación", "Terapia Manual", "Prevención"],
+      certifications: [
+        "Graduada en Fisioterapia",
+        "Máster en Fisioterapia Deportiva",
+        "Especialización en Terapia Manual Ortopédica",
+        "Formación en Ejercicio Terapéutico",
+      ],
     },
     {
       name: "Carlos Martínez",
       role: "Coach de Movimiento",
       description: "Experto en biomecánica y patrones de movimiento. Ayuda a restaurar la función natural del cuerpo.",
       specialties: ["Biomecánica", "Movilidad", "Estabilidad"],
+      certifications: [
+        "Certificado en Functional Movement Screen (FMS)",
+        "Especialización en Biomecánica Aplicada",
+        "Formación en Corrección de Patrones de Movimiento",
+        "Certificación en Entrenamiento Funcional",
+      ],
     },
     {
       name: "Laura Sánchez",
       role: "Nutricionista Deportiva",
       description: "Especializada en nutrición antiinflamatoria y recuperación. Optimiza tu alimentación para una espalda saludable.",
       specialties: ["Antiinflamatorio", "Recuperación", "Rendimiento"],
+      certifications: [
+        "Graduada en Nutrición Humana y Dietética",
+        "Máster en Nutrición Deportiva",
+        "Especialización en Nutrición Antiinflamatoria",
+        "Formación en Suplementación Deportiva",
+      ],
     },
   ];
 
@@ -81,32 +105,22 @@ const Equipo = () => {
                       ))}
                     </div>
                   </div>
+
+                  <div className="border-t border-border pt-6 mt-6">
+                    <h3 className="text-base font-bold text-card-foreground mb-3 text-center">
+                      Formación y Certificaciones
+                    </h3>
+                    <ul className="space-y-2 text-muted-foreground">
+                      {member.certifications.map((cert, i) => (
+                        <li key={i} className="flex items-start text-xs">
+                          <span className="text-primary mr-2 flex-shrink-0">✓</span>
+                          <span>{cert}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </Card>
               ))}
-            </div>
-
-            <div className="mt-16 bg-card border border-border rounded-lg p-8 max-w-4xl mx-auto">
-              <h2 className="text-2xl font-bold text-card-foreground mb-6 text-center">
-                Formación y Certificaciones
-              </h2>
-              <ul className="space-y-3 text-muted-foreground">
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Graduado en Ciencias de la Actividad Física y el Deporte</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Especialización en Readaptación Funcional</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Certificación en Métodos McGill de Estabilización Lumbar</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
-                  <span>Formación continua en patologías de columna vertebral</span>
-                </li>
-              </ul>
             </div>
           </div>
         </section>
