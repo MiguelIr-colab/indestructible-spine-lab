@@ -80,7 +80,7 @@ const Programa = () => {
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="bg-card border-2 border-primary/20 p-8 rounded-lg space-y-6">
+              <div className="bg-card border-2 border-primary/20 p-6 md:p-8 rounded-lg space-y-6">
                 <h2 className="text-3xl font-bold text-primary text-center">¿Por qué sé que funciona?</h2>
                 
                 <p className="text-foreground leading-relaxed text-lg">

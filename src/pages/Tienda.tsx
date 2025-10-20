@@ -65,11 +65,11 @@ const Tienda = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
               {products.map((product, index) => (
                 <Card
                   key={index}
-                  className={`bg-card border-border p-8 relative hover:shadow-[var(--shadow-card)] transition-all ${
+                  className={`bg-card border-border p-6 md:p-8 relative hover:shadow-[var(--shadow-card)] transition-all ${
                     product.popular ? 'border-primary border-2' : ''
                   }`}
                 >
@@ -111,7 +111,7 @@ const Tienda = () => {
               ))}
             </div>
 
-            <div className="mt-16 text-center bg-card border border-border rounded-lg p-8 max-w-4xl mx-auto">
+            <div className="mt-16 text-center bg-card border border-border rounded-lg p-6 md:p-8 max-w-4xl mx-auto">
               <h2 className="text-2xl font-bold text-card-foreground mb-4">
                 ¿No estás seguro qué programa elegir?
               </h2>

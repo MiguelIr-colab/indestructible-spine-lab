@@ -24,9 +24,9 @@ const ForWho = () => {
           ¿Es este programa <span className="text-primary">para ti</span>?
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* Para quién SÍ es */}
-          <div className="bg-background p-8 rounded-lg border-2 border-primary">
+          <div className="bg-background p-6 md:p-8 rounded-lg border-2 border-primary">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
                 <Check className="w-7 h-7 text-primary-foreground" />
@@ -44,7 +44,7 @@ const ForWho = () => {
           </div>
 
           {/* Para quién NO es */}
-          <div className="bg-background p-8 rounded-lg border-2 border-muted">
+          <div className="bg-background p-6 md:p-8 rounded-lg border-2 border-muted">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-muted rounded-full flex items-center justify-center">
                 <X className="w-7 h-7 text-muted-foreground" />
@@ -63,7 +63,7 @@ const ForWho = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="bg-primary/10 p-8 rounded-lg max-w-3xl mx-auto mb-8">
+          <div className="bg-primary/10 p-6 md:p-8 rounded-lg max-w-3xl mx-auto mb-8">
             <h3 className="text-2xl font-bold text-foreground mb-4">Garantía de 14 días</h3>
             <p className="text-lg text-muted-foreground">
               Si no ves progresión en 14 días siguiendo el programa correctamente,{" "}

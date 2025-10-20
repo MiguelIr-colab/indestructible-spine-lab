@@ -37,7 +37,7 @@ const HowItWorks = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, index) => (
             <div key={index} className="relative">
               <div className="text-center">
@@ -57,7 +57,7 @@ const HowItWorks = () => {
           ))}
         </div>
 
-        <div className="mt-16 bg-muted p-8 rounded-lg max-w-4xl mx-auto">
+        <div className="mt-16 bg-muted p-6 md:p-8 rounded-lg max-w-4xl mx-auto">
           <h3 className="text-2xl font-bold text-foreground mb-6 text-center">
             Qué incluye el programa
           </h3>

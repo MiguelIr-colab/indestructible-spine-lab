@@ -44,7 +44,7 @@ const Blog = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.map((post, index) => (
                 <Card key={index} className="bg-card border-border overflow-hidden hover:shadow-[var(--shadow-card)] transition-all">
                   <a href={post.videoUrl} target="_blank" rel="noopener noreferrer" className="block">
