@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-espalda-indestructible.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,7 +22,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <a href="/" className="flex items-center">
-              <img src={logo} alt="Roberto Galván Logo" className="h-12" />
+              <img src={logo} alt="Espalda Indestructible - Roberto Galván" className="h-14" />
             </a>
           </div>
 
