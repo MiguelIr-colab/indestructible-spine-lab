@@ -10,6 +10,24 @@ const Equipo = () => {
       description: "Experto en readaptación de patologías de columna. Más de 10 años ayudando a personas a recuperar su vida activa sin dolor.",
       specialties: ["Hernia Discal", "Estenosis Lumbar", "Protusión Discal"],
     },
+    {
+      name: "María Fernández",
+      role: "Fisioterapeuta Deportiva",
+      description: "Especializada en rehabilitación funcional y prevención de lesiones. Enfoque integral para recuperar movilidad y fuerza.",
+      specialties: ["Rehabilitación", "Terapia Manual", "Prevención"],
+    },
+    {
+      name: "Carlos Martínez",
+      role: "Coach de Movimiento",
+      description: "Experto en biomecánica y patrones de movimiento. Ayuda a restaurar la función natural del cuerpo.",
+      specialties: ["Biomecánica", "Movilidad", "Estabilidad"],
+    },
+    {
+      name: "Laura Sánchez",
+      role: "Nutricionista Deportiva",
+      description: "Especializada en nutrición antiinflamatoria y recuperación. Optimiza tu alimentación para una espalda saludable.",
+      specialties: ["Antiinflamatorio", "Recuperación", "Rendimiento"],
+    },
   ];
 
   return (
@@ -27,36 +45,36 @@ const Equipo = () => {
               </p>
             </div>
 
-            <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
               {teamMembers.map((member, index) => (
-                <Card key={index} className="bg-card border-border p-8 md:p-12">
-                  <div className="text-center mb-8">
-                    <div className="w-32 h-32 bg-primary/10 rounded-full mx-auto mb-6 flex items-center justify-center">
-                      <span className="text-4xl font-bold text-primary">
+                <Card key={index} className="bg-card border-border p-6 flex flex-col">
+                  <div className="text-center mb-6">
+                    <div className="w-24 h-24 bg-primary/10 rounded-full mx-auto mb-4 flex items-center justify-center">
+                      <span className="text-2xl font-bold text-primary">
                         {member.name.split(' ').map(n => n[0]).join('')}
                       </span>
                     </div>
-                    <h2 className="text-3xl font-bold text-card-foreground mb-2">
+                    <h2 className="text-xl font-bold text-card-foreground mb-2">
                       {member.name}
                     </h2>
-                    <p className="text-primary font-semibold text-lg mb-4">
+                    <p className="text-primary font-semibold text-sm mb-3">
                       {member.role}
                     </p>
                   </div>
 
-                  <p className="text-muted-foreground text-lg mb-8 text-center max-w-2xl mx-auto">
+                  <p className="text-muted-foreground text-sm mb-6 text-center flex-grow">
                     {member.description}
                   </p>
 
-                  <div className="border-t border-border pt-8">
-                    <h3 className="text-xl font-bold text-card-foreground mb-4 text-center">
+                  <div className="border-t border-border pt-6">
+                    <h3 className="text-sm font-bold text-card-foreground mb-3 text-center">
                       Especialidades
                     </h3>
-                    <div className="flex flex-wrap gap-3 justify-center">
+                    <div className="flex flex-wrap gap-2 justify-center">
                       {member.specialties.map((specialty, i) => (
                         <span
                           key={i}
-                          className="bg-primary text-primary-foreground px-4 py-2 rounded-md font-semibold"
+                          className="bg-primary text-primary-foreground px-3 py-1 rounded-md font-semibold text-xs"
                         >
                           {specialty}
                         </span>
