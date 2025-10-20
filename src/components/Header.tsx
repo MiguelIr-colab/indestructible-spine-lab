@@ -22,7 +22,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <a href="/" className="flex items-center">
-              <img src={logo} alt="Espalda Indestructible - Roberto Galván" className="h-16 w-auto" />
+              <img src={logo} alt="Espalda Indestructible - Roberto Galván" className="h-12 md:h-16 w-auto max-w-[250px] md:max-w-[350px]" />
             </a>
           </div>
 
