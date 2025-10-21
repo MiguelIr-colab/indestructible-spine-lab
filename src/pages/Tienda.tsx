@@ -43,10 +43,13 @@ const Tienda = () => {
                     </div>}
 
                   <div className="text-center mb-8">
-                    <p className="text-muted-foreground mb-4">{product.duration}</p>
-                    <div className="text-5xl font-bold text-primary">
+                    <h3 className="text-2xl font-bold text-card-foreground mb-2">
+                      {product.name}
+                    </h3>
+                    <div className="text-4xl font-bold text-primary mb-2">
                       {product.price}
                     </div>
+                    <p className="text-muted-foreground">{product.duration}</p>
                   </div>
 
                   <Button variant={product.popular ? "default" : "outline"} className="w-full" size="lg">
