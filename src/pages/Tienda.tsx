@@ -119,7 +119,7 @@ const Tienda = () => {
                 Agenda una llamada con uno de nuestros expertos y te ayudamos a elegir el programa ideal para ti
               </p>
               <Button variant="default" size="lg">
-                AGENDAR LLAMADA GRATUITA
+                AGENDAR LLAMADA
               </Button>
             </div>
 
