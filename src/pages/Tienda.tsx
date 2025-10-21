@@ -116,7 +116,7 @@ const Tienda = () => {
                 ¿No estás seguro qué programa elegir?
               </h2>
               <p className="text-muted-foreground mb-6">
-                Agenda una llamada gratuita de 15 minutos y te ayudaré a elegir el programa ideal para ti
+                Agenda una llamada con uno de nuestros expertos y te ayudamos a elegir el programa ideal para ti
               </p>
               <Button variant="default" size="lg">
                 AGENDAR LLAMADA GRATUITA
