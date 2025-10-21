@@ -2,25 +2,22 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Check } from "lucide-react";
+
 const Tienda = () => {
   const products = [{
     name: "Programa 3 Meses",
-    price: "297€",
+    price: "950€",
     duration: "3 meses",
-    features: ["Evaluación inicial completa", "Plan de entrenamiento personalizado", "Seguimiento semanal por videollamada", "Ajustes progresivos del programa", "Acceso a material educativo", "Soporte por WhatsApp"],
     popular: false
   }, {
     name: "Programa 6 Meses",
-    price: "497€",
+    price: "1.800€",
     duration: "6 meses",
-    features: ["Todo lo del programa de 3 meses", "Seguimiento quincenal personalizado", "Revisión de técnica en ejercicios", "Planificación de objetivos a largo plazo", "Acceso prioritario a nuevos contenidos", "Garantía de resultados"],
     popular: true
   }, {
     name: "Programa 9 Meses",
-    price: "697€",
+    price: "2.600€",
     duration: "9 meses",
-    features: ["Todo lo del programa de 6 meses", "Seguimiento mensual de por vida", "Acceso VIP a comunidad privada", "Planes de mantenimiento personalizados", "Descuentos en renovaciones", "Máxima transformación garantizada"],
     popular: false
   }];
   return <div className="min-h-screen bg-background">
@@ -46,21 +43,11 @@ const Tienda = () => {
                     </div>}
 
                   <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-card-foreground mb-2">
-                      {product.name}
-                    </h3>
-                    <div className="text-4xl font-bold text-primary mb-2">
+                    <p className="text-muted-foreground mb-4">{product.duration}</p>
+                    <div className="text-5xl font-bold text-primary">
                       {product.price}
                     </div>
-                    <p className="text-muted-foreground">{product.duration}</p>
                   </div>
-
-                  <ul className="space-y-4 mb-8">
-                    {product.features.map((feature, i) => <li key={i} className="flex items-start">
-                        <Check className="w-5 h-5 text-primary mr-3 flex-shrink-0 mt-0.5" />
-                        <span className="text-muted-foreground">{feature}</span>
-                      </li>)}
-                  </ul>
 
                   <Button variant={product.popular ? "default" : "outline"} className="w-full" size="lg">
                     COMPRAR AHORA
