@@ -64,10 +64,9 @@ const ForWho = () => {
 
         <div className="mt-10 lg:mt-16 text-center">
           <div className="bg-primary/10 p-6 md:p-8 rounded-lg max-w-3xl mx-auto mb-6 lg:mb-8">
-            <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3 lg:mb-4">Garantía de 14 días</h3>
+            <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3 lg:mb-4">Prueba algo diferente</h3>
             <p className="text-sm md:text-base lg:text-lg text-muted-foreground">
-              Si no ves progresión en 14 días siguiendo el programa correctamente,{" "}
-              <span className="text-primary font-bold">te devolvemos el 100% de tu inversión</span>.
+              Nada de grupos ni videos genéricos. <span className="text-primary font-bold">100% adaptado a lo que tú necesites</span>.
             </p>
           </div>
           <Button variant="hero" size="lg" asChild>
