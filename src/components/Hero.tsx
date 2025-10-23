@@ -67,8 +67,8 @@ const Hero = () => {
           backgroundPosition: 'center',
         }}
       >
-        {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/60" />
+        {/* Subtle overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/20" />
       </div>
 
       {/* Content */}
