@@ -8,10 +8,11 @@ const Blog = () => {
   const blogPosts = [
     {
       title: "Ejercicios para Hernia Discal: Guía Completa 2025",
-      excerpt: "Descubre los ejercicios más efectivos y seguros para fortalecer tu espalda cuando tienes hernia discal. Método progresivo paso a paso.",
-      videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+      excerpt: "Aprende cómo aliviar el dolor lumbar y fortalecer tu espalda sin cirugía. Descubre los mejores ejercicios, posturas y hábitos para recuperar tu movilidad paso a paso.",
+      videoUrl: "https://www.youtube.com/watch?v=8F0-ed6r8o0",
+      thumbnail: "https://img.youtube.com/vi/8F0-ed6r8o0/maxresdefault.jpg",
       category: "Hernia Discal",
+      articleUrl: "/blog/hernia-discal",
     },
     {
       title: "Estenosis Lumbar: Ejercicios que Realmente Funcionan",
@@ -75,7 +76,7 @@ const Blog = () => {
                       {post.excerpt}
                     </p>
                     <Button variant="outline" className="w-full" asChild>
-                      <a href={post.videoUrl} target="_blank" rel="noopener noreferrer">
+                      <a href={post.articleUrl || post.videoUrl} target={post.articleUrl ? "_self" : "_blank"} rel="noopener noreferrer">
                         Ver video y leer más
                       </a>
                     </Button>

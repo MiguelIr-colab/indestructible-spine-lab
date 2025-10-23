@@ -8,6 +8,7 @@ import Testimonios from "./pages/Testimonios";
 import LeadMagnet from "./pages/LeadMagnet";
 import Equipo from "./pages/Equipo";
 import Blog from "./pages/Blog";
+import HerniaDiscal from "./pages/HerniaDiscal";
 import Tienda from "./pages/Tienda";
 import Programa from "./pages/Programa";
 import Eventos from "./pages/Eventos";
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/lead-magnet" element={<LeadMagnet />} />
           <Route path="/equipo" element={<Equipo />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/hernia-discal" element={<HerniaDiscal />} />
           <Route path="/tienda" element={<Tienda />} />
           <Route path="/programa" element={<Programa />} />
           <Route path="/eventos" element={<Eventos />} />
