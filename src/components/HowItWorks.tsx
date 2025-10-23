@@ -51,7 +51,7 @@ const HowItWorks = () => {
                 <p className="text-sm lg:text-base text-secondary-foreground/70">{step.description}</p>
               </div>
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-10 left-[60%] w-[80%] h-0.5 bg-secondary-foreground" />
+                <div className="hidden lg:block absolute top-10 left-[60%] w-[80%] h-0.5 bg-secondary-foreground after:content-[''] after:absolute after:right-0 after:top-1/2 after:-translate-y-1/2 after:border-t-[6px] after:border-t-transparent after:border-b-[6px] after:border-b-transparent after:border-l-[8px] after:border-l-secondary-foreground" />
               )}
             </div>
           ))}
