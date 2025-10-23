@@ -3,6 +3,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import Autoplay from "embla-carousel-autoplay";
 import { Star, Play } from "lucide-react";
 import heroImage from "@/assets/hero-image-new.jpg";
+import heroBackground from "@/assets/hero-background.png";
 
 const Hero = () => {
   const testimonials = [
@@ -57,8 +58,21 @@ const Hero = () => {
   ];
 
   return (
-    <section className="min-h-screen bg-card pt-16 lg:pt-20 overflow-hidden">
-      <div className="container mx-auto px-4 py-4 lg:py-10 max-w-7xl">
+    <section className="min-h-screen relative pt-16 lg:pt-20 overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ 
+          backgroundImage: `url(${heroBackground})`,
+          backgroundPosition: 'center',
+        }}
+      >
+        {/* Dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/60" />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-4 py-4 lg:py-10 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 items-center">
           {/* Image - First on mobile, second on desktop */}
           <div className="relative lg:h-[500px] h-[200px] rounded-lg overflow-hidden lg:order-2 order-1 w-full">

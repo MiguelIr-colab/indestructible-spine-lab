@@ -97,13 +97,13 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonios" className="py-20 bg-background">
+    <section id="testimonios" className="py-20 bg-[hsl(var(--light-gray))]">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-primary">
             Personas como ellos nos avalan
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
+          <p className="text-lg text-secondary-foreground max-w-3xl mx-auto mb-8">
             Resultados reales de personas que superaron el dolor de espalda y recuperaron su vida gracias al programa <span className="font-bold">ESPALDA INDESTRUCTIBLE</span> diseñado por Roberto Galván
           </p>
           <Button 
@@ -118,7 +118,7 @@ const Testimonials = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-card overflow-hidden hover:shadow-[var(--shadow-card)] transition-all h-full">
+            <Card key={index} className="bg-[hsl(0_0%_5.5%)] border-border overflow-hidden hover:shadow-[var(--shadow-card)] transition-all h-full">
               <div className="flex flex-col h-full">
                 {/* Video Section */}
                 <div className="relative aspect-video bg-muted group cursor-pointer">

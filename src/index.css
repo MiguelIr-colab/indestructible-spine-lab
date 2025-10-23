@@ -43,6 +43,7 @@ All colors MUST be HSL.
     --dark-bg: 0 0% 5.5%; /* #0E0E0E */
     --orange: 38.5 94% 58.8%; /* #F9B233 */
     --orange-glow: 38.5 94% 68.8%;
+    --light-gray: 0 0% 85%; /* #D9D9D9 */
     
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(0 0% 5.5%), hsl(0 0% 8%));

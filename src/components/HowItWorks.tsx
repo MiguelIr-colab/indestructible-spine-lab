@@ -25,14 +25,14 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="py-12 lg:py-20 bg-card">
+    <section className="py-12 lg:py-20 bg-[hsl(var(--light-gray))]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10 lg:mb-16">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 lg:mb-4 text-foreground">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 lg:mb-4 text-secondary-foreground">
             ¿Cómo funciona el programa{" "}
             <span className="text-primary">Espalda Indestructible</span>?
           </h2>
-          <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base md:text-lg lg:text-xl text-secondary-foreground/70 max-w-3xl mx-auto">
             Un método estructurado en 4 pasos para tu recuperación
           </p>
         </div>
@@ -47,8 +47,8 @@ const HowItWorks = () => {
                     {index + 1}
                   </div>
                 </div>
-                <h3 className="text-base md:text-lg lg:text-xl font-bold text-foreground mb-2 lg:mb-3">{step.title}</h3>
-                <p className="text-sm lg:text-base text-muted-foreground">{step.description}</p>
+                <h3 className="text-base md:text-lg lg:text-xl font-bold text-secondary-foreground mb-2 lg:mb-3">{step.title}</h3>
+                <p className="text-sm lg:text-base text-secondary-foreground/70">{step.description}</p>
               </div>
               {index < steps.length - 1 && (
                 <div className="hidden lg:block absolute top-10 left-[60%] w-[80%] h-0.5 bg-primary/20" />
@@ -57,7 +57,7 @@ const HowItWorks = () => {
           ))}
         </div>
 
-        <div className="mt-10 lg:mt-16 bg-muted p-6 md:p-8 rounded-lg max-w-4xl mx-auto">
+        <div className="mt-10 lg:mt-16 bg-background p-6 md:p-8 rounded-lg max-w-4xl mx-auto">
           <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 lg:mb-6 text-center">
             Qué incluye el programa
           </h3>
