@@ -15,11 +15,12 @@ const Blog = () => {
       articleUrl: "/blog/hernia-discal",
     },
     {
-      title: "Estenosis Lumbar: Ejercicios que Realmente Funcionan",
-      excerpt: "Aprende qué ejercicios ayudan con la estenosis lumbar y cuáles debes evitar. Basado en evidencia científica y casos reales.",
-      videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
-      category: "Estenosis",
+      title: "El mejor ejercicio para la hernia discal L5-S1: fortalece tu espalda sin cirugía",
+      excerpt: "¿Sufres de dolor lumbar por una hernia discal L5-S1? En este video te enseño el ejercicio más eficaz y seguro para aliviar el dolor, reducir la presión sobre tus vértebras y recuperar movilidad sin pasar por quirófano. Descubre cómo evitar los movimientos que empeoran tu hernia y aprende la técnica correcta paso a paso.",
+      videoUrl: "https://www.youtube.com/watch?v=OdTgNU36Dhc",
+      thumbnail: "https://img.youtube.com/vi/OdTgNU36Dhc/maxresdefault.jpg",
+      category: "Hernia Discal",
+      articleUrl: "/blog/hernia-discal-l5-s1",
     },
     {
       title: "Cómo Volver al Gimnasio con Protrusión Discal",
