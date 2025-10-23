@@ -31,13 +31,13 @@ const ForWho = () => {
               <div className="w-10 h-10 lg:w-12 lg:h-12 bg-primary rounded-full flex items-center justify-center">
                 <Check className="w-5 h-5 lg:w-7 lg:h-7 text-primary-foreground" />
               </div>
-              <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-secondary-foreground">Es para ti si...</h3>
+              <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-foreground">Es para ti si...</h3>
             </div>
             <ul className="space-y-3 lg:space-y-4">
               {forWho.map((item, index) => (
                 <li key={index} className="flex items-start gap-2 lg:gap-3">
                   <Check className="w-5 h-5 lg:w-6 lg:h-6 text-primary mt-0.5 lg:mt-1 flex-shrink-0" />
-                  <span className="text-secondary-foreground text-sm md:text-base lg:text-lg">{item}</span>
+                  <span className="text-foreground text-sm md:text-base lg:text-lg">{item}</span>
                 </li>
               ))}
             </ul>
@@ -49,13 +49,13 @@ const ForWho = () => {
               <div className="w-10 h-10 lg:w-12 lg:h-12 bg-muted rounded-full flex items-center justify-center">
                 <X className="w-5 h-5 lg:w-7 lg:h-7 text-muted-foreground" />
               </div>
-              <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-secondary-foreground">No es para ti si...</h3>
+              <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-foreground">No es para ti si...</h3>
             </div>
             <ul className="space-y-3 lg:space-y-4">
               {notForWho.map((item, index) => (
                 <li key={index} className="flex items-start gap-2 lg:gap-3">
                   <X className="w-5 h-5 lg:w-6 lg:h-6 text-muted-foreground mt-0.5 lg:mt-1 flex-shrink-0" />
-                  <span className="text-secondary-foreground/70 text-sm md:text-base lg:text-lg">{item}</span>
+                  <span className="text-muted-foreground text-sm md:text-base lg:text-lg">{item}</span>
                 </li>
               ))}
             </ul>
