@@ -77,7 +77,7 @@ const Programa = () => {
         </section>
 
         {/* Why It Works Section */}
-        <section className="py-12 lg:py-20 bg-background">
+        <section className="py-12 lg:py-20 bg-[hsl(var(--light-gray))]">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="bg-card border-2 border-primary/20 p-6 md:p-8 rounded-lg space-y-4 lg:space-y-6">
