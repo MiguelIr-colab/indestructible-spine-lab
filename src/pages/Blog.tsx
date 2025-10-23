@@ -23,11 +23,12 @@ const Blog = () => {
       articleUrl: "/blog/hernia-discal-l5-s1",
     },
     {
-      title: "Cómo Volver al Gimnasio con Protrusión Discal",
-      excerpt: "Método seguro y progresivo para retomar el entrenamiento sin miedo a lesionarte. Incluye plan de 8 semanas.",
-      videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
-      category: "Protrusión",
+      title: "Estenosis del canal lumbar: 5 ejercicios para aliviar el dolor sin operación (guía 2025)",
+      excerpt: "En este vídeo te explico, paso a paso, qué es la estenosis del canal lumbar, por qué puede dar entumecimiento, debilidad y dificultad para caminar, y cuándo se valora la cirugía. Lo mejor: te enseño 5 ejercicios prácticos para empezar hoy mismo a reducir síntomas, ganar estabilidad y recuperar movilidad.",
+      videoUrl: "https://www.youtube.com/watch?v=8GpsHk4HV6o",
+      thumbnail: "https://img.youtube.com/vi/8GpsHk4HV6o/maxresdefault.jpg",
+      category: "Estenosis",
+      articleUrl: "/blog/estenosis-lumbar",
     },
   ];
 
