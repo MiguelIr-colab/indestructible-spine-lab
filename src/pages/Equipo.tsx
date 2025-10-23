@@ -55,30 +55,30 @@ const Equipo = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[hsl(var(--light-gray))]">
       <Header />
       <main className="pt-20">
-        <section className="py-20 bg-background">
+        <section className="py-20 bg-[hsl(var(--light-gray))]">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-primary">
                 Nuestro Equipo
               </h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-xl text-secondary-foreground/70 max-w-3xl mx-auto">
                 Profesionales especializados en ayudarte a volver a entrenar sin dolor
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
               {teamMembers.map((member, index) => (
-                <Card key={index} className="bg-card border-border p-6 flex flex-col">
+                <Card key={index} className="bg-background border-border p-6 flex flex-col">
                   <div className="text-center mb-6">
                     <div className="w-24 h-24 bg-primary/10 rounded-full mx-auto mb-4 flex items-center justify-center">
                       <span className="text-2xl font-bold text-primary">
                         {member.name.split(' ').map(n => n[0]).join('')}
                       </span>
                     </div>
-                    <h2 className="text-xl font-bold text-card-foreground mb-2">
+                    <h2 className="text-xl font-bold text-foreground mb-2">
                       {member.name}
                     </h2>
                     <p className="text-primary font-semibold text-sm mb-3">
@@ -91,7 +91,7 @@ const Equipo = () => {
                   </p>
 
                   <div className="border-t border-border pt-6">
-                    <h3 className="text-sm font-bold text-card-foreground mb-3 text-center">
+                    <h3 className="text-sm font-bold text-foreground mb-3 text-center">
                       Especialidades
                     </h3>
                     <div className="flex flex-wrap gap-2 justify-center">
@@ -107,7 +107,7 @@ const Equipo = () => {
                   </div>
 
                   <div className="border-t border-border pt-6 mt-6">
-                    <h3 className="text-base font-bold text-card-foreground mb-3 text-center">
+                    <h3 className="text-base font-bold text-foreground mb-3 text-center">
                       Formación y Certificaciones
                     </h3>
                     <ul className="space-y-2 text-muted-foreground">

@@ -55,13 +55,13 @@ const VideoTestimonials = () => {
   ];
 
   return (
-    <section className="py-10 lg:py-16 bg-background">
+    <section className="py-10 lg:py-16 bg-[hsl(var(--light-gray))]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-6 lg:mb-8">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 lg:mb-4 text-primary">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 lg:mb-4 text-secondary-foreground">
             Personas como ellos nos avalan
           </h2>
-          <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm md:text-base lg:text-lg text-secondary-foreground/70 max-w-2xl mx-auto">
             Resultados reales de personas que superaron el dolor de espalda y recuperaron su vida
           </p>
         </div>

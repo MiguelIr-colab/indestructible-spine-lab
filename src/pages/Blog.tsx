@@ -33,23 +33,23 @@ const Blog = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[hsl(var(--light-gray))]">
       <Header />
       <main className="pt-20">
-        <section className="py-20 bg-background">
+        <section className="py-20 bg-[hsl(var(--light-gray))]">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-primary">
                 Blog
               </h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-xl text-secondary-foreground/70 max-w-3xl mx-auto">
                 Artículos, guías y videos sobre entrenamiento y patologías de columna
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.map((post, index) => (
-                <Card key={index} className="bg-card border-border overflow-hidden hover:shadow-[var(--shadow-card)] transition-all">
+                <Card key={index} className="bg-background border-border overflow-hidden hover:shadow-[var(--shadow-card)] transition-all">
                   <a href={post.videoUrl} target="_blank" rel="noopener noreferrer" className="block">
                     <div className="relative group">
                       <img
@@ -69,7 +69,7 @@ const Blog = () => {
                   </a>
 
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-card-foreground mb-3 hover:text-primary transition-colors">
+                    <h3 className="text-xl font-bold text-foreground mb-3 hover:text-primary transition-colors">
                       <a href={post.videoUrl} target="_blank" rel="noopener noreferrer">
                         {post.title}
                       </a>
