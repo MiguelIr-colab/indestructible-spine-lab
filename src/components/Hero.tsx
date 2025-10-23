@@ -3,7 +3,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import Autoplay from "embla-carousel-autoplay";
 import { Star, Play } from "lucide-react";
 import heroImage from "@/assets/hero-image-new.jpg";
-import heroBackground from "@/assets/hero-background.png";
+import heroBackground from "@/assets/hero-background-new.png";
 
 const Hero = () => {
   const testimonials = [
