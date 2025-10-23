@@ -41,7 +41,7 @@ const HowItWorks = () => {
           {steps.map((step, index) => (
             <div key={index} className="relative">
               <div className="text-center">
-                <div className="w-16 h-16 lg:w-20 lg:h-20 bg-primary/10 rounded-full flex items-center justify-center mb-4 lg:mb-6 mx-auto relative">
+                <div className="w-16 h-16 lg:w-20 lg:h-20 bg-muted rounded-lg flex items-center justify-center mb-4 lg:mb-6 mx-auto relative">
                   <step.icon className="w-8 h-8 lg:w-10 lg:h-10 text-primary" />
                   <div className="absolute -top-2 -right-2 lg:-top-3 lg:-right-3 w-8 h-8 lg:w-10 lg:h-10 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-sm lg:text-base">
                     {index + 1}
