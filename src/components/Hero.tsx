@@ -87,26 +87,26 @@ const Hero = () => {
           <div className="space-y-3 lg:space-y-6 lg:order-1 order-2 w-full overflow-hidden">
             <div className="space-y-2 lg:space-y-4">
               <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight text-foreground break-words">
-                Di adiós al dolor de espalda y recupera tu vida de siempre
+                Fortalece tu columna sin riesgos, sólo para personas con patologías de columna: Hernias, protrusiones, lisis, estenosis...
               </h1>
               
               <h2 className="text-sm sm:text-base md:text-lg lg:text-xl text-foreground leading-relaxed break-words">
-                Programa online personalizado que elimina el dolor crónico de espalda fortaleciendo tu columna desde la raíz.
-                <span className="block mt-1 lg:mt-2 font-semibold text-primary break-words">Sin medicación, sin reposo, sin cirugías.</span>
+                Programa online individualizado por fisioterapeutas y entrenadores, para fortalecer y estabilizar tu columna.
+                <span className="block mt-1 lg:mt-2 font-semibold text-primary break-words">Sin los riesgos de la cirugía y desde casa</span>
               </h2>
 
               <ul className="space-y-1.5 lg:space-y-2 w-full">
                 <li className="flex items-start gap-2 text-foreground">
                   <span className="text-primary text-base lg:text-xl flex-shrink-0 mt-0.5">🔹</span>
-                  <span className="text-xs sm:text-sm lg:text-base break-words">Mejora tu movilidad y fuerza real en pocas semanas.</span>
+                  <span className="text-xs sm:text-sm lg:text-base break-words">Estudiamos tu biomecánica.</span>
                 </li>
                 <li className="flex items-start gap-2 text-foreground">
                   <span className="text-primary text-base lg:text-xl flex-shrink-0 mt-0.5">🔹</span>
-                  <span className="text-xs sm:text-sm lg:text-base break-words">100% adaptado a tu nivel y condición.</span>
+                  <span className="text-xs sm:text-sm lg:text-base break-words">Creamos tu programa 100% según tus test iniciales.</span>
                 </li>
                 <li className="flex items-start gap-2 text-foreground">
                   <span className="text-primary text-base lg:text-xl flex-shrink-0 mt-0.5">🔹</span>
-                  <span className="text-xs sm:text-sm lg:text-base break-words">Acompañamiento profesional en cada fase.</span>
+                  <span className="text-xs sm:text-sm lg:text-base break-words">Acompañamiento profesional por fisios y entrenadores a diario.</span>
                 </li>
                 <li className="flex items-start gap-2 text-foreground">
                   <span className="text-primary text-base lg:text-xl flex-shrink-0 mt-0.5">🔹</span>
@@ -120,10 +120,10 @@ const Hero = () => {
                   className="text-[10px] leading-tight xs:text-xs sm:text-sm md:text-base lg:text-lg h-10 sm:h-11 md:h-12 lg:h-14 px-3 xs:px-4 sm:px-6 md:px-8 lg:px-12 w-full lg:w-auto break-words whitespace-normal"
                   onClick={() => window.location.href = '/programa'}
                 >
-                  QUIERO UNA ESPALDA INDESTRUCTIBLE
+                  QUIERO UNA ENTREVISTA
                 </Button>
                 <p className="text-center text-[10px] sm:text-xs md:text-sm text-muted-foreground mt-2 lg:mt-4 break-words px-2">
-                  Solicita tu primera entrevista y descubre cómo eliminar el dolor desde casa.
+                  Agenda tu primera entrevista y descubre cómo empezar cuanto antes.
                 </p>
               </div>
 
