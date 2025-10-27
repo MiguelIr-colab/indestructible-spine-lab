@@ -4,23 +4,18 @@ const HowItWorks = () => {
   const steps = [
     {
       icon: FileCheck,
-      title: "ENTREVISTA INICIAL",
-      description: "Por videollamada conoceremos los detalles de tu dolor y tus objetivos, así como tu forma física actual. Te contaremos cómo funciona el programa y si realmente puede ayudarte.",
+      title: "EVALUACIÓN",
+      description: "Te haremos un estudio biomecánico para saber qué necesita tu columna",
     },
     {
       icon: Calendar,
-      title: "EVALUACIÓN",
-      description: "Ya dentro del programa, te evaluaremos por medio de una serie de vídeos. En base a ello diseñaremos tu programa con la secuencia de ejercicios que debes hacer para recuperarte.",
+      title: "PROGRAMACIÓN",
+      description: "En una App sólo para tí, diseñaremos tu programación, basada en tu estudio previo, en la que podrás reproducir los videos detallados de las ejecuciones de cada ejercicio según tu caso.",
     },
     {
       icon: RefreshCw,
-      title: "TU PROGRAMACIÓN",
-      description: "No es ninguna tabla, tendrás una App personal sólo para ti, en la que podrás reproducir los ejercicios explicados a la perfección para que sepas la técnica correcta de ejecución.",
-    },
-    {
-      icon: TrendingUp,
-      title: "SEGUIMIENTO DIARIO",
-      description: "Además diariamente tendremos contacto, para corregirte tus ejercicios que enviarás a un entrenador asignado para un seguimiento personalizado (nada de grupos ni cosas genéricas).",
+      title: "SEGUIMIENTO",
+      description: "Diariamente veremos tus entrenamientos para corregirte por medio de un fisio o un entrenador sólo para ti, nada de grupos ni pdf genéricos.",
     },
   ];
 
@@ -29,15 +24,15 @@ const HowItWorks = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-10 lg:mb-16">
           <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 lg:mb-4 text-secondary-foreground">
-            ¿Cómo funciona el programa{" "}
+            ¿Cómo funciona{" "}
             <span className="text-primary">Espalda Indestructible</span>?
           </h2>
           <p className="text-base md:text-lg lg:text-xl text-secondary-foreground/70 max-w-3xl mx-auto">
-            Un método estructurado en 4 pasos para tu recuperación
+            Un método estructurado en 3 pasos para tu recuperación
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {steps.map((step, index) => (
             <div key={index} className="relative">
               <div className="text-center">
@@ -66,25 +61,19 @@ const HowItWorks = () => {
               <svg className="w-5 h-5 lg:w-6 lg:h-6 text-primary mt-0.5 lg:mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
-              <span className="text-foreground text-sm md:text-base lg:text-lg">Evaluación inicial en vídeo personalizada</span>
+              <span className="text-foreground text-sm md:text-base lg:text-lg">Evaluación Biomecánica en vídeo para analizarte con un programa informático a cámara lenta (sin los errores del ojo humano, cosa que presencialmente no se puede hacer)</span>
             </li>
             <li className="flex items-start gap-2 lg:gap-3">
               <svg className="w-5 h-5 lg:w-6 lg:h-6 text-primary mt-0.5 lg:mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
-              <span className="text-foreground text-sm md:text-base lg:text-lg">Revisión técnica de todos tus ejercicios</span>
+              <span className="text-foreground text-sm md:text-base lg:text-lg">Creación de tu programa en base a tu estudio inicial</span>
             </li>
             <li className="flex items-start gap-2 lg:gap-3">
               <svg className="w-5 h-5 lg:w-6 lg:h-6 text-primary mt-0.5 lg:mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
-              <span className="text-foreground text-sm md:text-base lg:text-lg">Progresión personalizada según tu evolución</span>
-            </li>
-            <li className="flex items-start gap-2 lg:gap-3">
-              <svg className="w-5 h-5 lg:w-6 lg:h-6 text-primary mt-0.5 lg:mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
-              <span className="text-foreground text-sm md:text-base lg:text-lg">Acceso a comunidad privada de apoyo</span>
+              <span className="text-foreground text-sm md:text-base lg:text-lg">Corrección diaria de tus entrenamientos</span>
             </li>
           </ul>
         </div>

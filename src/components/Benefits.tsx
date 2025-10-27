@@ -4,18 +4,18 @@ const Benefits = () => {
   const benefits = [
     {
       icon: Shield,
-      title: "Reduce el dolor y gana confianza al moverte",
-      description: "Aprende a moverte de forma segura y progresiva, eliminando el miedo que te paraliza.",
+      title: "Recupera la seguridad al moverte",
+      description: "Con un sistema validado por investigaciones en columna",
     },
     {
       icon: TrendingUp,
-      title: "Recupera fuerza y movilidad real",
-      description: "Programa basado en evidencia científica diseñado específicamente para patologías de columna.",
+      title: "Recupera tus actividades sin limitaciones",
+      description: "Y retoma tus actividades que ahora no te atreves a hacer",
     },
     {
       icon: Heart,
-      title: "Sigue un plan con seguimiento directo",
-      description: "Ajustes personalizados quincenales para garantizar tu progresión de forma segura.",
+      title: "Sigue un plan diseñado para tu columna",
+      description: "Ajustes y correcciones diarias para que progreses de forma segura.",
     },
   ];
 
@@ -25,10 +25,10 @@ const Benefits = () => {
         <div className="text-center mb-10 lg:mb-16">
           <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 lg:mb-4">
             <span className="text-primary">Entrenamiento online</span>{" "}
-            <span className="text-foreground">para hernia, protrusión y dolor lumbar</span>
+            <span className="text-foreground">para personas con patologías de columna: hernias, protrusiones, lisis, estenosis...</span>
           </h2>
           <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Método progresivo y seguro para volver a entrenar sin miedo
+            Método progresivo y seguro para recuperar tu vida normal
           </p>
         </div>
 
