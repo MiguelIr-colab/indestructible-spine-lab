@@ -20,9 +20,9 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-24 md:h-28">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center -my-2">
             <a href="/" className="flex items-center">
-              <img src={logo} alt="Espalda Indestructible - Roberto Galván" className="h-20 md:h-24 w-auto max-w-[280px] md:max-w-[400px]" />
+              <img src={logo} alt="Espalda Indestructible - Roberto Galván" className="h-28 md:h-32 w-auto max-w-[350px] md:max-w-[480px]" />
             </a>
           </div>
 
