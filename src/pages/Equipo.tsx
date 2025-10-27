@@ -1,6 +1,10 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
+import teamRoberto from "@/assets/team-roberto.png";
+import teamMaria from "@/assets/team-maria.png";
+import teamCarlos from "@/assets/team-carlos.png";
+import teamLaura from "@/assets/team-laura.png";
 
 const Equipo = () => {
   const teamMembers = [
@@ -15,6 +19,7 @@ const Equipo = () => {
         "Certificación en Métodos McGill de Estabilización Lumbar",
         "Formación continua en patologías de columna vertebral",
       ],
+      image: teamRoberto,
     },
     {
       name: "María Fernández",
@@ -27,6 +32,7 @@ const Equipo = () => {
         "Especialización en Terapia Manual Ortopédica",
         "Formación en Ejercicio Terapéutico",
       ],
+      image: teamMaria,
     },
     {
       name: "Carlos Martínez",
@@ -39,6 +45,7 @@ const Equipo = () => {
         "Formación en Corrección de Patrones de Movimiento",
         "Certificación en Entrenamiento Funcional",
       ],
+      image: teamCarlos,
     },
     {
       name: "Laura Sánchez",
@@ -51,6 +58,7 @@ const Equipo = () => {
         "Especialización en Nutrición Antiinflamatoria",
         "Formación en Suplementación Deportiva",
       ],
+      image: teamLaura,
     },
   ];
 
@@ -73,10 +81,12 @@ const Equipo = () => {
               {teamMembers.map((member, index) => (
                 <Card key={index} className="bg-background border-border p-6 flex flex-col">
                   <div className="text-center mb-6">
-                    <div className="w-24 h-24 bg-primary/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-2xl font-bold text-primary">
-                        {member.name.split(' ').map(n => n[0]).join('')}
-                      </span>
+                    <div className="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full">
+                      <img 
+                        src={member.image} 
+                        alt={member.name}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <h2 className="text-xl font-bold text-foreground mb-2">
                       {member.name}
