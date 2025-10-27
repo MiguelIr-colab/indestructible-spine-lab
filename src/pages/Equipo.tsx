@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import teamRoberto from "@/assets/team-roberto.png";
 import teamMaria from "@/assets/team-maria.png";
 import teamCarlos from "@/assets/team-carlos.png";
+import teamHugo from "@/assets/team-hugo.png";
+import teamKevin from "@/assets/team-kevin.png";
 import teamLaura from "@/assets/team-laura.png";
 
 const Equipo = () => {
@@ -46,6 +48,32 @@ const Equipo = () => {
         "Certificación en Entrenamiento Funcional",
       ],
       image: teamCarlos,
+    },
+    {
+      name: "Hugo",
+      role: "Fisioterapeuta Deportivo",
+      description: "Especializado en tratamiento de lesiones deportivas y recuperación funcional. Enfoque personalizado para cada paciente.",
+      specialties: ["Lesiones Deportivas", "Recuperación", "Movilidad"],
+      certifications: [
+        "Graduado en Fisioterapia",
+        "Especialización en Fisioterapia Deportiva",
+        "Formación en Terapia Manual",
+        "Certificación en Readaptación Funcional",
+      ],
+      image: teamHugo,
+    },
+    {
+      name: "Kevin",
+      role: "Fisioterapeuta Especializado",
+      description: "Experto en tratamiento de patologías de columna vertebral. Combina técnicas manuales con ejercicio terapéutico.",
+      specialties: ["Columna Vertebral", "Terapia Manual", "Ejercicio Terapéutico"],
+      certifications: [
+        "Graduado en Fisioterapia",
+        "Máster en Terapia Manual Ortopédica",
+        "Especialización en Patologías de Columna",
+        "Formación en Ejercicio Correctivo",
+      ],
+      image: teamKevin,
     },
     {
       name: "Laura Sánchez",
