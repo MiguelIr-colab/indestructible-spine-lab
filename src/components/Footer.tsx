@@ -1,4 +1,5 @@
 import { Youtube, Instagram } from "lucide-react";
+import { FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -91,6 +92,15 @@ const Footer = () => {
                 aria-label="Instagram"
               >
                 <Instagram className="w-6 h-6" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@robertogalvan.hernias"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="TikTok"
+              >
+                <FaTiktok className="w-6 h-6" />
               </a>
             </div>
           </div>
