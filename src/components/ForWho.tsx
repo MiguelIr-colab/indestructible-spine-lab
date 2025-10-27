@@ -3,18 +3,15 @@ import { Button } from "@/components/ui/button";
 
 const ForWho = () => {
   const forWho = [
-    "Personas diagnosticadas con hernia discal",
-    "Dolor por protrusión o estenosis lumbar",
-    "Ciática leve o moderada",
-    "Personas que quieren volver a entrenar sin miedo",
-    "Adultos entre 25 y 60 años con dolor crónico",
+    "Te han diagnosticado: hernia discal, protrusión, estenosis...",
+    "Tienes síntomas como: Dolor local o irradiado, ciática, incluso electricidad",
+    "Si quieres una alternativa a la cirugía",
   ];
 
   const notForWho = [
-    "Dolor agudo sin diagnóstico médico",
-    "Patologías graves sin supervisión médica",
-    "Personas que buscan soluciones mágicas instantáneas",
-    "Quienes no están comprometidos con el proceso",
+    "Pierdes fuerza en alguna extremidad (no eres capaz de contraer el músculo)",
+    "Tienes pérdida del control de los esfínteres",
+    "Te han diagnosticado síndrome de cola de caballo",
   ];
 
   return (
@@ -64,13 +61,13 @@ const ForWho = () => {
 
         <div className="mt-10 lg:mt-16 text-center">
           <div className="bg-background p-6 md:p-8 rounded-lg max-w-3xl mx-auto mb-6 lg:mb-8">
-            <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3 lg:mb-4">Prueba algo diferente</h3>
+            <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3 lg:mb-4">Empieza con un programa experto en patologías de columna</h3>
             <p className="text-sm md:text-base lg:text-lg text-muted-foreground">
-              Nada de grupos ni videos genéricos. <span className="text-primary font-bold">100% adaptado a lo que tú necesites</span>.
+              Nada de grupos, ni videos genéricos. <span className="text-primary font-bold">100% creado a tus déficits biomecánicos</span>.
             </p>
           </div>
           <Button variant="hero" size="lg" asChild>
-            <a href="#programa">Empieza tu plan ahora</a>
+            <a href="#preguntanos">Empieza tu plan ahora</a>
           </Button>
         </div>
       </div>
