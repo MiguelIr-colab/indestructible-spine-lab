@@ -86,7 +86,7 @@ const Hero = () => {
           {/* Content - Second on mobile, first on desktop */}
           <div className="space-y-3 lg:space-y-6 lg:order-1 order-2 w-full overflow-hidden">
             <div className="space-y-2 lg:space-y-4">
-              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight text-foreground break-words">
+              <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight text-foreground break-words">
                 Fortalece tu columna sin riesgos, sólo para personas con patologías de columna: Hernias, protrusiones, lisis, estenosis...
               </h1>
               

@@ -16,7 +16,7 @@ const Programa = () => {
       <main>
         {/* Hero Section */}
         <section className="min-h-screen bg-card pt-20">
-          <div className="container mx-auto px-4 py-8 lg:py-12 xl:py-20">
+          <div className="container mx-auto px-4 py-4 lg:py-6 xl:py-8">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Image - First on mobile, second on desktop */}
               <div className="relative lg:h-[700px] h-[300px] md:h-[400px] rounded-lg overflow-hidden lg:order-2 order-1">
