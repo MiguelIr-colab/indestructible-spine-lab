@@ -169,7 +169,7 @@ const Testimonials = () => {
             className="text-lg h-14 px-12"
             onClick={() => window.location.href = '/programa'}
           >
-            RESERVA TU ENTREVISTA GRATUITA
+            RESERVA TU ENTREVISTA
           </Button>
           <p className="text-center text-sm text-muted-foreground mt-4">
             Únete a las personas que ya transformaron su vida
