@@ -52,7 +52,12 @@ const Tienda = () => {
                     <p className="text-muted-foreground">{product.duration}</p>
                   </div>
 
-                  <Button variant={product.popular ? "default" : "outline"} className="w-full" size="lg">
+                  <Button 
+                    variant={product.popular ? "default" : "outline"} 
+                    className="w-full" 
+                    size="lg"
+                    onClick={() => window.open('https://calendly.com/d/cnzd-y87-nk6/entrevista', '_blank')}
+                  >
                     COMPRAR AHORA
                   </Button>
                 </Card>)}
@@ -65,7 +70,11 @@ const Tienda = () => {
               <p className="text-muted-foreground mb-6">
                 Agenda una llamada con uno de nuestros expertos y te ayudamos a elegir el programa ideal para ti
               </p>
-              <Button variant="default" size="lg">
+              <Button 
+                variant="default" 
+                size="lg"
+                onClick={() => window.open('https://calendly.com/d/cnzd-y87-nk6/entrevista', '_blank')}
+              >
                 AGENDAR LLAMADA
               </Button>
             </div>
