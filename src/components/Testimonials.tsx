@@ -101,7 +101,7 @@ const Testimonials = () => {
             variant="hero" 
             size="lg"
             className="text-lg h-14 px-12"
-            onClick={() => window.location.href = '/programa'}
+            onClick={() => window.open('https://calendly.com/d/cnzd-y87-nk6/entrevista', '_blank')}
           >
             RESERVA AQUÍ TU PRIMERA ENTREVISTA
           </Button>
@@ -167,7 +167,7 @@ const Testimonials = () => {
             variant="hero" 
             size="lg"
             className="text-lg h-14 px-12"
-            onClick={() => window.location.href = '/programa'}
+            onClick={() => window.open('https://calendly.com/d/cnzd-y87-nk6/entrevista', '_blank')}
           >
             RESERVA TU ENTREVISTA
           </Button>
