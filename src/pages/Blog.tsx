@@ -7,6 +7,14 @@ import { Play } from "lucide-react";
 const Blog = () => {
   const blogPosts = [
     {
+      title: "💪 El mejor antiinflamatorio para la hernia discal: la clave no está en las pastillas, sino en el movimiento",
+      excerpt: "Si sufres una hernia discal y estás buscando el mejor antiinflamatorio para aliviar el dolor, puede que te sorprenda saber que la verdadera solución no está en los medicamentos, sino en fortalecer tu columna.",
+      videoUrl: "https://www.youtube.com/watch?v=bAR3UDwmh9g",
+      thumbnail: "https://img.youtube.com/vi/bAR3UDwmh9g/maxresdefault.jpg",
+      category: "Hernia Discal",
+      articleUrl: "/blog/antiinflamatorio-hernia-discal",
+    },
+    {
       title: "Ejercicios para Hernia Discal: Guía Completa 2025",
       excerpt: "Aprende cómo aliviar el dolor lumbar y fortalecer tu espalda sin cirugía. Descubre los mejores ejercicios, posturas y hábitos para recuperar tu movilidad paso a paso.",
       videoUrl: "https://www.youtube.com/watch?v=8F0-ed6r8o0",

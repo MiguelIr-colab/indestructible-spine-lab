@@ -8,6 +8,7 @@ import Testimonios from "./pages/Testimonios";
 import LeadMagnet from "./pages/LeadMagnet";
 import Equipo from "./pages/Equipo";
 import Blog from "./pages/Blog";
+import AntiinflamatorioHerniaDiscal from "./pages/AntiinflamatorioHerniaDiscal";
 import HerniaDiscal from "./pages/HerniaDiscal";
 import HerniaDiscalL5S1 from "./pages/HerniaDiscalL5S1";
 import EstenosisLumbar from "./pages/EstenosisLumbar";
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/lead-magnet" element={<LeadMagnet />} />
           <Route path="/equipo" element={<Equipo />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/antiinflamatorio-hernia-discal" element={<AntiinflamatorioHerniaDiscal />} />
           <Route path="/blog/hernia-discal" element={<HerniaDiscal />} />
           <Route path="/blog/hernia-discal-l5-s1" element={<HerniaDiscalL5S1 />} />
           <Route path="/blog/estenosis-lumbar" element={<EstenosisLumbar />} />
