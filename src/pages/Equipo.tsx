@@ -10,45 +10,39 @@ import teamLaura from "@/assets/team-laura.png";
 const Equipo = () => {
   const teamMembers = [{
     name: "Roberto Galván",
-    role: "Entrenador Personal Especializado",
-    description: "Experto en readaptación de patologías de columna. Más de 10 años ayudando a personas a recuperar su vida activa sin dolor.",
+    role: "Ldo Ciencias de la Actividad Física",
+    description: "Experto en readaptación de patologías de columna. Experto en neuromecánica. Biomecánica deportiva.",
     specialties: ["Hernia Discal", "Estenosis Lumbar", "Protusión Discal"],
-    certifications: ["Graduado en Ciencias de la Actividad Física y el Deporte", "Especialización en Readaptación Funcional", "Certificación en Métodos McGill de Estabilización Lumbar", "Formación continua en patologías de columna vertebral"],
     image: teamRoberto
   }, {
-    name: "María Fernández",
-    role: "Fisioterapeuta Deportiva",
-    description: "Especializada en rehabilitación funcional y prevención de lesiones. Enfoque integral para recuperar movilidad y fuerza.",
-    specialties: ["Rehabilitación", "Terapia Manual", "Prevención"],
-    certifications: ["Graduada en Fisioterapia", "Máster en Fisioterapia Deportiva", "Especialización en Terapia Manual Ortopédica", "Formación en Ejercicio Terapéutico"],
+    name: "Asun Venancio",
+    role: "Fisioterapeuta Colegiada: 39/1156",
+    description: "Master en Neurorehabilitación.",
+    specialties: ["Ejercicio terapéutico", "Dolor Neuropático"],
     image: teamMaria
   }, {
-    name: "Carlos Martínez",
-    role: "Coach de Movimiento",
-    description: "Experto en biomecánica y patrones de movimiento. Ayuda a restaurar la función natural del cuerpo.",
-    specialties: ["Biomecánica", "Movilidad", "Estabilidad"],
-    certifications: ["Certificado en Functional Movement Screen (FMS)", "Especialización en Biomecánica Aplicada", "Formación en Corrección de Patrones de Movimiento", "Certificación en Entrenamiento Funcional"],
+    name: "Kevin Díaz",
+    role: "Fisioterapeuta colegiado 10944",
+    description: "Investigador clínico. Master en Fisioterapia del sistema músculo esquelético.",
+    specialties: ["Investigación", "Patologías de columna"],
     image: teamCarlos
   }, {
-    name: "Hugo",
-    role: "Fisioterapeuta Deportivo",
-    description: "Especializado en tratamiento de lesiones deportivas y recuperación funcional. Enfoque personalizado para cada paciente.",
-    specialties: ["Lesiones Deportivas", "Recuperación", "Movilidad"],
-    certifications: ["Graduado en Fisioterapia", "Especialización en Fisioterapia Deportiva", "Formación en Terapia Manual", "Certificación en Readaptación Funcional"],
+    name: "Hugo Fondevilla",
+    role: "Fisioterapeuta colegiado: 1998 COFISPA",
+    description: "Master en Fisioterapia Neurológica.",
+    specialties: ["Ejercicio Terapéutico", "Dolor Neuropático"],
     image: teamHugo
   }, {
-    name: "Kevin",
-    role: "Fisioterapeuta Especializado",
-    description: "Experto en tratamiento de patologías de columna vertebral. Combina técnicas manuales con ejercicio terapéutico.",
-    specialties: ["Columna Vertebral", "Terapia Manual", "Ejercicio Terapéutico"],
-    certifications: ["Graduado en Fisioterapia", "Máster en Terapia Manual Ortopédica", "Especialización en Patologías de Columna", "Formación en Ejercicio Correctivo"],
+    name: "Ricardo Romero",
+    role: "Fisioterapeuta colegiado: 12264",
+    description: "Master en Fisioterapia deportiva.",
+    specialties: ["Fisioterapia invasiva", "Ecografía músculo-esquelética"],
     image: teamKevin
   }, {
-    name: "Laura Sánchez",
-    role: "Nutricionista Deportiva",
-    description: "Especializada en nutrición antiinflamatoria y recuperación. Optimiza tu alimentación para una espalda saludable.",
-    specialties: ["Antiinflamatorio", "Recuperación", "Rendimiento"],
-    certifications: ["Graduada en Nutrición Humana y Dietética", "Máster en Nutrición Deportiva", "Especialización en Nutrición Antiinflamatoria", "Formación en Suplementación Deportiva"],
+    name: "Olivia Valerón",
+    role: "Márketing y comunicación",
+    description: "Master en Customer Relationship Management.",
+    specialties: ["CX", "CRM"],
     image: teamLaura
   }];
   return <div className="min-h-screen bg-[hsl(var(--light-gray))]">
