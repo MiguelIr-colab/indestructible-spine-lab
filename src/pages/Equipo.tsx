@@ -25,7 +25,7 @@ const Equipo = () => {
     role: "Fisioterapeuta colegiado 10944",
     description: "Investigador clínico. Master en Fisioterapia del sistema músculo esquelético.",
     specialties: ["Investigación", "Patologías de columna"],
-    image: teamCarlos
+    image: teamKevin
   }, {
     name: "Hugo Fondevilla",
     role: "Fisioterapeuta colegiado: 1998 COFISPA",
@@ -37,7 +37,7 @@ const Equipo = () => {
     role: "Fisioterapeuta colegiado: 12264",
     description: "Master en Fisioterapia deportiva.",
     specialties: ["Fisioterapia invasiva", "Ecografía músculo-esquelética"],
-    image: teamKevin
+    image: teamCarlos
   }, {
     name: "Olivia Valerón",
     role: "Márketing y comunicación",
