@@ -46,7 +46,7 @@ const HerniaCervicalC5C6 = () => {
                 ></iframe>
               </div>
 
-              <div className="prose prose-lg max-w-none">
+              <div className="prose prose-lg max-w-none text-foreground">
                 <h2>¿Por qué aparece la hernia discal cervical C5–C6?</h2>
                 <p>
                   Esta hernia ocurre en la zona que une la lordosis cervical (curva del cuello) y la cifosis dorsal (parte alta de la espalda).
