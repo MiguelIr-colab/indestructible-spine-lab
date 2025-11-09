@@ -15,10 +15,10 @@ const HerniaCervicalC5C6 = () => {
         <link rel="canonical" href="https://espaldaindestructible.com/blog/hernia-cervical-c5-c6" />
       </Helmet>
       
-      <div className="min-h-screen bg-[hsl(var(--light-gray))]">
+      <div className="min-h-screen bg-background">
         <Header />
         <main className="pt-20">
-          <article className="py-20 bg-[hsl(var(--light-gray))]">
+          <article className="py-20 bg-background">
             <div className="container mx-auto px-4 max-w-4xl">
               <Button variant="ghost" asChild className="mb-8">
                 <Link to="/blog">
