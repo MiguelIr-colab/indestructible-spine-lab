@@ -38,6 +38,14 @@ const Blog = () => {
       category: "Estenosis",
       articleUrl: "/blog/estenosis-lumbar",
     },
+    {
+      title: "💪 Hernia Discal Cervical C5–C6: Tratamiento y 7 Ejercicios para aliviar el dolor",
+      excerpt: "La hernia discal cervical C5–C6 es una de las más comunes, ya que se sitúa en un punto donde la columna soporta gran parte de la carga y movimiento. En este artículo descubrirás por qué aparece, cómo diferenciar la fase aguda de la crónica, y los tratamientos más utilizados, junto a 7 ejercicios prácticos y seguros para reducir el dolor, mejorar la movilidad y fortalecer el cuello sin necesidad de cirugía.",
+      videoUrl: "https://www.youtube.com/watch?v=xCuWalw7604",
+      thumbnail: "https://img.youtube.com/vi/xCuWalw7604/maxresdefault.jpg",
+      category: "Hernia Cervical",
+      articleUrl: "/blog/hernia-cervical-c5-c6",
+    },
   ];
 
   return (
