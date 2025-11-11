@@ -46,6 +46,38 @@ const Blog = () => {
       category: "Hernia Cervical",
       articleUrl: "/blog/hernia-cervical-c5-c6",
     },
+    {
+      title: "💪 Hernia Cervical #1: Tratamiento y Ejercicios para aliviar el dolor",
+      excerpt: "La hernia cervical es una de las patologías más comunes de la columna. En este artículo descubrirás por qué aparece, cómo diferenciar la fase aguda de la crónica, y los tratamientos más utilizados, junto a ejercicios prácticos y seguros para reducir el dolor, mejorar la movilidad y fortalecer el cuello sin necesidad de cirugía.",
+      videoUrl: "https://www.youtube.com/watch?v=xCuWalw7604",
+      thumbnail: "https://img.youtube.com/vi/xCuWalw7604/maxresdefault.jpg",
+      category: "Hernia Cervical",
+      articleUrl: "/blog/hernia-cervical-1",
+    },
+    {
+      title: "💪 Hernia Cervical #2: Guía completa de ejercicios y tratamiento",
+      excerpt: "Descubre cómo tratar la hernia cervical de forma efectiva. Esta guía completa te muestra las mejores estrategias para aliviar el dolor, recuperar movilidad y fortalecer la musculatura del cuello con ejercicios seguros y progresivos.",
+      videoUrl: "https://www.youtube.com/watch?v=xCuWalw7604",
+      thumbnail: "https://img.youtube.com/vi/xCuWalw7604/maxresdefault.jpg",
+      category: "Hernia Cervical",
+      articleUrl: "/blog/hernia-cervical-2",
+    },
+    {
+      title: "💪 Hernia Cervical #3: Ejercicios avanzados para fortalecer el cuello",
+      excerpt: "Aprende ejercicios avanzados para el tratamiento de la hernia cervical. Esta guía incluye progresiones seguras, técnicas de control motor y estrategias para fortalecer la musculatura profunda del cuello sin necesidad de cirugía.",
+      videoUrl: "https://www.youtube.com/watch?v=xCuWalw7604",
+      thumbnail: "https://img.youtube.com/vi/xCuWalw7604/maxresdefault.jpg",
+      category: "Hernia Cervical",
+      articleUrl: "/blog/hernia-cervical-3",
+    },
+    {
+      title: "💪 Hernia Cervical #4: Recuperación sin cirugía paso a paso",
+      excerpt: "La recuperación de una hernia cervical sin cirugía es posible. En este artículo encontrarás un plan paso a paso con ejercicios progresivos, consejos prácticos y estrategias para aliviar el dolor y recuperar tu calidad de vida.",
+      videoUrl: "https://www.youtube.com/watch?v=xCuWalw7604",
+      thumbnail: "https://img.youtube.com/vi/xCuWalw7604/maxresdefault.jpg",
+      category: "Hernia Cervical",
+      articleUrl: "/blog/hernia-cervical-4",
+    },
   ];
 
   return (
