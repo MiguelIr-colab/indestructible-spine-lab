@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { Mail, CheckCircle, AlertCircle } from "lucide-react";
+import MinimalFooter from "@/components/MinimalFooter";
 
 const Thankyou = () => {
   const [email, setEmail] = useState("");
@@ -133,6 +134,7 @@ const Thankyou = () => {
           </div>
         </section>
       </main>
+      <MinimalFooter />
     </div>
   );
 };

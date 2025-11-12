@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
 import CountdownTimer from "@/components/CountdownTimer";
+import MinimalFooter from "@/components/MinimalFooter";
 
 const Eventos = () => {
   const navigate = useNavigate();
@@ -288,6 +289,7 @@ const Eventos = () => {
           </div>
         </section>
       </main>
+      <MinimalFooter />
     </div>
   );
 };

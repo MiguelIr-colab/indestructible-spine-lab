@@ -108,10 +108,10 @@ const Footer = () => {
 
         <div className="border-t border-border pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Roberto Galvan - Espalda Indestructible. Todos los derechos reservados.
+            © {currentYear} Unbreakable Back LLC. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground mt-2">
-            Este sitio no sustituye el diagnóstico médico profesional. Consulta siempre con tu médico.
+            "Espalda Indestructible" es una marca comercial de Unbreakable Back LLC
           </p>
         </div>
       </div>
