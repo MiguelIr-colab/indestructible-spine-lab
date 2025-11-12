@@ -6,79 +6,88 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
 import CountdownTimer from "@/components/CountdownTimer";
 import MinimalFooter from "@/components/MinimalFooter";
-
 const Eventos = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     nombre: "",
     email: "",
     privacidad: false,
-    website: "", // Honeypot field
+    website: "" // Honeypot field
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState({
     privacidad: "",
     email: "",
-    captcha: "",
+    captcha: ""
   });
   const formLoadTime = useRef<number>(Date.now());
-
   useEffect(() => {
     // Record when the form was loaded
     formLoadTime.current = Date.now();
   }, []);
-
   const validateEmail = (email: string): boolean => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Reset errors
-    setErrors({ privacidad: "", email: "", captcha: "" });
+    setErrors({
+      privacidad: "",
+      email: "",
+      captcha: ""
+    });
 
     // Check honeypot (should be empty)
     if (formData.website) {
-      setErrors(prev => ({ ...prev, captcha: "No verificado como humano" }));
+      setErrors(prev => ({
+        ...prev,
+        captcha: "No verificado como humano"
+      }));
       return;
     }
 
     // Check timing (must be at least 3 seconds since page load)
     const timeSinceLoad = (Date.now() - formLoadTime.current) / 1000;
     if (timeSinceLoad < 3) {
-      setErrors(prev => ({ ...prev, captcha: "No verificado como humano" }));
+      setErrors(prev => ({
+        ...prev,
+        captcha: "No verificado como humano"
+      }));
       return;
     }
 
     // Validate privacy acceptance
     if (!formData.privacidad) {
-      setErrors(prev => ({ ...prev, privacidad: "Debes aceptar la política de privacidad" }));
+      setErrors(prev => ({
+        ...prev,
+        privacidad: "Debes aceptar la política de privacidad"
+      }));
       return;
     }
 
     // Validate email
     if (!validateEmail(formData.email)) {
-      setErrors(prev => ({ ...prev, email: "Email inválido" }));
+      setErrors(prev => ({
+        ...prev,
+        email: "Email inválido"
+      }));
       return;
     }
-
     setIsSubmitting(true);
-
     try {
       const response = await fetch('/api/mailrelay/subscribe', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
           nombre: formData.nombre,
           email: formData.email,
-          timeSinceLoad,
-        }),
+          timeSinceLoad
+        })
       });
-
       if (response.ok) {
         // Redirect to thank you page on success
         navigate('/thankyou');
@@ -93,9 +102,7 @@ const Eventos = () => {
       setIsSubmitting(false);
     }
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <main className="py-8 md:py-12">
         {/* VSL Section */}
         <section className="py-12 md:py-16">
@@ -122,7 +129,7 @@ const Eventos = () => {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   />
-                */}
+                 */}
               </div>
 
               {/* Countdown Timer */}
@@ -139,71 +146,41 @@ const Eventos = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Honeypot field - hidden from users */}
                   <div className="absolute left-[-5000px]" aria-hidden="true">
-                    <Input
-                      id="website"
-                      type="text"
-                      value={formData.website}
-                      onChange={(e) => setFormData({ ...formData, website: e.target.value })}
-                      placeholder="Your website"
-                      tabIndex={-1}
-                      autoComplete="off"
-                    />
+                    <Input id="website" type="text" value={formData.website} onChange={e => setFormData({
+                    ...formData,
+                    website: e.target.value
+                  })} placeholder="Your website" tabIndex={-1} autoComplete="off" />
                   </div>
 
                   <div>
                     <label htmlFor="nombre" className="block text-sm font-medium text-primary mb-2">
                       Nombre
                     </label>
-                    <Input
-                      id="nombre"
-                      type="text"
-                      value={formData.nombre}
-                      onChange={(e) => setFormData({ ...formData, nombre: e.target.value })}
-                      placeholder="Tu nombre completo"
-                      className="bg-background border-input"
-                      required
-                    />
+                    <Input id="nombre" type="text" value={formData.nombre} onChange={e => setFormData({
+                    ...formData,
+                    nombre: e.target.value
+                  })} placeholder="Tu nombre completo" className="bg-background border-input" required />
                   </div>
 
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-primary mb-2">
                       Email
                     </label>
-                    <Input
-                      id="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="tu@email.com"
-                      className="bg-background border-input"
-                      aria-invalid={!!errors.email}
-                      aria-describedby={errors.email ? "email-error" : undefined}
-                      required
-                    />
-                    {errors.email && (
-                      <p 
-                        id="email-error" 
-                        className="text-destructive text-sm mt-1" 
-                        role="alert" 
-                        aria-live="polite"
-                      >
+                    <Input id="email" type="email" value={formData.email} onChange={e => setFormData({
+                    ...formData,
+                    email: e.target.value
+                  })} placeholder="tu@email.com" className="bg-background border-input" aria-invalid={!!errors.email} aria-describedby={errors.email ? "email-error" : undefined} required />
+                    {errors.email && <p id="email-error" className="text-destructive text-sm mt-1" role="alert" aria-live="polite">
                         {errors.email}
-                      </p>
-                    )}
+                      </p>}
                   </div>
 
                   <div>
                     <div className="flex items-start gap-3">
-                      <Checkbox
-                        id="privacidad"
-                        checked={formData.privacidad}
-                        onCheckedChange={(checked) => 
-                          setFormData({ ...formData, privacidad: checked as boolean })
-                        }
-                        className="mt-1"
-                        aria-invalid={!!errors.privacidad}
-                        aria-describedby={errors.privacidad ? "privacidad-error" : undefined}
-                      />
+                      <Checkbox id="privacidad" checked={formData.privacidad} onCheckedChange={checked => setFormData({
+                      ...formData,
+                      privacidad: checked as boolean
+                    })} className="mt-1" aria-invalid={!!errors.privacidad} aria-describedby={errors.privacidad ? "privacidad-error" : undefined} />
                       <label htmlFor="privacidad" className="text-sm text-foreground">
                         Acepto la{" "}
                         <a href="/politica-privacidad" className="text-primary hover:underline">
@@ -212,34 +189,16 @@ const Eventos = () => {
                         {" "}y el tratamiento de datos para recibir información sobre el programa
                       </label>
                     </div>
-                    {errors.privacidad && (
-                      <p 
-                        id="privacidad-error" 
-                        className="text-destructive text-sm mt-1" 
-                        role="alert" 
-                        aria-live="polite"
-                      >
+                    {errors.privacidad && <p id="privacidad-error" className="text-destructive text-sm mt-1" role="alert" aria-live="polite">
                         {errors.privacidad}
-                      </p>
-                    )}
+                      </p>}
                   </div>
 
-                  {errors.captcha && (
-                    <p 
-                      className="text-destructive text-sm" 
-                      role="alert" 
-                      aria-live="polite"
-                    >
+                  {errors.captcha && <p className="text-destructive text-sm" role="alert" aria-live="polite">
                       {errors.captcha}
-                    </p>
-                  )}
+                    </p>}
 
-                  <Button 
-                    type="submit" 
-                    size="lg" 
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg py-6"
-                    disabled={!formData.privacidad || isSubmitting}
-                  >
+                  <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg py-6" disabled={!formData.privacidad || isSubmitting}>
                     {isSubmitting ? "ENVIANDO..." : "ENVIAR"}
                   </Button>
                 </form>
@@ -281,17 +240,13 @@ const Eventos = () => {
 
               {/* Waiting Message */}
               <div className="mt-12 text-center">
-                <h4 className="text-xl md:text-2xl font-bold text-foreground">
-                  TIENES QUE ESPERAR AL PRÓXIMO LANZAMIENTO GRATUITO
-                </h4>
+                
               </div>
             </div>
           </div>
         </section>
       </main>
       <MinimalFooter />
-    </div>
-  );
+    </div>;
 };
-
 export default Eventos;
