@@ -258,25 +258,25 @@ const Eventos = () => {
                   <div className="flex items-start gap-3">
                     <div className="text-primary text-xl mt-1">✓</div>
                     <p className="text-foreground">
-                      Se te abrirá YouTube, presiona allí en RECIBIR AVISO
+                      Te llegará un email de verificación
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="text-primary text-xl mt-1">✓</div>
                     <p className="text-foreground">
-                      MIRA tu EMAIL te he enviado el enlace al grupo en WhatsApp
+                      Tras verificar se abrirá YouTube y te llegará un email con un enlace al grupo de WhatsApp
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="text-primary text-xl mt-1">✓</div>
                     <p className="text-foreground">
-                      Mira en la carpeta de SPAM por si acaso
+                      Mira la carpeta de SPAM por si acaso
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="text-primary text-xl mt-1">✓</div>
                     <p className="text-foreground">
-                      Si no lo haces, no podrás ver el BOTÓN para entrar al GRUPO
+                      Si no llega el email pulsa en volver a enviar
                     </p>
                   </div>
                 </div>
