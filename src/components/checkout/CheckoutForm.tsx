@@ -5,7 +5,16 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+
+const countries = [
+  "España", "Andorra", "Argentina", "Bolivia", "Chile", "Colombia", "Costa Rica",
+  "Cuba", "Ecuador", "El Salvador", "Guatemala", "Guinea Ecuatorial", "Honduras",
+  "México", "Nicaragua", "Panamá", "Paraguay", "Perú", "Puerto Rico",
+  "República Dominicana", "Uruguay", "Venezuela", "Alemania", "Austria", "Bélgica",
+  "Francia", "Italia", "Portugal", "Reino Unido", "Suiza", "Estados Unidos", "Otro"
+];
 
 const CheckoutForm = () => {
   const stripe = useStripe();
@@ -16,8 +25,10 @@ const CheckoutForm = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
+    companyName: "",
     country: "",
-    address: "",
+    streetAddress: "",
+    apartment: "",
     city: "",
     province: "",
     postalCode: "",
@@ -41,7 +52,7 @@ const CheckoutForm = () => {
     if (!formData.firstName.trim()) newErrors.firstName = "El nombre es obligatorio";
     if (!formData.lastName.trim()) newErrors.lastName = "Los apellidos son obligatorios";
     if (!formData.country.trim()) newErrors.country = "El país es obligatorio";
-    if (!formData.address.trim()) newErrors.address = "La dirección es obligatoria";
+    if (!formData.streetAddress.trim()) newErrors.streetAddress = "La dirección es obligatoria";
     if (!formData.city.trim()) newErrors.city = "La ciudad es obligatoria";
     if (!formData.province.trim()) newErrors.province = "La provincia es obligatoria";
     if (!formData.postalCode.trim()) newErrors.postalCode = "El código postal es obligatorio";
@@ -95,7 +106,12 @@ const CheckoutForm = () => {
 
   return (
     <div className="bg-card border border-border rounded-lg p-6 md:p-8">
-      <h2 className="text-2xl font-bold mb-6 text-card-foreground">Datos de Facturación</h2>
+      <h2 className="text-2xl font-bold mb-2 text-card-foreground">Detalles de facturación</h2>
+      <div className="flex items-center gap-3 mb-6">
+        <div className="h-px bg-border flex-1"></div>
+        <span className="text-muted-foreground text-sm">O</span>
+        <div className="h-px bg-border flex-1"></div>
+      </div>
       
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -125,32 +141,67 @@ const CheckoutForm = () => {
         </div>
 
         <div>
-          <Label htmlFor="country">País/Región *</Label>
+          <Label htmlFor="companyName">Nombre de la empresa (opcional)</Label>
           <Input
-            id="country"
-            name="country"
-            value={formData.country}
+            id="companyName"
+            name="companyName"
+            value={formData.companyName}
             onChange={handleChange}
-            className={errors.country ? "border-destructive" : ""}
           />
+        </div>
+
+        <div>
+          <Label htmlFor="country">País / Región *</Label>
+          <Select 
+            value={formData.country} 
+            onValueChange={(value) => {
+              setFormData(prev => ({ ...prev, country: value }));
+              if (errors.country) {
+                setErrors(prev => ({ ...prev, country: "" }));
+              }
+            }}
+          >
+            <SelectTrigger className={errors.country ? "border-destructive" : ""}>
+              <SelectValue placeholder="Selecciona un país" />
+            </SelectTrigger>
+            <SelectContent className="bg-popover z-50">
+              {countries.map((country) => (
+                <SelectItem key={country} value={country}>
+                  {country}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
           {errors.country && <p className="text-destructive text-sm mt-1">{errors.country}</p>}
         </div>
 
         <div>
-          <Label htmlFor="address">Dirección *</Label>
+          <Label htmlFor="streetAddress">Dirección de la calle *</Label>
           <Input
-            id="address"
-            name="address"
-            value={formData.address}
+            id="streetAddress"
+            name="streetAddress"
+            placeholder="Nombre de la calle y número de la casa"
+            value={formData.streetAddress}
             onChange={handleChange}
-            className={errors.address ? "border-destructive" : ""}
+            className={errors.streetAddress ? "border-destructive" : ""}
           />
-          {errors.address && <p className="text-destructive text-sm mt-1">{errors.address}</p>}
+          {errors.streetAddress && <p className="text-destructive text-sm mt-1">{errors.streetAddress}</p>}
+        </div>
+
+        <div>
+          <Label htmlFor="apartment">Apartamento, habitación, escalera, etc. (opcional)</Label>
+          <Input
+            id="apartment"
+            name="apartment"
+            placeholder="Apartamento, habitación, etc. (opcional)"
+            value={formData.apartment}
+            onChange={handleChange}
+          />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <Label htmlFor="city">Ciudad *</Label>
+            <Label htmlFor="city">Población *</Label>
             <Input
               id="city"
               name="city"
@@ -166,6 +217,7 @@ const CheckoutForm = () => {
             <Input
               id="province"
               name="province"
+              placeholder="La Romana"
               value={formData.province}
               onChange={handleChange}
               className={errors.province ? "border-destructive" : ""}
@@ -176,7 +228,7 @@ const CheckoutForm = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <Label htmlFor="postalCode">Código Postal *</Label>
+            <Label htmlFor="postalCode">Código postal / ZIP *</Label>
             <Input
               id="postalCode"
               name="postalCode"
@@ -202,7 +254,7 @@ const CheckoutForm = () => {
         </div>
 
         <div>
-          <Label htmlFor="email">Email *</Label>
+          <Label htmlFor="email">Dirección de correo electrónico *</Label>
           <Input
             id="email"
             name="email"
@@ -214,15 +266,18 @@ const CheckoutForm = () => {
           {errors.email && <p className="text-destructive text-sm mt-1">{errors.email}</p>}
         </div>
 
-        <div>
-          <Label htmlFor="notes">Notas del pedido (opcional)</Label>
-          <Textarea
-            id="notes"
-            name="notes"
-            value={formData.notes}
-            onChange={handleChange}
-            rows={3}
-          />
+        <div className="pt-4">
+          <h3 className="text-lg font-semibold mb-4 text-card-foreground">Información adicional</h3>
+          <div>
+            <Label htmlFor="notes">Notas del pedido (opcional)</Label>
+            <Textarea
+              id="notes"
+              name="notes"
+              value={formData.notes}
+              onChange={handleChange}
+              rows={3}
+            />
+          </div>
         </div>
 
         <div className="mt-6">
