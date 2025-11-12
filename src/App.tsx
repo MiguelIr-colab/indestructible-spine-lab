@@ -16,6 +16,7 @@ import HerniaCervicalC5C6 from "./pages/HerniaCervicalC5C6";
 import Tienda from "./pages/Tienda";
 import Programa from "./pages/Programa";
 import Eventos from "./pages/Eventos";
+import Thankyou from "./pages/Thankyou";
 import NotFound from "./pages/NotFound";
 import AvisoLegal from "./pages/AvisoLegal";
 import PoliticaCookies from "./pages/PoliticaCookies";
@@ -44,6 +45,7 @@ const App = () => (
           <Route path="/tienda" element={<Tienda />} />
           <Route path="/programa" element={<Programa />} />
           <Route path="/eventos" element={<Eventos />} />
+          <Route path="/thankyou" element={<Thankyou />} />
           <Route path="/aviso-legal" element={<AvisoLegal />} />
           <Route path="/politica-cookies" element={<PoliticaCookies />} />
           <Route path="/politica-privacidad" element={<PoliticaPrivacidad />} />
