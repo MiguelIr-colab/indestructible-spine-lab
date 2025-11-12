@@ -99,11 +99,11 @@ const Blog = () => {
               {blogPosts.map((post, index) => (
                 <Card key={index} className="bg-background border-border overflow-hidden hover:shadow-[var(--shadow-card)] transition-all">
                   <a href={post.videoUrl} target="_blank" rel="noopener noreferrer" className="block">
-                    <div className="relative group">
+                    <div className="relative group overflow-hidden">
                       <img
                         src={post.thumbnail}
                         alt={post.title}
-                        className="w-full h-48 object-cover"
+                        className="w-full h-48 object-cover scale-110 group-hover:scale-125 transition-transform duration-300"
                       />
                       <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all flex items-center justify-center">
                         <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform">
