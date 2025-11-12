@@ -3,21 +3,21 @@ import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
-const Tienda = () => {
+const EspaldaIndestructible = () => {
   const products = [{
-    name: "Programa 3 Meses",
-    price: "950€",
-    duration: "3 meses",
+    name: "ESPALDA INDESTRUCTIBLE",
+    price: "950,00€",
+    duration: "12 semanas",
     popular: false
   }, {
-    name: "Programa 6 Meses",
-    price: "1.800€",
+    name: "ESPALDA INDESTRUCTIBLE",
+    price: "1.695,00€",
     duration: "6 meses",
     popular: true
   }, {
-    name: "Programa 9 Meses",
-    price: "2.600€",
-    duration: "9 meses",
+    name: "ESPALDA INDESTRUCTIBLE",
+    price: "2.795,00€",
+    duration: "1 año",
     popular: false
   }];
   return <div className="min-h-screen bg-background">
@@ -27,10 +27,10 @@ const Tienda = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-primary">
-                Programas de Entrenamiento
+                ESPALDA INDESTRUCTIBLE
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Elige el programa que mejor se adapte a tus objetivos y comienza tu transformación hoy
+                Un programa para personas que quieren Eliminar su Dolor de Espalda, ya sea provocado por hernias de Disco, Protrusiones Discales, Espondilolistesis, Estenosis del canal Medular, Ciática, Lumbalgia, o simplemente porque lleven con su dolor más de 6 meses y no hayan encontrado solución en otras terapias.
               </p>
             </div>
 
@@ -86,4 +86,4 @@ const Tienda = () => {
       <Footer />
     </div>;
 };
-export default Tienda;
+export default EspaldaIndestructible;

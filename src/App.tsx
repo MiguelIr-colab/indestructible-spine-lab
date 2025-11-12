@@ -13,7 +13,7 @@ import HerniaDiscal from "./pages/HerniaDiscal";
 import HerniaDiscalL5S1 from "./pages/HerniaDiscalL5S1";
 import EstenosisLumbar from "./pages/EstenosisLumbar";
 import HerniaCervicalC5C6 from "./pages/HerniaCervicalC5C6";
-import Tienda from "./pages/Tienda";
+import EspaldaIndestructible from "./pages/EspaldaIndestructible";
 import Programa from "./pages/Programa";
 import Eventos from "./pages/Eventos";
 import Thankyou from "./pages/Thankyou";
@@ -42,7 +42,7 @@ const App = () => (
           <Route path="/blog/hernia-discal-l5-s1" element={<HerniaDiscalL5S1 />} />
           <Route path="/blog/estenosis-lumbar" element={<EstenosisLumbar />} />
           <Route path="/blog/hernia-cervical-c5-c6" element={<HerniaCervicalC5C6 />} />
-          <Route path="/tienda" element={<Tienda />} />
+          <Route path="/espalda-indestructible" element={<EspaldaIndestructible />} />
           <Route path="/programa" element={<Programa />} />
           <Route path="/eventos" element={<Eventos />} />
           <Route path="/thankyou" element={<Thankyou />} />
