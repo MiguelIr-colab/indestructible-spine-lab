@@ -15,16 +15,19 @@ const Programa = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="min-h-screen bg-card pt-20">
+        <section className="min-h-screen bg-card pt-24">
           <div className="container mx-auto px-4 py-1 lg:py-2 xl:py-4">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              {/* Image - First on mobile, second on desktop */}
+              {/* Video - First on mobile, second on desktop */}
               <div className="relative lg:h-[700px] h-[300px] md:h-[400px] rounded-lg overflow-hidden lg:order-2 order-1">
-                <img
-                  src={heroImage}
-                  alt="Programa Espalda Indestructible - Entrenamiento personalizado para eliminar dolor de espalda"
+                <video
+                  src="TU_URL_DE_CDN_AQUI"
+                  controls
                   className="w-full h-full object-cover"
-                />
+                  poster={heroImage}
+                >
+                  Tu navegador no soporta el elemento de video.
+                </video>
               </div>
 
               {/* Content - Second on mobile, first on desktop */}
