@@ -4,8 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import CountdownTimer from "@/components/CountdownTimer";
 
 const Eventos = () => {
@@ -97,9 +95,7 @@ const Eventos = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-      
-      <main className="pt-20">
+      <main className="py-8 md:py-12">
         {/* VSL Section */}
         <section className="py-12 md:py-16">
           <div className="container mx-auto px-4">
@@ -292,8 +288,6 @@ const Eventos = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 };

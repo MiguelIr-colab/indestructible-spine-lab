@@ -2,8 +2,6 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { Mail, CheckCircle, AlertCircle } from "lucide-react";
 
 const Thankyou = () => {
@@ -46,9 +44,7 @@ const Thankyou = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-      
-      <main className="pt-20">
+      <main className="py-8 md:py-12">
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
@@ -137,8 +133,6 @@ const Thankyou = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 };
