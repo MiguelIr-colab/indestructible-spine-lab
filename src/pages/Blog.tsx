@@ -87,7 +87,7 @@ const Blog = () => {
         <section className="py-20 bg-[hsl(var(--light-gray))]">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-primary">
+              <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-secondary-foreground">
                 Blog
               </h1>
               <p className="text-xl text-secondary-foreground/70 max-w-3xl mx-auto">
