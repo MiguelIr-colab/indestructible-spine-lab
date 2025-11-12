@@ -7,17 +7,23 @@ const EspaldaIndestructible = () => {
   const products = [{
     name: "ESPALDA INDESTRUCTIBLE",
     price: "950,00€",
+    priceAmount: 950,
     duration: "12 semanas",
+    slug: "12-semanas",
     popular: false
   }, {
     name: "ESPALDA INDESTRUCTIBLE",
     price: "1.695,00€",
+    priceAmount: 1695,
     duration: "6 meses",
+    slug: "6-meses",
     popular: true
   }, {
     name: "ESPALDA INDESTRUCTIBLE",
     price: "2.795,00€",
+    priceAmount: 2795,
     duration: "1 año",
+    slug: "1-ano",
     popular: false
   }];
   return <div className="min-h-screen bg-background">
@@ -56,7 +62,7 @@ const EspaldaIndestructible = () => {
                     variant={product.popular ? "default" : "outline"} 
                     className="w-full" 
                     size="lg"
-                    onClick={() => window.open('https://calendly.com/d/cnzd-y87-nk6/entrevista', '_blank')}
+                    onClick={() => window.location.href = `/espalda-indestructible/${product.slug}`}
                   >
                     COMPRAR AHORA
                   </Button>
