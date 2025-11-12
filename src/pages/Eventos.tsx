@@ -108,6 +108,11 @@ const Eventos = () => {
         <section className="py-12 md:py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
+              {/* Title */}
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary text-center mb-8 md:mb-12">
+                ESPALDA INDESTRUCTIBLE
+              </h1>
+              
               {/* Video Container - Smaller */}
               <div className="relative w-full max-w-3xl mx-auto aspect-video bg-muted rounded-lg overflow-hidden mb-8">
                 {/* Placeholder for video - replace with actual video embed */}
