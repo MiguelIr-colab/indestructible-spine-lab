@@ -9,6 +9,7 @@ import MinimalFooter from "@/components/MinimalFooter";
 
 const Evento2 = () => {
   const navigate = useNavigate();
+  const videoRef = useRef<HTMLVideoElement>(null);
   const [formData, setFormData] = useState({
     nombre: "",
     email: "",
@@ -26,6 +27,10 @@ const Evento2 = () => {
   useEffect(() => {
     // Record when the form was loaded
     formLoadTime.current = Date.now();
+    // Set video volume
+    if (videoRef.current) {
+      videoRef.current.volume = 0.5;
+    }
   }, []);
 
   const validateEmail = (email: string): boolean => {
@@ -123,12 +128,12 @@ const Evento2 = () => {
               {/* Video Container - Smaller */}
               <div className="relative w-full max-w-3xl mx-auto aspect-video bg-muted rounded-lg overflow-hidden mb-8">
                 <video 
+                  ref={videoRef}
                   src="https://res.cloudinary.com/draffep0n/video/upload/v1763053870/Landing_NO_Evento_ktfe5d.mp4"
                   className="absolute inset-0 w-full h-full"
                   controls
                   controlsList="nodownload"
                   autoPlay
-                  muted
                 />
               </div>
 
