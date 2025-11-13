@@ -127,6 +127,8 @@ const Evento2 = () => {
                   className="absolute inset-0 w-full h-full"
                   controls
                   controlsList="nodownload"
+                  autoPlay
+                  muted
                 />
               </div>
 
