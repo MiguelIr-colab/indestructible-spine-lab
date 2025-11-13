@@ -171,7 +171,7 @@ const Testimonials = () => {
           >
             RESERVA TU ENTREVISTA
           </Button>
-          <p className="text-center text-sm text-foreground mt-4">
+          <p className="text-center text-sm text-secondary-foreground mt-4">
             Únete a las personas que ya transformaron su vida
           </p>
         </div>
