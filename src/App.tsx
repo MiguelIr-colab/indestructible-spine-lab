@@ -16,7 +16,8 @@ import HerniaCervicalC5C6 from "./pages/HerniaCervicalC5C6";
 import EspaldaIndestructible from "./pages/EspaldaIndestructible";
 import CheckoutPage from "./pages/checkout/CheckoutPage";
 import Programa from "./pages/Programa";
-import Eventos from "./pages/Eventos";
+import Evento from "./pages/Evento";
+import Evento2 from "./pages/Evento2";
 import Thankyou from "./pages/Thankyou";
 import NotFound from "./pages/NotFound";
 import AvisoLegal from "./pages/AvisoLegal";
@@ -46,7 +47,8 @@ const App = () => (
           <Route path="/espalda-indestructible" element={<EspaldaIndestructible />} />
           <Route path="/espalda-indestructible/:slug" element={<CheckoutPage />} />
           <Route path="/programa" element={<Programa />} />
-          <Route path="/eventos" element={<Eventos />} />
+          <Route path="/evento" element={<Evento />} />
+          <Route path="/evento2" element={<Evento2 />} />
           <Route path="/thankyou" element={<Thankyou />} />
           <Route path="/aviso-legal" element={<AvisoLegal />} />
           <Route path="/politica-cookies" element={<PoliticaCookies />} />

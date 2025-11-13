@@ -6,7 +6,8 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
 import CountdownTimer from "@/components/CountdownTimer";
 import MinimalFooter from "@/components/MinimalFooter";
-const Eventos = () => {
+
+const Evento = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     nombre: "",
@@ -21,14 +22,17 @@ const Eventos = () => {
     captcha: ""
   });
   const formLoadTime = useRef<number>(Date.now());
+
   useEffect(() => {
     // Record when the form was loaded
     formLoadTime.current = Date.now();
   }, []);
+
   const validateEmail = (email: string): boolean => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -75,6 +79,7 @@ const Eventos = () => {
       }));
       return;
     }
+
     setIsSubmitting(true);
     try {
       const response = await fetch('/api/mailrelay/subscribe', {
@@ -88,6 +93,7 @@ const Eventos = () => {
           timeSinceLoad
         })
       });
+
       if (response.ok) {
         // Redirect to thank you page on success
         navigate('/thankyou');
@@ -102,6 +108,7 @@ const Eventos = () => {
       setIsSubmitting(false);
     }
   };
+
   return <div className="min-h-screen bg-background">
       <main className="py-8 md:py-12">
         {/* VSL Section */}
@@ -115,26 +122,12 @@ const Eventos = () => {
               
               {/* Video Container - Smaller */}
               <div className="relative w-full max-w-3xl mx-auto aspect-video bg-muted rounded-lg overflow-hidden mb-8">
-                {/* Placeholder for video - replace with actual video embed */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <p className="text-muted-foreground mb-4">
-                      Inserta aquí tu video de Vimeo o YouTube
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      Ejemplo: &lt;iframe src="https://www.youtube.com/embed/VIDEO_ID"&gt;&lt;/iframe&gt;
-                    </p>
-                  </div>
-                </div>
-                {/* 
-                  Replace the above placeholder with your actual video embed:
-                  <iframe 
-                    src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
-                    className="absolute inset-0 w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                 */}
+                <video 
+                  src="https://res.cloudinary.com/draffep0n/video/upload/v1763053775/Landing_Evento_xsxre4.mp4"
+                  className="absolute inset-0 w-full h-full"
+                  controls
+                  controlsList="nodownload"
+                />
               </div>
 
               {/* Countdown Timer */}
@@ -254,4 +247,5 @@ const Eventos = () => {
       <MinimalFooter />
     </div>;
 };
-export default Eventos;
+
+export default Evento;
