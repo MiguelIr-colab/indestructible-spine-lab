@@ -20,14 +20,11 @@ const Programa = () => {
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Video - First on mobile, second on desktop */}
               <div className="relative lg:h-[700px] h-[300px] md:h-[400px] rounded-lg overflow-hidden lg:order-2 order-1">
-                <video
-                  src="TU_URL_DE_CDN_AQUI"
-                  controls
+                <img
+                  src={heroImage}
+                  alt="Equipo Espalda Indestructible"
                   className="w-full h-full object-cover"
-                  poster={heroImage}
-                >
-                  Tu navegador no soporta el elemento de video.
-                </video>
+                />
               </div>
 
               {/* Content - Second on mobile, first on desktop */}
