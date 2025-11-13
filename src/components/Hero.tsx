@@ -2,10 +2,19 @@ import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { Star, Play } from "lucide-react";
+import { useEffect, useRef } from "react";
 import heroImage from "@/assets/hero-image-new.jpg";
 import heroBackground from "@/assets/hero-background-new.png";
 
 const Hero = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.volume = 0.5;
+    }
+  }, []);
+
   const testimonials = [
     {
       name: "JAVI",
@@ -77,10 +86,11 @@ const Hero = () => {
           {/* Image - First on mobile, second on desktop */}
           <div className="relative lg:h-[500px] h-[200px] rounded-lg overflow-hidden lg:order-2 order-1 w-full">
             <video
+              ref={videoRef}
               src="https://res.cloudinary.com/draffep0n/video/upload/v1763053970/video_presentaci%C3%B3n_web_wh9yvf.mp4"
               className="w-full h-full object-cover"
+              controls
               autoPlay
-              muted
               loop
               playsInline
             />
