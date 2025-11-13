@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import VideoTestimonials from "@/components/VideoTestimonials";
-import heroImage from "@/assets/program-hero.png";
+import heroImage from "@/assets/team-group.png";
 
 const Programa = () => {
   const handleCalendlyClick = () => {
