@@ -76,10 +76,13 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 items-center">
           {/* Image - First on mobile, second on desktop */}
           <div className="relative lg:h-[500px] h-[200px] rounded-lg overflow-hidden lg:order-2 order-1 w-full">
-            <img
-              src={heroImage}
-              alt="Entrenador ayudando a persona a mejorar el dolor de espalda con ejercicios guiados"
+            <video
+              src="https://res.cloudinary.com/draffep0n/video/upload/v1763053970/video_presentaci%C3%B3n_web_wh9yvf.mp4"
               className="w-full h-full object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
             />
           </div>
 
