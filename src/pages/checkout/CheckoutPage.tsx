@@ -8,7 +8,7 @@ import CheckoutForm from "@/components/checkout/CheckoutForm";
 import OrderSummary from "@/components/checkout/OrderSummary";
 import { useToast } from "@/hooks/use-toast";
 
-const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY || "");
+const stripePromise = loadStripe("pk_test_51O2WhSI4kLudxxlwiw9TQInunS6IYQLneiTqIktTcUBANr2GaPxvfD2fnWiUgrwG4DX5A6gtoB583Pgy6bitjdBv008lRPMUeB");
 
 const products = {
   "12-semanas": {
