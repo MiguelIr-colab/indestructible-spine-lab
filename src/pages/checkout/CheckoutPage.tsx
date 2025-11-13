@@ -50,7 +50,7 @@ const CheckoutPage = () => {
     // Create payment intent
     const createPaymentIntent = async () => {
       try {
-        const response = await fetch("https://www.aquiiraelbackend.com/create-payment-intent", {
+        const response = await fetch("/.netlify/functions/create-payment-intent", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
