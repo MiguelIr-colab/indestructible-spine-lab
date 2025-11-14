@@ -6,4 +6,3 @@
   from = "/api/mailrelay/subscribe"
   to = "/.netlify/functions/subscribe"
   status = 200
-
