@@ -39,8 +39,9 @@ exports.handler = async (event) => {
     return { statusCode: 400, body: JSON.stringify({ message: "Dominio de email inválido" }) };
   }
 
-  let groupId = MAILRELAY_GROUP_EVENTO_ID;
-  if (sourcePage === "evento2") groupId = MAILRELAY_GROUP_EVENTO2_ID;
+  let groupId = Number(MAILRELAY_GROUP_EVENTO_ID);
+  if (sourcePage === "evento2") groupId = Number(MAILRELAY_GROUP_EVENTO2_ID);
+
 
   console.log("📦 Enviando a Mailrelay:", JSON.stringify({
   email,
