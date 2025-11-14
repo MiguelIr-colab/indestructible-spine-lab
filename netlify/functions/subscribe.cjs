@@ -42,6 +42,13 @@ exports.handler = async (event) => {
   let groupId = MAILRELAY_GROUP_EVENTO_ID;
   if (sourcePage === "evento2") groupId = MAILRELAY_GROUP_EVENTO2_ID;
 
+  console.log("📦 Enviando a Mailrelay:", JSON.stringify({
+  email,
+  name: nombre,
+  groups: [groupId],
+}));
+
+
   try {
     const mailrelayRes = await fetch(`${MAILRELAY_BASE_URL}/subscribers`, {
       method: "POST",
