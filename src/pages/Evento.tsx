@@ -143,71 +143,50 @@ const Evento = () => {
               </div>
 
               {/* Form Section */}
-              <div className="bg-card border border-border rounded-lg p-8 md:p-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
-                  ACCEDE PARA FORTALECER TU COLUMNA
-                </h2>
+<div className="bg-card border border-border rounded-lg p-8 md:p-12">
+  <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+    ACCEDE PARA FORTALECER TU COLUMNA
+  </h2>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  {/* Honeypot field - hidden from users */}
-                  <div className="absolute left-[-5000px]" aria-hidden="true">
-                    <Input id="website" type="text" value={formData.website} onChange={e => setFormData({
-                    ...formData,
-                    website: e.target.value
-                  })} placeholder="Your website" tabIndex={-1} autoComplete="off" />
-                  </div>
+  {/* Formulario Mailrelay embebido */}
+  <div className="space-y-6">
+    <div className="ipz-container max-w-lg mx-auto">
+      <iframe
+        data-skip-lazy=""
+        src="https://entrenaconrobertogalvan.ipzmarketing.com/f/YhjKrjm3hkY"
+        frameBorder="0"
+        scrolling="no"
+        width="100%"
+        className="ipz-iframe rounded-xl shadow-lg"
+        style={{
+          background: "transparent",
+          minHeight: "420px",
+          border: "none",
+        }}
+      ></iframe>
+    </div>
 
-                  <div>
-                    <label htmlFor="nombre" className="block text-sm font-medium text-primary mb-2">
-                      Nombre
-                    </label>
-                    <Input id="nombre" type="text" value={formData.nombre} onChange={e => setFormData({
-                    ...formData,
-                    nombre: e.target.value
-                  })} placeholder="Tu nombre completo" className="bg-background border-input" required />
-                  </div>
+    <p className="text-center text-sm text-muted-foreground mt-4">
+      Al enviar tus datos aceptas nuestra{" "}
+      <a
+        href="/politica-privacidad"
+        className="text-primary hover:underline"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        política de privacidad
+      </a>.
+    </p>
+  </div>
 
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-primary mb-2">
-                      Email
-                    </label>
-                    <Input id="email" type="email" value={formData.email} onChange={e => setFormData({
-                    ...formData,
-                    email: e.target.value
-                  })} placeholder="tu@email.com" className="bg-background border-input" aria-invalid={!!errors.email} aria-describedby={errors.email ? "email-error" : undefined} required />
-                    {errors.email && <p id="email-error" className="text-destructive text-sm mt-1" role="alert" aria-live="polite">
-                        {errors.email}
-                      </p>}
-                  </div>
+  {/* Script de Mailrelay */}
+  <script
+    data-cfasync="false"
+    type="text/javascript"
+    src="https://assets.ipzmarketing.com/assets/signup_form/iframe_v1.js"
+  ></script>
+</div>
 
-                  <div>
-                    <div className="flex items-start gap-3">
-                      <Checkbox id="privacidad" checked={formData.privacidad} onCheckedChange={checked => setFormData({
-                      ...formData,
-                      privacidad: checked as boolean
-                    })} className="mt-1" aria-invalid={!!errors.privacidad} aria-describedby={errors.privacidad ? "privacidad-error" : undefined} />
-                      <label htmlFor="privacidad" className="text-sm text-foreground">
-                        Acepto la{" "}
-                        <a href="/politica-privacidad" className="text-primary hover:underline">
-                          política de privacidad
-                        </a>
-                        {" "}y el tratamiento de datos para recibir información sobre el programa
-                      </label>
-                    </div>
-                    {errors.privacidad && <p id="privacidad-error" className="text-destructive text-sm mt-1" role="alert" aria-live="polite">
-                        {errors.privacidad}
-                      </p>}
-                  </div>
-
-                  {errors.captcha && <p className="text-destructive text-sm" role="alert" aria-live="polite">
-                      {errors.captcha}
-                    </p>}
-
-                  <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg py-6" disabled={!formData.privacidad || isSubmitting}>
-                    {isSubmitting ? "ENVIANDO..." : "ENVIAR"}
-                  </Button>
-                </form>
-              </div>
 
               {/* Next Steps Section */}
               <div className="mt-16 bg-card border border-border rounded-lg p-8 md:p-12">
