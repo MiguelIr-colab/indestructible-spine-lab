@@ -1,30 +1,118 @@
-import { useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
+import { toast } from "sonner";
 import CountdownTimer from "@/components/CountdownTimer";
 import MinimalFooter from "@/components/MinimalFooter";
 
 const Evento = () => {
+  const navigate = useNavigate();
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [formData, setFormData] = useState({
+    nombre: "",
+    email: "",
+    privacidad: false,
+    website: "" // Honeypot field
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState({
+    privacidad: "",
+    email: "",
+    captcha: ""
+  });
+  const formLoadTime = useRef<number>(Date.now());
 
   useEffect(() => {
+    // Record when the form was loaded
+    formLoadTime.current = Date.now();
     // Set video volume
     if (videoRef.current) {
       videoRef.current.volume = 0.5;
     }
-    
-    // Load IPZ Marketing script
-    const script = document.createElement('script');
-    script.src = 'https://assets.ipzmarketing.com/assets/signup_form/iframe_v1.js';
-    script.async = true;
-    script.setAttribute('data-cfasync', 'false');
-    document.body.appendChild(script);
-    
-    return () => {
-      // Cleanup script on unmount
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
-      }
-    };
   }, []);
+
+  const validateEmail = (email: string): boolean => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Reset errors
+    setErrors({
+      privacidad: "",
+      email: "",
+      captcha: ""
+    });
+
+    // Check honeypot (should be empty)
+    if (formData.website) {
+      setErrors(prev => ({
+        ...prev,
+        captcha: "No verificado como humano"
+      }));
+      return;
+    }
+
+    // Check timing (must be at least 3 seconds since page load)
+    const timeSinceLoad = (Date.now() - formLoadTime.current) / 1000;
+    if (timeSinceLoad < 3) {
+      setErrors(prev => ({
+        ...prev,
+        captcha: "No verificado como humano"
+      }));
+      return;
+    }
+
+    // Validate privacy acceptance
+    if (!formData.privacidad) {
+      setErrors(prev => ({
+        ...prev,
+        privacidad: "Debes aceptar la política de privacidad"
+      }));
+      return;
+    }
+
+    // Validate email
+    if (!validateEmail(formData.email)) {
+      setErrors(prev => ({
+        ...prev,
+        email: "Email inválido"
+      }));
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {
+      const response = await fetch('/api/mailrelay/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          nombre: formData.nombre,
+          email: formData.email,
+          timeSinceLoad
+        })
+      });
+
+      if (response.ok) {
+        // Redirect to thank you page on success
+        navigate('/thankyou');
+      } else {
+        const data = await response.json();
+        toast.error(data.message || "Error al enviar el formulario");
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast.error("Error al conectar con el servidor");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return <div className="min-h-screen bg-background">
       <main className="py-8 md:py-12">
@@ -60,34 +148,65 @@ const Evento = () => {
                   ACCEDE PARA FORTALECER TU COLUMNA
                 </h2>
 
-                {/* External Form Integration */}
-                <div className="space-y-6">
-                  {/* IPZ Marketing Form */}
-                  <iframe 
-                    data-skip-lazy="" 
-                    src="https://entrenaconrobertogalvan.ipzmarketing.com/f/YhjKrjm3hkY" 
-                    frameBorder="0" 
-                    scrolling="no" 
-                    width="100%" 
-                    className="ipz-iframe min-h-[500px]"
-                    title="Formulario de registro"
-                  ></iframe>
-                  
-                  {/* Privacy Policy Notice */}
-                  <div className="text-center text-sm text-muted-foreground mt-4">
-                    <p>
-                      Al registrarte, aceptas nuestra{" "}
-                      <a 
-                        href="/politica-privacidad" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-primary hover:underline"
-                      >
-                        Política de Privacidad
-                      </a>
-                    </p>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Honeypot field - hidden from users */}
+                  <div className="absolute left-[-5000px]" aria-hidden="true">
+                    <Input id="website" type="text" value={formData.website} onChange={e => setFormData({
+                    ...formData,
+                    website: e.target.value
+                  })} placeholder="Your website" tabIndex={-1} autoComplete="off" />
                   </div>
-                </div>
+
+                  <div>
+                    <label htmlFor="nombre" className="block text-sm font-medium text-primary mb-2">
+                      Nombre
+                    </label>
+                    <Input id="nombre" type="text" value={formData.nombre} onChange={e => setFormData({
+                    ...formData,
+                    nombre: e.target.value
+                  })} placeholder="Tu nombre completo" className="bg-background border-input" required />
+                  </div>
+
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-primary mb-2">
+                      Email
+                    </label>
+                    <Input id="email" type="email" value={formData.email} onChange={e => setFormData({
+                    ...formData,
+                    email: e.target.value
+                  })} placeholder="tu@email.com" className="bg-background border-input" aria-invalid={!!errors.email} aria-describedby={errors.email ? "email-error" : undefined} required />
+                    {errors.email && <p id="email-error" className="text-destructive text-sm mt-1" role="alert" aria-live="polite">
+                        {errors.email}
+                      </p>}
+                  </div>
+
+                  <div>
+                    <div className="flex items-start gap-3">
+                      <Checkbox id="privacidad" checked={formData.privacidad} onCheckedChange={checked => setFormData({
+                      ...formData,
+                      privacidad: checked as boolean
+                    })} className="mt-1" aria-invalid={!!errors.privacidad} aria-describedby={errors.privacidad ? "privacidad-error" : undefined} />
+                      <label htmlFor="privacidad" className="text-sm text-foreground">
+                        Acepto la{" "}
+                        <a href="/politica-privacidad" className="text-primary hover:underline">
+                          política de privacidad
+                        </a>
+                        {" "}y el tratamiento de datos para recibir información sobre el programa
+                      </label>
+                    </div>
+                    {errors.privacidad && <p id="privacidad-error" className="text-destructive text-sm mt-1" role="alert" aria-live="polite">
+                        {errors.privacidad}
+                      </p>}
+                  </div>
+
+                  {errors.captcha && <p className="text-destructive text-sm" role="alert" aria-live="polite">
+                      {errors.captcha}
+                    </p>}
+
+                  <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg py-6" disabled={!formData.privacidad || isSubmitting}>
+                    {isSubmitting ? "ENVIANDO..." : "ENVIAR"}
+                  </Button>
+                </form>
               </div>
 
               {/* Next Steps Section */}
