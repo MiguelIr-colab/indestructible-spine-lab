@@ -42,18 +42,18 @@ const CheckoutPage = () => {
   const [paymentIntentId, setPaymentIntentId] = useState("");
   const [loading, setLoading] = useState(true);
 
-  const [coupon, setCoupon] = useState(""); // ⬅️ Nuevo estado del cupón
-  const [finalAmount, setFinalAmount] = useState<number | null>(null);
+  const [coupon, setCoupon] = useState(""); // CUPÓN
+  const [finalAmount, setFinalAmount] = useState<number | null>(null); // PRECIO FINAL
 
   const product = slug ? products[slug as keyof typeof products] : null;
 
+  // Mantiene tu vista EXACTA — solo añade la lógica del cupón
   useEffect(() => {
     if (!product) {
       navigate("/espalda-indestructible");
       return;
     }
 
-    // Crear pago con cupón si existe
     const createPaymentIntent = async () => {
       try {
         const response = await fetch(
@@ -65,7 +65,7 @@ const CheckoutPage = () => {
               amount: product.price * 100,
               currency: "eur",
               productName: `${product.name} - ${product.duration}`,
-              coupon: coupon, // ⬅️ ENVIAMOS CUPÓN AL BACKEND
+              coupon: coupon, // ← enviamos cupón
             }),
           }
         );
@@ -74,15 +74,13 @@ const CheckoutPage = () => {
 
         setClientSecret(data.clientSecret);
         setPaymentIntentId(data.paymentIntentId);
-        setFinalAmount(data.finalAmount / 100); // guardamos en euros
+        setFinalAmount(data.finalAmount / 100); // devolver en euros
         setLoading(false);
 
       } catch (error) {
-        console.error("Error creating payment intent:", error);
         toast({
           title: "Error",
-          description:
-            "No se pudo iniciar el proceso de pago. Por favor, inténtalo de nuevo.",
+          description: "No se pudo iniciar el proceso de pago.",
           variant: "destructive",
         });
         setLoading(false);
@@ -108,7 +106,7 @@ const CheckoutPage = () => {
             Finalizar Compra
           </h1>
 
-          {/* INPUT CUPÓN */}
+          {/* Mantengo tu UI — solo el input del cupón usa setCoupon */}
           <div className="max-w-md mx-auto mb-10">
             <label className="block font-semibold mb-1">Código de descuento</label>
             <input
@@ -120,7 +118,7 @@ const CheckoutPage = () => {
             />
             {coupon.toLowerCase() === "50k50" && (
               <p className="text-green-600 mt-2 font-medium">
-                Cupón válido aplicado: -50€
+                Cupón aplicado: -50€
               </p>
             )}
           </div>
@@ -131,19 +129,19 @@ const CheckoutPage = () => {
             </div>
           ) : (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
-              
-              {/* FORMULARIO DE STRIPE */}
+
+              {/* Stripe Form */}
               {clientSecret && (
                 <Elements options={options} stripe={stripePromise}>
                   <CheckoutForm />
                 </Elements>
               )}
 
-              {/* RESUMEN DEL PEDIDO */}
+              {/* Order Summary con precio FINAL */}
               <OrderSummary
                 product={product}
                 paymentIntentId={paymentIntentId}
-                finalAmount={finalAmount ?? product.price} // ⬅️ Pasamos el total real
+                finalAmount={finalAmount ?? product.price}
               />
             </div>
           )}
@@ -156,4 +154,5 @@ const CheckoutPage = () => {
 };
 
 export default CheckoutPage;
+
 
