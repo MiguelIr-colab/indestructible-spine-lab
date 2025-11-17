@@ -8,7 +8,7 @@ import CheckoutForm from "@/components/checkout/CheckoutForm";
 import OrderSummary from "@/components/checkout/OrderSummary";
 import { useToast } from "@/hooks/use-toast";
 
-const stripePromise = loadStripe("pk_test_51O2WhSI4kLudxxlwiw9TQInunS6IYQLneiTqIktTcUBANr2GaPxvfD2fnWiUgrwG4DX5A6gtoB583Pgy6bitjdBv008lRPMUeB");
+const stripePromise = loadStripe("pk_live_51QiLdnLv0O1dNyb5yj8OC8mIlsw2JNRupZxGEsRsz7opO5P28NpNZIb4gIuTYpFjt9FhZ9rk5t7NN4bao8YWjt0c00izSQSz4q");
 
 const products = {
   "12-semanas": {
