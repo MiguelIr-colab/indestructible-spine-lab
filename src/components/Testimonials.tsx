@@ -134,6 +134,16 @@ const Testimonials = () => {
       result: "Tras 12 semanas con el programa espalda indestructible ya no tiene dolor crónico de espalda, ha evitado una tercera operación y puede levantar 30 kg sin miedo a agacharse.",
       rating: 5,
     },
+    {
+      name: "DAVID",
+      age: 0,
+      condition: "HERNIA L4-L5,\nPROTRUSIÓN L3-L4\nY ESTENOSIS LUMBAR",
+      videoId: "c9Rc5x_mJoY",
+      playlistIndex: 34,
+      quote: "Pasé de necesitar estar tumbado por el dolor a moverme, sentarme y caminar con confianza, sin miedo a que vuelva la ciática.",
+      result: "Con el programa online individualizado pasó de dolor lumbar, ciática y adormecimiento del pie derecho a sentarse más de 4 horas, caminar varias horas y hacer su vida diaria sin dolor.",
+      rating: 5,
+    },
   ];
 
   return (
