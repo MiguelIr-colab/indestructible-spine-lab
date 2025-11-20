@@ -211,7 +211,7 @@ const Hero = () => {
                     onClick={() => window.location.href = '/testimonios'}
                     className="text-[10px] sm:text-xs h-7 sm:h-8 px-3 break-words whitespace-normal"
                   >
-                    Ver todos los testimonios
+                    Ver más testimonios
                   </Button>
                 </div>
               </div>
