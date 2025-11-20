@@ -7,7 +7,7 @@ const Testimonials = () => {
     {
       name: "ALFONSO",
       age: 0,
-      condition: "3 PROTRUSIONES (L3–S1)",
+      condition: "2 PROTUSIONES Y TRES ABOMBAMIENTOS",
       videoId: "uKoibeP8OQ8",
       playlistIndex: 1,
       quote: "Vivía con dolor cada día. En pocas semanas volví a correr y moverme sin miedo.",
