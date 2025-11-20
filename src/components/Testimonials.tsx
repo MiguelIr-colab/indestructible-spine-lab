@@ -8,7 +8,8 @@ const Testimonials = () => {
       name: "ALFONSO",
       age: 0,
       condition: "3 PROTRUSIONES (L3–S1)",
-      videoId: "1w7SqYsQKNM",
+      videoId: "uKoibeP8OQ8",
+      playlistIndex: 1,
       quote: "Vivía con dolor cada día. En pocas semanas volví a correr y moverme sin miedo.",
       result: "Eliminó el dolor tras 10 años y volvió a correr, trabajar y disfrutar sin limitaciones.",
       rating: 5,
@@ -18,6 +19,7 @@ const Testimonials = () => {
       age: 0,
       condition: "DISCOPATÍA LUMBAR CRÓNICA",
       videoId: "2aMuVJmP9zE",
+      playlistIndex: 2,
       quote: "Tras años de tratamientos fallidos, descubrí que la fuerza era mi medicina.",
       result: "Eliminó el dolor lumbar y volvió a entrenar y trabajar sin miedo.",
       rating: 5,
@@ -27,6 +29,7 @@ const Testimonials = () => {
       age: 0,
       condition: "ESCOLIOSIS Y DOLOR LUMBAR",
       videoId: "SlpiNZsuhuc",
+      playlistIndex: 3,
       quote: "Vivía limitada por el dolor. Ahora entreno, trabajo y disfruto de mi cuerpo.",
       result: "Gana estabilidad, confianza y una espalda fuerte sin recurrir a terapias pasivas.",
       rating: 5,
@@ -36,6 +39,7 @@ const Testimonials = () => {
       age: 0,
       condition: "PROTUSIÓN L5-S1",
       videoId: "dseWDQv9hfg",
+      playlistIndex: 4,
       quote: "Pasé de vivir con miedo al movimiento a disfrutar entrenando sin dolor.",
       result: "Reforzó su espalda, eliminó el dolor y recuperó su vida activa.",
       rating: 5,
@@ -45,6 +49,7 @@ const Testimonials = () => {
       age: 0,
       condition: "HERNIA CERVICAL Y DOLOR DE BRAZO",
       videoId: "6J9yA03JGm0",
+      playlistIndex: 5,
       quote: "Pensé que me operaría. Hoy no tengo dolor y vuelvo a dormir tranquila.",
       result: "Recuperó movilidad cervical y eliminó el dolor en pocas semanas.",
       rating: 5,
@@ -54,6 +59,7 @@ const Testimonials = () => {
       age: 0,
       condition: "HERNIA L4-L5 Y FECHA DE CIRUGÍA",
       videoId: "L3JWrRBqujE",
+      playlistIndex: 6,
       quote: "Tenía cirugía programada. El entrenamiento me devolvió la vida.",
       result: "Canceló su operación y volvió a moverse sin dolor ni limitaciones.",
       rating: 5,
@@ -63,6 +69,7 @@ const Testimonials = () => {
       age: 0,
       condition: "HERNIA L5-S1 Y PROTUSIÓN L4-L5",
       videoId: "za0gs_X2pu0",
+      playlistIndex: 7,
       quote: "Vivía con dolor constante. Hoy camino, trabajo y duermo sin molestias.",
       result: "Recuperó movilidad y fuerza, sin necesidad de medicación.",
       rating: 5,
@@ -72,6 +79,7 @@ const Testimonials = () => {
       age: 0,
       condition: "DOS PROTRUSIONES LUMBARES",
       videoId: "W6JcuIj-Rxk",
+      playlistIndex: 8,
       quote: "No podía ni sentarme. Ahora trabajo, duermo bien y entreno sin miedo.",
       result: "Eliminó el dolor y recuperó fuerza y confianza en pocas semanas.",
       rating: 5,
@@ -81,6 +89,7 @@ const Testimonials = () => {
       age: 0,
       condition: "HERNIA L4-L5 CON EXTRUSIÓN",
       videoId: "2LYTh7PEMWA",
+      playlistIndex: 9,
       quote: "Llevaba años con dolor. Entrenar fue lo único que me devolvió la libertad.",
       result: "Redujo el dolor a cero y volvió a jugar al pádel y disfrutar de su vida activa.",
       rating: 5,
@@ -115,7 +124,7 @@ const Testimonials = () => {
                 <div className="relative aspect-video bg-muted group cursor-pointer">
                   <iframe
                     className="w-full h-full"
-                    src={`https://www.youtube.com/embed/${testimonial.videoId}`}
+                    src={`https://www.youtube.com/embed/${testimonial.videoId}?list=PLgcEARhbMJ2boEJF9CIwMot1CCAwT5C2S&index=${testimonial.playlistIndex}`}
                     title={`Testimonio de ${testimonial.name}`}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
