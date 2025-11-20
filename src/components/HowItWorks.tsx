@@ -22,12 +22,12 @@ const HowItWorks = () => {
   return (
     <section className="py-12 lg:py-20 bg-[hsl(var(--light-gray))]">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-10 lg:mb-16">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 lg:mb-4 text-secondary-foreground">
+        <div className="text-center mb-10 lg:mb-16 bg-black p-6 md:p-8 lg:p-10 rounded-lg max-w-4xl mx-auto">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 lg:mb-4 text-white">
             ¿Cómo funciona{" "}
             <span className="text-primary">Espalda Indestructible</span>?
           </h2>
-          <p className="text-base md:text-lg lg:text-xl text-secondary-foreground/70 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg lg:text-xl text-white/90 max-w-3xl mx-auto">
             Un método estructurado en 3 pasos para tu recuperación
           </p>
         </div>
