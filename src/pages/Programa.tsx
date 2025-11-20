@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import VideoTestimonials from "@/components/VideoTestimonials";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import heroImage from "@/assets/team-group.png";
+import heroImage from "@/assets/team-hero-new.png";
 
 const Programa = () => {
   const handleCalendlyClick = () => {
