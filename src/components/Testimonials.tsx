@@ -97,7 +97,7 @@ const Testimonials = () => {
     {
       name: "FÁTIMA",
       age: 0,
-      condition: "ESCOLIOSIS, 2 HERNIAS Y DESPLAZAMIENTO DE DISCO",
+      condition: "ESCOLIOSIS,\n2 HERNIAS Y\nDESPLAZAMIENTO DE DISCO",
       videoId: "_A9eHRvBigs",
       playlistIndex: 23,
       quote: "Pasé de no poder andar sin agarrarme, con escoliosis y dos hernias discales, a vivir mi día a día sin dolor.",
@@ -152,7 +152,7 @@ const Testimonials = () => {
                   <div>
                       <h3 className="text-xl font-bold text-primary">{testimonial.name}</h3>
                     </div>
-                    <span className="bg-primary text-primary-foreground px-2 py-1 rounded-md text-xs font-bold uppercase text-center leading-tight max-w-[140px]">
+                    <span className="bg-primary text-primary-foreground px-2 py-1 rounded-md text-xs font-bold uppercase text-center leading-tight max-w-[140px] whitespace-pre-line">
                       {testimonial.condition}
                     </span>
                   </div>
