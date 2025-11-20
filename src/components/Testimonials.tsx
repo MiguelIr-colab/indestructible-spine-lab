@@ -104,6 +104,16 @@ const Testimonials = () => {
       result: "Vivía con dolor diario y necesitaba calmantes. Tras trabajar fuerza con Espalda Indestructible ahora camina sola, con postura normal y sin dolor en su día a día.",
       rating: 5,
     },
+    {
+      name: "CRISTINA",
+      age: 0,
+      condition: "HERNIA DISCAL\nCENTRAL L5-S1\nCON COMPRESIÓN\nMEDULAR",
+      videoId: "QyZTTrvjm1w",
+      playlistIndex: 31,
+      quote: "Pensaba que solo la operación me salvaría y hoy, con una hernia discal L5-S1 central, hago entrenamiento de fuerza y vuelvo a trotar suave.",
+      result: "En 12 semanas desaparecieron los calambres en las piernas y los pinchazos en la espalda y el dolor lumbar. Ha vuelto a caminar y ya puede trotar suave y entrenar con barra de 20 kg.",
+      rating: 5,
+    },
   ];
 
   return (
