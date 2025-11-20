@@ -144,6 +144,16 @@ const Testimonials = () => {
       result: "Con el programa online individualizado pasó de dolor lumbar, ciática y adormecimiento del pie derecho a sentarse más de 4 horas, caminar varias horas y hacer su vida diaria sin dolor.",
       rating: 5,
     },
+    {
+      name: "DORLE",
+      age: 0,
+      condition: "DISCOPATÍA\nDEGENERATIVA L4-L5\nY L5-S1 CON PROTUSIÓN",
+      videoId: "iD0MZPkw3c4",
+      playlistIndex: 35,
+      quote: "Después de 28 años con dolor diario, hoy camino y trabajo horas seguidas sin miedo a que vuelva el dolor de espalda.",
+      result: "Tras 28 años con dolor lumbar y cervical por discopatía degenerativa, ahora puede caminar y estar sentada horas, trabajar y hacer vida diaria casi sin dolor de espalda.",
+      rating: 5,
+    },
   ];
 
   return (
