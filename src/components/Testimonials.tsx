@@ -114,6 +114,16 @@ const Testimonials = () => {
       result: "En 12 semanas desaparecieron los calambres en las piernas y los pinchazos en la espalda y el dolor lumbar. Ha vuelto a caminar y ya puede trotar suave y entrenar con barra de 20 kg.",
       rating: 5,
     },
+    {
+      name: "MARIANO",
+      age: 0,
+      condition: "HERNIA DISCAL\nL5-S1 IZQUIERDA\nY RECTIFICACIÓN\nLUMBAR",
+      videoId: "eaSPIXLfCLA",
+      playlistIndex: 32,
+      quote: "Pasé de vivir tumbado por una hernia discal L5-S1 izquierda y rectificación lumbar a volver a la bici y moto, al teletrabajo y al ejercicio con el programa Espalda Indestructible.",
+      result: "Ha pasado de estar el 90% del día tumbado, con dolor lumbar y de pierna, a montar en bici 13 km sin dolor, ir en moto, hacer la compra y trabajar horas sentado.",
+      rating: 5,
+    },
   ];
 
   return (
