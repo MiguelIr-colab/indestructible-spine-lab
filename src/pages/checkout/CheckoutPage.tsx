@@ -141,6 +141,7 @@ const CheckoutPage = () => {
               <OrderSummary
                 product={product}
                 paymentIntentId={paymentIntentId}
+                finalAmount={finalAmount ?? product.price}
               />
             </div>
           )}
