@@ -147,7 +147,7 @@ const Testimonials = () => {
     {
       name: "DORLE",
       age: 0,
-      condition: "DISCOPATÍA\nDEGENERATIVA L4-L5\nY L5-S1 CON PROTUSIÓN",
+      condition: "DISCOPATÍA DEGENERATIVA\nL4-L5 Y L5-S1\nCON PROTUSIÓN",
       videoId: "iD0MZPkw3c4",
       playlistIndex: 35,
       quote: "Después de 28 años con dolor diario, hoy camino y trabajo horas seguidas sin miedo a que vuelva el dolor de espalda.",
