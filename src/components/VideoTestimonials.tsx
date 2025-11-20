@@ -5,52 +5,64 @@ import { Star, Play } from "lucide-react";
 const VideoTestimonials = () => {
   const testimonials = [
     {
-      name: "JAVI",
-      age: 44,
-      condition: "PROTRUSIÓN",
-      videoId: "dQw4w9WgXcQ",
-      quote: "No podía trabajar, ni estar sentado, ahora me agacho sin miedo al dolor",
-      result: "Con 1 protrusión al agacharse se quedaba clavado y no le permitía trabajar sin dolor. Pasados 2 meses Javi está agachándose a levantar más de 50 kg como si nada.",
+      name: "ALFONSO",
+      age: 0,
+      condition: "3 PROTRUSIONES (L3–S1)",
+      videoId: "uKoibeP8OQ8",
+      playlistIndex: 1,
+      quote: "Vivía con dolor cada día. En pocas semanas volví a correr y moverme sin miedo.",
+      result: "Eliminó el dolor tras 10 años y volvió a correr, trabajar y disfrutar sin limitaciones.",
+      rating: 5,
     },
     {
-      name: "DAVID",
-      age: 44,
-      condition: "2 HERNIAS",
-      videoId: "dQw4w9WgXcQ",
-      quote: "Me quedaba clavado y no podía trabajar sin dolor",
-      result: "Con 2 hernias discales David no podía estar de pie más de 10 minutos. Ahora trabaja jornadas completas sin molestias y ha recuperado su vida activa.",
+      name: "ELI",
+      age: 0,
+      condition: "ESCOLIOSIS Y DOLOR LUMBAR",
+      videoId: "SlpiNZsuhuc",
+      playlistIndex: 3,
+      quote: "Vivía limitada por el dolor. Ahora entreno, trabajo y disfruto de mi cuerpo.",
+      result: "Ganó estabilidad, confianza y una espalda fuerte sin recurrir a terapias pasivas.",
+      rating: 5,
     },
     {
-      name: "LAURA",
-      age: 52,
-      condition: "LUMBALGIA CRÓNICA",
-      videoId: "dQw4w9WgXcQ",
-      quote: "Después de 10 años con dolor, ahora puedo jugar con mis nietos",
-      result: "Laura sufría de dolor lumbar crónico que le impedía agacharse. Tras 3 meses de programa, puede realizar todas sus actividades diarias sin limitaciones.",
+      name: "GEMMA",
+      age: 0,
+      condition: "HERNIA CERVICAL Y DOLOR DE BRAZO",
+      videoId: "6J9yA03JGm0",
+      playlistIndex: 5,
+      quote: "Pensé que me operaría. Hoy no tengo dolor y vuelvo a dormir tranquila.",
+      result: "Recuperó movilidad cervical y eliminó el dolor en pocas semanas.",
+      rating: 5,
     },
     {
-      name: "PILAR",
-      age: 71,
-      condition: "2 HERNIAS",
-      videoId: "dQw4w9WgXcQ",
-      quote: "Con 2 Hernias de disco y sin poder mover a penas una pierna, ni con fisioterapia ni medicación mejoraba",
-      result: "Con 2 Hernias de disco y sin poder mover a penas una pierna, ni con fisioterapia ni medicación mejoraba, hasta que comenzó a trabajar la fuerza y movilidad que necesitaba.",
+      name: "MATÍAS",
+      age: 0,
+      condition: "HERNIA L4-L5 Y FECHA DE CIRUGÍA",
+      videoId: "L3JWrRBqujE",
+      playlistIndex: 6,
+      quote: "Tenía cirugía programada. El entrenamiento me devolvió la vida.",
+      result: "Canceló su operación y volvió a moverse sin dolor ni limitaciones.",
+      rating: 5,
     },
     {
-      name: "CRISTINA",
-      age: 43,
-      condition: "1 HERNIA",
-      videoId: "dQw4w9WgXcQ",
-      quote: "Menos mal que el médico me dijo de entrenar, mejor que operarme",
-      result: "Con una hernia e importante compresión medular, con calambres en las dos piernas, Cristina tuvo que dejar de trabajar, y actualmente está corriendo y moviendo peso sin esos calambres.",
+      name: "RAMÓN",
+      age: 0,
+      condition: "HERNIA L5-S1 Y PROTUSIÓN L4-L5",
+      videoId: "za0gs_X2pu0",
+      playlistIndex: 7,
+      quote: "Vivía con dolor constante. Hoy camino, trabajo y duermo sin molestias.",
+      result: "Recuperó movilidad y fuerza, sin necesidad de medicación.",
+      rating: 5,
     },
     {
-      name: "MARCOS",
-      age: 38,
-      condition: "HERNIA DISCAL",
-      videoId: "dQw4w9WgXcQ",
-      quote: "Evité la cirugía y recuperé mi movilidad al 100%",
-      result: "Los médicos le recomendaron cirugía por una hernia L5-S1. Con el programa evitó la operación y ahora entrena sin dolor.",
+      name: "SILVIA",
+      age: 0,
+      condition: "HERNIA L4-L5 CON EXTRUSIÓN",
+      videoId: "2LYTh7PEMWA",
+      playlistIndex: 9,
+      quote: "Llevaba años con dolor. Entrenar fue lo único que me devolvió la libertad.",
+      result: "Redujo el dolor a cero y volvió a jugar al pádel y disfrutar de su vida activa.",
+      rating: 5,
     },
   ];
 
@@ -87,7 +99,7 @@ const VideoTestimonials = () => {
                   <div className="relative aspect-video bg-muted group cursor-pointer">
                     <iframe
                       className="w-full h-full"
-                      src={`https://www.youtube.com/embed/${testimonial.videoId}`}
+                      src={`https://www.youtube.com/embed/${testimonial.videoId}?list=PLgcEARhbMJ2boEJF9CIwMot1CCAwT5C2S&index=${testimonial.playlistIndex}`}
                       title={`Testimonio de ${testimonial.name}`}
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
@@ -104,7 +116,6 @@ const VideoTestimonials = () => {
                     <div className="flex items-start justify-between gap-2">
                       <div>
                         <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-primary">{testimonial.name}</h3>
-                        <p className="text-xs lg:text-sm text-muted-foreground">{testimonial.age} años</p>
                       </div>
                       <span className="bg-primary text-primary-foreground px-2 py-0.5 lg:px-3 lg:py-1 rounded-md text-[10px] lg:text-xs font-bold uppercase whitespace-nowrap">
                         {testimonial.condition}
