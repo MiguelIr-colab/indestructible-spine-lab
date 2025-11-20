@@ -7,7 +7,7 @@ const Testimonials = () => {
     {
       name: "ALFONSO",
       age: 0,
-      condition: "3 PROTRUSIONES (L3–S1)",
+      condition: ["3 PROTRUSIONES (L3–S1)"],
       videoId: "uKoibeP8OQ8",
       playlistIndex: 1,
       quote: "Vivía con dolor cada día. En pocas semanas volví a correr y moverme sin miedo.",
@@ -17,7 +17,7 @@ const Testimonials = () => {
     {
       name: "EDUARDO",
       age: 0,
-      condition: "DISCOPATÍA LUMBAR CRÓNICA",
+      condition: ["DISCOPATÍA LUMBAR CRÓNICA"],
       videoId: "2aMuVJmP9zE",
       playlistIndex: 2,
       quote: "Tras años de tratamientos fallidos, descubrí que la fuerza era mi medicina.",
@@ -27,7 +27,7 @@ const Testimonials = () => {
     {
       name: "ELI",
       age: 0,
-      condition: "ESCOLIOSIS Y DOLOR LUMBAR",
+      condition: ["ESCOLIOSIS Y DOLOR LUMBAR"],
       videoId: "SlpiNZsuhuc",
       playlistIndex: 3,
       quote: "Vivía limitada por el dolor. Ahora entreno, trabajo y disfruto de mi cuerpo.",
@@ -37,7 +37,7 @@ const Testimonials = () => {
     {
       name: "SERGIO",
       age: 0,
-      condition: "PROTUSIÓN L5-S1",
+      condition: ["PROTUSIÓN L5-S1"],
       videoId: "dseWDQv9hfg",
       playlistIndex: 4,
       quote: "Pasé de vivir con miedo al movimiento a disfrutar entrenando sin dolor.",
@@ -47,7 +47,7 @@ const Testimonials = () => {
     {
       name: "GEMMA",
       age: 0,
-      condition: "HERNIA CERVICAL Y DOLOR DE BRAZO",
+      condition: ["HERNIA CERVICAL Y DOLOR DE BRAZO"],
       videoId: "6J9yA03JGm0",
       playlistIndex: 5,
       quote: "Pensé que me operaría. Hoy no tengo dolor y vuelvo a dormir tranquila.",
@@ -57,7 +57,7 @@ const Testimonials = () => {
     {
       name: "MATÍAS",
       age: 0,
-      condition: "HERNIA L4-L5 Y FECHA DE CIRUGÍA",
+      condition: ["HERNIA L4-L5 Y FECHA DE CIRUGÍA"],
       videoId: "L3JWrRBqujE",
       playlistIndex: 6,
       quote: "Tenía cirugía programada. El entrenamiento me devolvió la vida.",
@@ -67,7 +67,7 @@ const Testimonials = () => {
     {
       name: "RAMÓN",
       age: 0,
-      condition: "HERNIA L5-S1 Y PROTUSIÓN L4-L5",
+      condition: ["HERNIA L5-S1 Y PROTUSIÓN L4-L5"],
       videoId: "za0gs_X2pu0",
       playlistIndex: 7,
       quote: "Vivía con dolor constante. Hoy camino, trabajo y duermo sin molestias.",
@@ -77,7 +77,7 @@ const Testimonials = () => {
     {
       name: "ABDELAH",
       age: 0,
-      condition: "DOS PROTRUSIONES LUMBARES",
+      condition: ["DOS PROTRUSIONES LUMBARES"],
       videoId: "W6JcuIj-Rxk",
       playlistIndex: 8,
       quote: "No podía ni sentarme. Ahora trabajo, duermo bien y entreno sin miedo.",
@@ -87,7 +87,7 @@ const Testimonials = () => {
     {
       name: "SILVIA",
       age: 0,
-      condition: "HERNIA L4-L5 CON EXTRUSIÓN",
+      condition: ["HERNIA L4-L5 CON EXTRUSIÓN"],
       videoId: "2LYTh7PEMWA",
       playlistIndex: 9,
       quote: "Llevaba años con dolor. Entrenar fue lo único que me devolvió la libertad.",
@@ -97,11 +97,11 @@ const Testimonials = () => {
     {
       name: "FÁTIMA",
       age: 0,
-      condition: "ESCOLIOSIS-2 HERNIAS-DESPLAZAMIENTO DE DISCO",
+      condition: ["ESCOLIOSIS", "2 HERNIAS", "DESPLAZAMIENTO"],
       videoId: "_A9eHRvBigs",
       playlistIndex: 23,
-      quote: "Pasé de no poder andar sin agarrarme, con escoliosis y dos hernias discales, a vivir mi día a día sin dolor gracias a trabajar la fuerza con Espalda Indestructible.",
-      result: "Con una escoliosis grande, dos hernias discales y un desplazamiento de disco, vivía con dolor diario y necesitaba calmante. Tras trabajar fuerza con Espalda Indestructible ahora camina sola, con postura normal y sin dolor en su día a día.",
+      quote: "Pasé de no poder andar sin agarrarme, con escoliosis y dos hernias discales, a vivir mi día a día sin dolor.",
+      result: "Vivía con dolor diario y necesitaba calmantes. Tras trabajar fuerza con Espalda Indestructible ahora camina sola, con postura normal y sin dolor en su día a día.",
       rating: 5,
     },
   ];
@@ -152,9 +152,13 @@ const Testimonials = () => {
                   <div>
                       <h3 className="text-xl font-bold text-primary">{testimonial.name}</h3>
                     </div>
-                    <span className="bg-primary text-primary-foreground px-2 py-1 rounded-md text-xs font-bold uppercase whitespace-nowrap">
-                      {testimonial.condition}
-                    </span>
+                    <div className="flex flex-col gap-1">
+                      {testimonial.condition.map((cond, idx) => (
+                        <span key={idx} className="bg-primary text-primary-foreground px-2 py-1 rounded-md text-xs font-bold uppercase whitespace-nowrap text-center">
+                          {cond}
+                        </span>
+                      ))}
+                    </div>
                   </div>
 
                   <div className="flex gap-1">
