@@ -97,7 +97,7 @@ const Testimonials = () => {
     {
       name: "FÁTIMA",
       age: 0,
-      condition: "ESCOLIOSIS, 2 HERNIAS Y DESPLAZAMIENTO DE DISCO",
+      condition: "ESCOLIOSIS\n2 HERNIAS\nDESPLAZAMIENTO DE DISCO",
       videoId: "_A9eHRvBigs",
       playlistIndex: 23,
       quote: "Pasé de no poder andar sin agarrarme, con escoliosis y dos hernias discales, a vivir mi día a día sin dolor.",
