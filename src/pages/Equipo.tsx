@@ -64,7 +64,7 @@ const Equipo = () => {
               {teamMembers.map((member, index) => <Card key={index} className="bg-background border-border p-6 flex flex-col">
                   <div className="text-center mb-6">
                     <div className="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full">
-                      <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                      <img src={member.image} alt={member.name} className="w-full h-full object-cover scale-90" />
                     </div>
                     <h2 className="text-xl font-bold text-foreground mb-2">
                       {member.name}
