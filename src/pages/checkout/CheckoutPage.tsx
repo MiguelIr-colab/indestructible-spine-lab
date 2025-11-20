@@ -42,9 +42,6 @@ const CheckoutPage = () => {
   const [paymentIntentId, setPaymentIntentId] = useState("");
   const [loading, setLoading] = useState(true);
 
-  const [coupon, setCoupon] = useState(""); // CUPÓN
-  const [finalAmount, setFinalAmount] = useState<number | null>(null); // PRECIO FINAL
-
   const product = slug ? products[slug as keyof typeof products] : null;
 
   // Mantiene tu vista EXACTA — solo añade la lógica del cupón
@@ -65,7 +62,6 @@ const CheckoutPage = () => {
               amount: product.price * 100,
               currency: "eur",
               productName: `${product.name} - ${product.duration}`,
-              coupon: coupon, // ← enviamos cupón
             }),
           }
         );
@@ -74,7 +70,6 @@ const CheckoutPage = () => {
 
         setClientSecret(data.clientSecret);
         setPaymentIntentId(data.paymentIntentId);
-        setFinalAmount(data.finalAmount / 100); // devolver en euros
         setLoading(false);
 
       } catch (error) {
@@ -88,7 +83,7 @@ const CheckoutPage = () => {
     };
 
     createPaymentIntent();
-  }, [product, coupon, navigate, toast]);
+  }, [product, navigate, toast]);
 
   if (!product) return null;
 
@@ -105,23 +100,6 @@ const CheckoutPage = () => {
           <h1 className="text-3xl lg:text-4xl font-bold mb-8 text-center text-primary">
             Finalizar Compra
           </h1>
-
-          {/* Mantengo tu UI — solo el input del cupón usa setCoupon */}
-          <div className="max-w-md mx-auto mb-10">
-            <label className="block font-semibold mb-1">Código de descuento</label>
-            <input
-              type="text"
-              value={coupon}
-              onChange={(e) => setCoupon(e.target.value)}
-              placeholder="Introduce tu cupón"
-              className="border p-3 rounded w-full"
-            />
-            {coupon.toLowerCase() === "50k50" && (
-              <p className="text-green-600 mt-2 font-medium">
-                Cupón aplicado: -50€
-              </p>
-            )}
-          </div>
 
           {loading ? (
             <div className="flex justify-center items-center py-20">

@@ -40,7 +40,7 @@ const OrderSummary = ({ product, paymentIntentId }: OrderSummaryProps) => {
     setCouponError("");
 
     try {
-      const response = await fetch("https://www.aquiiraelbackend.com/apply-coupon", {
+      const response = await fetch("/.netlify/functions/apply-coupon", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -59,7 +59,7 @@ const OrderSummary = ({ product, paymentIntentId }: OrderSummaryProps) => {
           description: `Se ha aplicado un descuento de ${data.discount.toFixed(2)}€`,
         });
       } else {
-        setCouponError("El código no es válido o está caducado");
+        setCouponError(data.error || "El código no es válido o está caducado");
       }
     } catch (error) {
       console.error("Error applying coupon:", error);
@@ -151,8 +151,8 @@ const OrderSummary = ({ product, paymentIntentId }: OrderSummaryProps) => {
         </Card>
 
         <div className="text-sm text-muted-foreground space-y-1 pt-4">
-          <p>• Solo se puede aplicar un cupón por producto</p>
-          <p>• Descuentos disponibles: 50€ o 100€</p>
+          <p>• Solo se puede aplicar un cupón por pedido</p>
+          <p>• Cupones disponibles: 50K50, 100k100, 200k200</p>
         </div>
       </div>
     </div>
