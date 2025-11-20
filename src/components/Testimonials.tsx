@@ -124,6 +124,16 @@ const Testimonials = () => {
       result: "Ha pasado de estar el 90% del día tumbado, con dolor lumbar y de pierna, a montar en bici 13 km sin dolor, ir en moto, hacer la compra y trabajar horas sentado.",
       rating: 5,
     },
+    {
+      name: "MIGUEL ÁNGEL",
+      age: 0,
+      condition: "HERNIA DISCAL\nCON RECIDIVA,\nOPERADO DOS VECES",
+      videoId: "tmltcVMB5Ys",
+      playlistIndex: 33,
+      quote: "De no poder levantarse de la cama, operado dos veces de hernia discal y con miedo a agacharse, a entrenar con fuerza y sin dolor crónico de espalda cargando la olla de la abuela.",
+      result: "Tras 12 semanas con el programa espalda indestructible ya no tiene dolor crónico de espalda, ha evitado una tercera operación y puede levantar 30 kg sin miedo a agacharse.",
+      rating: 5,
+    },
   ];
 
   return (
