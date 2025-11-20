@@ -56,7 +56,7 @@ const Equipo = () => {
                 Nuestro Equipo
               </h1>
               <p className="text-xl text-secondary-foreground/70 max-w-3xl mx-auto">
-                Profesionales especializados en ayudarte a volver a entrenar sin dolor
+                Profesionales especializados en patologías de columna y dolor neuropático.
               </p>
             </div>
 
