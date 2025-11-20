@@ -117,7 +117,7 @@ const VideoTestimonials = () => {
                       <div>
                         <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-primary">{testimonial.name}</h3>
                       </div>
-                      <span className="bg-primary text-primary-foreground px-2 py-0.5 lg:px-3 lg:py-1 rounded-md text-[10px] lg:text-xs font-bold uppercase whitespace-nowrap">
+                      <span className="bg-primary text-primary-foreground px-2 py-1 rounded-md text-xs font-bold uppercase text-center leading-tight max-w-[140px] whitespace-pre-line">
                         {testimonial.condition}
                       </span>
                     </div>
