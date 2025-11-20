@@ -88,7 +88,7 @@ const Hero = () => {
             <video
               ref={videoRef}
               src="https://res.cloudinary.com/draffep0n/video/upload/v1763053970/video_presentaci%C3%B3n_web_wh9yvf.mp4"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
               controls
               autoPlay
               loop
