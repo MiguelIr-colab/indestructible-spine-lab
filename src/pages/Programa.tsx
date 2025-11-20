@@ -65,7 +65,7 @@ const Programa = () => {
                       className="text-sm md:text-base lg:text-lg h-11 md:h-12 lg:h-14 px-8 md:px-10 lg:px-12 w-full lg:w-auto"
                       onClick={handleCalendlyClick}
                     >
-                      RESERVA MI PRIMERA ENTREVISTA
+                      RESERVA TU PRIMERA ENTREVISTA
                     </Button>
                     <p className="text-center text-xs md:text-sm text-muted-foreground mt-3 lg:mt-4">
                       Agenda tu entrevista personalizada ahora
@@ -123,7 +123,7 @@ const Programa = () => {
                     className="text-sm md:text-base lg:text-lg h-11 md:h-12 lg:h-14 px-8 md:px-10 lg:px-12 w-full lg:w-auto"
                     onClick={handleCalendlyClick}
                   >
-                    RESERVA MI PRIMERA ENTREVISTA
+                    RESERVA TU PRIMERA ENTREVISTA
                   </Button>
                 </div>
               </div>
