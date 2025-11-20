@@ -152,7 +152,7 @@ const Testimonials = () => {
                   <div>
                       <h3 className="text-xl font-bold text-primary">{testimonial.name}</h3>
                     </div>
-                    <span className="bg-primary text-primary-foreground px-2 py-1 rounded-md text-xs font-bold uppercase whitespace-nowrap">
+                    <span className="bg-primary text-primary-foreground px-2 py-1 rounded-md text-xs font-bold uppercase text-center leading-tight max-w-[140px]">
                       {testimonial.condition}
                     </span>
                   </div>
