@@ -84,7 +84,7 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 py-4 lg:py-10 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 items-center">
           {/* Image - First on mobile, second on desktop */}
-          <div className="relative lg:h-[500px] h-[200px] rounded-lg overflow-hidden lg:order-2 order-1 w-full">
+          <div className="relative lg:h-[375px] h-[150px] rounded-lg overflow-hidden lg:order-2 order-1 w-full">
             <video
               ref={videoRef}
               src="https://res.cloudinary.com/draffep0n/video/upload/v1763053970/video_presentaci%C3%B3n_web_wh9yvf.mp4"
