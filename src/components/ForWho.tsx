@@ -17,9 +17,11 @@ const ForWho = () => {
   return (
     <section className="py-12 lg:py-20 bg-[hsl(var(--light-gray))]">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-10 lg:mb-16 text-center text-secondary-foreground">
-          ¿Es este programa <span className="text-primary">para ti</span>?
-        </h2>
+        <div className="bg-black p-6 md:p-8 lg:p-10 rounded-lg max-w-4xl mx-auto mb-10 lg:mb-16">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-center text-white">
+            ¿Es este programa <span className="text-primary">para ti</span>?
+          </h2>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
           {/* Para quién SÍ es */}
