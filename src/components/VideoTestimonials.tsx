@@ -7,7 +7,7 @@ const VideoTestimonials = () => {
     {
       name: "FÁTIMA",
       age: 0,
-      condition: "ESCOLIOSIS, 2 HERNIAS Y DESPLAZAMIENTO DE DISCO",
+      condition: "ESCOLIOSIS,\n2 HERNIAS Y\nDESPLAZAMIENTO DE DISCO",
       videoId: "_A9eHRvBigs",
       playlistIndex: 23,
       quote: "Pasé de no poder andar sin agarrarme, con escoliosis y dos hernias discales, a vivir mi día a día sin dolor.",
@@ -17,7 +17,7 @@ const VideoTestimonials = () => {
     {
       name: "CRISTINA",
       age: 0,
-      condition: "HERNIA DISCAL CENTRAL L5-S1 CON COMPRESIÓN MEDULAR",
+      condition: "HERNIA DISCAL\nCENTRAL L5-S1\nCON COMPRESIÓN\nMEDULAR",
       videoId: "QyZTTrvjm1w",
       playlistIndex: 31,
       quote: "Pensaba que solo la operación me salvaría y hoy, con una hernia discal L5-S1 central, hago entrenamiento de fuerza y vuelvo a trotar suave.",
@@ -27,7 +27,7 @@ const VideoTestimonials = () => {
     {
       name: "MARIANO",
       age: 0,
-      condition: "HERNIA DISCAL L5-S1 IZQUIERDA Y RECTIFICACIÓN LUMBAR",
+      condition: "HERNIA DISCAL\nL5-S1 IZQUIERDA\nY RECTIFICACIÓN\nLUMBAR",
       videoId: "eaSPIXLfCLA",
       playlistIndex: 32,
       quote: "Pasé de vivir tumbado por una hernia discal L5-S1 izquierda y rectificación lumbar a volver a la bici y moto, al teletrabajo y al ejercicio con el programa Espalda Indestructible.",
@@ -37,7 +37,7 @@ const VideoTestimonials = () => {
     {
       name: "MIGUEL ÁNGEL",
       age: 0,
-      condition: "HERNIA DISCAL CON RECIDIVA, OPERADO DOS VECES",
+      condition: "HERNIA DISCAL\nCON RECIDIVA,\nOPERADO DOS VECES",
       videoId: "tmltcVMB5Ys",
       playlistIndex: 33,
       quote: "De no poder levantarse de la cama, operado dos veces de hernia discal y con miedo a agacharse, a entrenar con fuerza y sin dolor crónico de espalda cargando la olla de la abuela.",
@@ -47,7 +47,7 @@ const VideoTestimonials = () => {
     {
       name: "DAVID",
       age: 0,
-      condition: "HERNIA L4-L5, PROTRUSIÓN L3-L4 Y ESTENOSIS LUMBAR",
+      condition: "HERNIA L4-L5,\nPROTRUSIÓN L3-L4\nY ESTENOSIS LUMBAR",
       videoId: "c9Rc5x_mJoY",
       playlistIndex: 34,
       quote: "Pasé de necesitar estar tumbado por el dolor a moverme, sentarme y caminar con confianza, sin miedo a que vuelva la ciática.",
@@ -57,7 +57,7 @@ const VideoTestimonials = () => {
     {
       name: "DORLE",
       age: 0,
-      condition: "DISCOPATÍA DEGENERATIVA L4-L5 Y L5-S1 CON PROTUSIÓN",
+      condition: "DISCOPATÍA\nDEGENERATIVA L4-L5\nY L5-S1 CON PROTUSIÓN",
       videoId: "iD0MZPkw3c4",
       playlistIndex: 35,
       quote: "Después de 28 años con dolor diario, hoy camino y trabajo horas seguidas sin miedo a que vuelva el dolor de espalda.",
