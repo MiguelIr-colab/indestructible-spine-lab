@@ -31,7 +31,7 @@ const Testimonials = () => {
       videoId: "SlpiNZsuhuc",
       playlistIndex: 3,
       quote: "Vivía limitada por el dolor. Ahora entreno, trabajo y disfruto de mi cuerpo.",
-      result: "Gana estabilidad, confianza y una espalda fuerte sin recurrir a terapias pasivas.",
+      result: "Ganó estabilidad, confianza y una espalda fuerte sin recurrir a terapias pasivas.",
       rating: 5,
     },
     {
