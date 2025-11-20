@@ -15,7 +15,6 @@ exports.handler = async (event, context) => {
     const amount = data.amount; // en céntimos (ej: 95000 = 950€)
     const currency = data.currency || "eur";
     const productName = data.productName || "Producto sin nombre";
-    const coupon = data.coupon || null; // ← recibe el cupón del frontend
 
     if (!amount) {
       return {
@@ -24,27 +23,15 @@ exports.handler = async (event, context) => {
       };
     }
 
-    // ------------------------------------------------------
-    //   CUPÓN DESCUENTO
-    //   Cupón válido: "50k50" → -50€
-    // ------------------------------------------------------
-    let finalAmount = amount;
-
-    if (coupon && coupon.toLowerCase() === "50k50") {
-      const discount = 50 * 100; // 50€ en céntimos
-      finalAmount = Math.max(amount - discount, 0); // nunca negativo
-    }
-
-    // Crear PaymentIntent con el monto final
+    // Crear PaymentIntent con el monto original
+    // El cupón se aplicará después desde OrderSummary usando apply-coupon
     const paymentIntent = await stripe.paymentIntents.create({
-      amount: finalAmount,
+      amount,
       currency,
       description: productName,
       metadata: {
         productName,
-        couponUsed: coupon || "none",
         originalAmount: amount,
-        finalAmount,
       },
     });
 
@@ -56,7 +43,6 @@ exports.handler = async (event, context) => {
       body: JSON.stringify({
         clientSecret: paymentIntent.client_secret,
         paymentIntentId: paymentIntent.id,
-        finalAmount,
       }),
     };
   } catch (err) {

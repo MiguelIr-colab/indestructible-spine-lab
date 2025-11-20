@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 
 // CONFIGURACIÓN: Edita esta fecha para cambiar la cuenta atrás
 // Formato: "YYYY-MM-DD HH:mm:ss" (hora en formato 24h)
-const TARGET_DATE = "2025-12-31 23:59:59";
+// Nota: Esta fecha está en hora española (CET/CEST)
+const TARGET_DATE = "2025-12-14 19:00:00";
 
 const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState({
