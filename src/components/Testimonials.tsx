@@ -130,9 +130,8 @@ const Testimonials = () => {
                 {/* Content Section */}
                 <div className="p-4 space-y-3 flex flex-col flex-1">
                   <div className="flex items-start justify-between gap-2">
-                    <div>
+                  <div>
                       <h3 className="text-xl font-bold text-primary">{testimonial.name}</h3>
-                      <p className="text-sm text-muted-foreground">{testimonial.age} años</p>
                     </div>
                     <span className="bg-primary text-primary-foreground px-2 py-1 rounded-md text-xs font-bold uppercase whitespace-nowrap">
                       {testimonial.condition}
