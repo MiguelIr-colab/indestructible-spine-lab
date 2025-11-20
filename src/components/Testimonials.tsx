@@ -94,6 +94,16 @@ const Testimonials = () => {
       result: "Redujo el dolor a cero y volvió a jugar al pádel y disfrutar de su vida activa.",
       rating: 5,
     },
+    {
+      name: "FÁTIMA",
+      age: 0,
+      condition: "ESCOLIOSIS-2 HERNIAS-DESPLAZAMIENTO DE DISCO",
+      videoId: "_A9eHRvBigs",
+      playlistIndex: 23,
+      quote: "Pasé de no poder andar sin agarrarme, con escoliosis y dos hernias discales, a vivir mi día a día sin dolor gracias a trabajar la fuerza con Espalda Indestructible.",
+      result: "Con una escoliosis grande, dos hernias discales y un desplazamiento de disco, vivía con dolor diario y necesitaba calmante. Tras trabajar fuerza con Espalda Indestructible ahora camina sola, con postura normal y sin dolor en su día a día.",
+      rating: 5,
+    },
   ];
 
   return (
