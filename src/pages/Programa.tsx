@@ -24,7 +24,7 @@ const Programa = () => {
                 <img
                   src={heroImage}
                   alt="Equipo Espalda Indestructible"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
 
