@@ -244,6 +244,16 @@ const Testimonials = () => {
       result: "Tras más de 10 años con dolor diario de espalda, pasa de no poder estar de pie ni caminar a trabajar 10 h, correr y entrenar fuerza y peso muerto online casi sin dolor.",
       rating: 5,
     },
+    {
+      name: "SALVADOR",
+      age: 0,
+      condition: "3 ABOMBAMIENTOS\nDISCALES L3-S1\nY DOLOR CRÓNICO\nDE ESPALDA",
+      videoId: "Np4KG2EXOEA",
+      playlistIndex: 24,
+      quote: "Pensé que con 3 abombamientos discales L3-S1 y dolor de espalda crónico, a mis 53 años tenía que dejar el deporte; hoy entreno fuerte, hago surf y me muevo sin miedo.",
+      result: "Tras 1-2 meses de entrenamiento online, reduce el dolor lumbar a cero, puede entrenar con pesas hasta 50 kg, hacer surf y deporte aeróbico varios días seguidos sin recaídas.",
+      rating: 5,
+    },
   ];
 
   return (
