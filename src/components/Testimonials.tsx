@@ -214,6 +214,16 @@ const Testimonials = () => {
       result: "En 2 meses y medio en el programa Indestructible pasó de crisis de ciática diarias y miedo a trabajar a estar casi siempre sin dolor, hacer peso muerto con 45 kg y salir en moto sin limitaciones.",
       rating: 5,
     },
+    {
+      name: "ROSARIO",
+      age: 0,
+      condition: "TENDINOSIS GLÚTEA,\nHERNIA Y ESTENOSIS\nLUMBAR",
+      videoId: "50fCQ5PD8ak",
+      playlistIndex: 42,
+      quote: "Pensé que viviría siempre con dolor lumbar, glúteo y pie dormidos por la hernia y la estenosis, pero he vuelto a caminar, dormir y hacer mi vida casi normal.",
+      result: "Tras entrenar online, camina sola una hora, sube escaleras sin dolor lumbar, ha dejado la medicación y vuelve a coser y dormir con tranquilidad.",
+      rating: 5,
+    },
   ];
 
   return (
