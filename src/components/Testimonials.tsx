@@ -194,6 +194,16 @@ const Testimonials = () => {
       result: "Tras medio año con dolor lumbar intenso y fisioterapia sin resultados, ahora hace vida normal, se ata los zapatos y estornuda sin miedo.",
       rating: 5,
     },
+    {
+      name: "ROSI",
+      age: 0,
+      condition: "CINCO HERNIAS DISCALES,\nESTENOSIS DE CANAL\nY ARTROSIS",
+      videoId: "pztMUoda4ic",
+      playlistIndex: 41,
+      quote: "Con cinco hernias discales, estenosis de canal y artrosis, el entrenamiento me ha permitido volver a caminar y cocinar de pie sin miedo y sin medicación.",
+      result: "En 3 meses pasó de caer a los 600 pasos a caminar kilómetros, cocinar de pie, cargar la bombona y dormir bien, sin medicación, con mucha más fuerza y confianza.",
+      rating: 5,
+    },
   ];
 
   return (
