@@ -164,6 +164,16 @@ const Testimonials = () => {
       result: "En 6 meses desapareció el dolor lumbar y la parestesia, y ahora puede agacharse, coger peso y entrenar sin dolor.",
       rating: 5,
     },
+    {
+      name: "GEMA",
+      age: 0,
+      condition: "PROTRUSIÓN L3-L4,\nHERNIA L4-L5 Y\nDESPLAZAMIENTO\nVERTEBRAL",
+      videoId: "7m_TO0p0pXg",
+      playlistIndex: 37,
+      quote: "Pensé que viviría siempre con dolor lumbar y ciático, y ahora puedo vestirme, trabajar, viajar y saltar horas sin que mi espalda se queje.",
+      result: "Recupera su vida diaria: se viste sin dolor, trabaja sentada, camina rápido, corre y salta horas en conciertos y viajes en autobús sin molestias lumbares ni ciáticas.",
+      rating: 5,
+    },
   ];
 
   return (
