@@ -154,6 +154,16 @@ const Testimonials = () => {
       result: "Tras 28 años con dolor lumbar y cervical por discopatía degenerativa, ahora puede caminar y estar sentada horas, trabajar y hacer vida diaria casi sin dolor de espalda.",
       rating: 5,
     },
+    {
+      name: "MANUEL",
+      age: 0,
+      condition: "HERNIA L5-S1,\nCIÁTICA Y\nPIERNA DORMIDA",
+      videoId: "mOhh-LK5Bt4",
+      playlistIndex: 36,
+      quote: "Pensé que no volvería a agacharme ni a conducir tranquilo por mi espalda, y ahora entreno y vivo el día a día sin miedo al dolor.",
+      result: "En 6 meses desapareció el dolor lumbar y la parestesia, y ahora puede agacharse, coger peso y entrenar sin dolor.",
+      rating: 5,
+    },
   ];
 
   return (
