@@ -184,6 +184,16 @@ const Testimonials = () => {
       result: "Tras 2 años con protrusión L4-L5, ahora lleva casi 3 semanas sin dolor, trabaja sentado en reuniones largas y viaja 5 h en coche sin molestias.",
       rating: 5,
     },
+    {
+      name: "JUAN ANDRÉS",
+      age: 0,
+      condition: "HERNIA L5 S1,\nDESGARRO DE ANILLO S1\nY ESPONDILOARTROSIS",
+      videoId: "r25y1YwnNPM",
+      playlistIndex: 39,
+      quote: "De un dolor lumbar 8/10 por hernia L5 S1 y espondiloartrosis a olvidarse del dolor crónico gracias al programa Espalda indestructible y al entrenamiento de fuerza.",
+      result: "Tras medio año con dolor lumbar intenso y fisioterapia sin resultados, ahora hace vida normal, se ata los zapatos y estornuda sin miedo.",
+      rating: 5,
+    },
   ];
 
   return (
