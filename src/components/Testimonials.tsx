@@ -234,6 +234,16 @@ const Testimonials = () => {
       result: "Tras 3 años y 9 meses de dolor lumbar por protrusiones L4-L5, hoy se sienta horas sin dolor, trapea, carga peso y levanta hasta 40 kg con seguridad y confianza.",
       rating: 5,
     },
+    {
+      name: "JOSE",
+      age: 0,
+      condition: "HERNIA DISCAL,\nPROTRUSIÓN DISCAL\nY RECTIFICACIÓN\nLUMBAR",
+      videoId: "J4ujDgMaYzQ",
+      playlistIndex: 14,
+      quote: "Tenía una hernia discal, otra casi hernia con rectificación lumbar y llevaba más de 10 años con dolor de espalda; ahora hay días enteros que ni me acuerdo del dolor gracias al entrenamiento online de fuerza.",
+      result: "Tras más de 10 años con dolor diario de espalda, pasa de no poder estar de pie ni caminar a trabajar 10 h, correr y entrenar fuerza y peso muerto online casi sin dolor.",
+      rating: 5,
+    },
   ];
 
   return (
