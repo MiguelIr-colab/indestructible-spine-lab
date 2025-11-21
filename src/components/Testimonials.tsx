@@ -204,6 +204,16 @@ const Testimonials = () => {
       result: "En 3 meses pasó de caer a los 600 pasos a caminar kilómetros, cocinar de pie, cargar la bombona y dormir bien, sin medicación, con mucha más fuerza y confianza.",
       rating: 5,
     },
+    {
+      name: "CARLOS",
+      age: 0,
+      condition: "CIÁTICA Y HERNIA DISCAL\nL5-S1 OPERADA",
+      videoId: "fD0rJuRG9d4",
+      playlistIndex: 40,
+      quote: "Pensé que la ciática, la hernia operada y la osteoporosis serían de por vida;  hoy entreno sin dolor de espalda.",
+      result: "En 2 meses y medio en el programa Indestructible pasó de crisis de ciática diarias y miedo a trabajar a estar casi siempre sin dolor, hacer peso muerto con 45 kg y salir en moto sin limitaciones.",
+      rating: 5,
+    },
   ];
 
   return (
