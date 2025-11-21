@@ -224,6 +224,16 @@ const Testimonials = () => {
       result: "Tras entrenar online, camina sola una hora, sube escaleras sin dolor lumbar, ha dejado la medicación y vuelve a coser y dormir con tranquilidad.",
       rating: 5,
     },
+    {
+      name: "LILIANA",
+      age: 0,
+      condition: "PROTRUSIÓN LUMBAR\nL4-L5 Y DOLOR\nLUMBAR CRÓNICO",
+      videoId: "HApEzXI-xb0",
+      playlistIndex: 18,
+      quote: "Tras 4 años con protrusiones y dolor lumbar crónico, entendí que la fuerza podía devolverme la espalda y la vida.",
+      result: "Tras 3 años y 9 meses de dolor lumbar por protrusiones L4-L5, hoy se sienta horas sin dolor, trapea, carga peso y levanta hasta 40 kg con seguridad y confianza.",
+      rating: 5,
+    },
   ];
 
   return (
