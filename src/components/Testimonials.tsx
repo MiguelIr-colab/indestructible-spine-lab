@@ -174,6 +174,16 @@ const Testimonials = () => {
       result: "Recupera su vida diaria: se viste sin dolor, trabaja sentada, camina rápido, corre y salta horas en conciertos y viajes en autobús sin molestias lumbares ni ciáticas.",
       rating: 5,
     },
+    {
+      name: "ARIEL",
+      age: 0,
+      condition: "PROTRUSIÓN DISCAL\nL4-L5",
+      videoId: "My2-AmVBWLA",
+      playlistIndex: 38,
+      quote: "Pensé que el dolor lumbar sería para siempre; hoy puedo trabajar sentado y viajar en coche sin miedo.",
+      result: "Tras 2 años con protrusión L4-L5, ahora lleva casi 3 semanas sin dolor, trabaja sentado en reuniones largas y viaja 5 h en coche sin molestias.",
+      rating: 5,
+    },
   ];
 
   return (
