@@ -134,6 +134,14 @@ const Blog = () => {
       category: "Hernia Discal",
       articleUrl: "/blog/estiramientos-hernia-discal-ciatica-fuerza",
     },
+    {
+      title: "💪 Entrenar con hernia discal: ¿es realmente peligroso o justo lo que necesitas?",
+      excerpt: "¿Te han dicho que entrenar con hernia discal es peligroso? Descubre por qué el verdadero problema no es el entrenamiento en sí, sino cómo se mueve tu columna y qué compensaciones has creado.",
+      videoUrl: "https://www.youtube.com/watch?v=28oXkohSLb8",
+      thumbnail: "https://img.youtube.com/vi/28oXkohSLb8/maxresdefault.jpg",
+      category: "Hernia Discal",
+      articleUrl: "/blog/entrenar-con-hernia-discal-riesgos-bien-hecho",
+    },
   ];
 
   return (
