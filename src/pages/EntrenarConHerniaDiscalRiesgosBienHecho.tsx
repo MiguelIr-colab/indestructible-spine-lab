@@ -2,6 +2,8 @@ import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
 
 const EntrenarConHerniaDiscalRiesgosBienHecho = () => {
   return (
@@ -54,6 +56,13 @@ const EntrenarConHerniaDiscalRiesgosBienHecho = () => {
         
         <main className="pt-20">
           <article className="container mx-auto px-4 py-16 max-w-4xl">
+            <Button variant="ghost" asChild className="mb-8">
+              <Link to="/blog">
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                Volver al blog
+              </Link>
+            </Button>
+            
             <header className="mb-12">
               <h1 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
                 Entrenar con hernia discal: ¿es realmente peligroso o justo lo que necesitas?
@@ -68,6 +77,9 @@ const EntrenarConHerniaDiscalRiesgosBienHecho = () => {
                   allowFullScreen
                   className="rounded-lg"
                 ></iframe>
+              </div>
+              <div className="mb-8 text-sm text-muted-foreground flex items-center gap-2">
+                <span>⏱️ Tiempo de lectura: 8-10 minutos</span>
               </div>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 ¿Te han dicho que <Link to="/blog/hernia-discal-como-se-produce-y-como-curarla-sin-cirugia" className="text-primary hover:underline">entrenar con hernia discal</Link> es peligroso y que debes evitar esfuerzos, cargar peso o moverte "demasiado"? En este artículo entenderás por qué el verdadero problema no es el entrenamiento en sí, sino cómo se mueve tu columna, qué compensaciones has creado y si tu programa de ejercicio está pensado para mejorar tu biomecánica, ganar fuerza y estabilidad… o si solo estás "haciendo ejercicios sueltos" que no cambian nada de raíz.
