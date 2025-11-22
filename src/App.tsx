@@ -13,6 +13,7 @@ import HerniaDiscal from "./pages/HerniaDiscal";
 import HerniaDiscalL5S1 from "./pages/HerniaDiscalL5S1";
 import EstenosisLumbar from "./pages/EstenosisLumbar";
 import HerniaCervicalC5C6 from "./pages/HerniaCervicalC5C6";
+import HerniaDiscalReabsorber from "./pages/HerniaDiscalReabsorber";
 import EspaldaIndestructible from "./pages/EspaldaIndestructible";
 import CheckoutPage from "./pages/checkout/CheckoutPage";
 import Programa from "./pages/Programa";
@@ -44,6 +45,7 @@ const App = () => (
           <Route path="/blog/hernia-discal-l5-s1" element={<HerniaDiscalL5S1 />} />
           <Route path="/blog/estenosis-lumbar" element={<EstenosisLumbar />} />
           <Route path="/blog/hernia-cervical-c5-c6" element={<HerniaCervicalC5C6 />} />
+          <Route path="/blog/hernia-discal-se-puede-reabsorber-sola-sin-cirugia" element={<HerniaDiscalReabsorber />} />
           <Route path="/espalda-indestructible" element={<EspaldaIndestructible />} />
           <Route path="/espalda-indestructible/:slug" element={<CheckoutPage />} />
           <Route path="/programa" element={<Programa />} />
