@@ -1,6 +1,4 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { Gift } from "lucide-react";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { useEffect } from "react";
 
 const Pdf = () => {
@@ -18,14 +16,10 @@ const Pdf = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-      <main className="pt-20">
+      <main className="pt-20 pb-16">
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4 max-w-4xl">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-primary/10 rounded-full mb-6">
-                <Gift className="w-10 h-10 text-primary" />
-              </div>
               <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-primary">
                 Rellena el formulario para obtener tu guía gratuita
               </h1>
@@ -71,7 +65,19 @@ const Pdf = () => {
           </div>
         </section>
       </main>
-      <Footer />
+      
+      {/* Minimal Footer */}
+      <footer className="py-8 border-t border-border">
+        <div className="container mx-auto px-4">
+          <p className="text-center text-sm text-muted-foreground">
+            © 2025 Unbreakable Back LLC. All rights reserved.
+            <br />
+            "Espalda Indestructible" es una marca comercial de Unbreakable Back LLC
+          </p>
+        </div>
+      </footer>
+      
+      <WhatsAppButton />
     </div>
   );
 };
