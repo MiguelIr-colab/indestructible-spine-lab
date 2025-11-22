@@ -86,6 +86,14 @@ const Blog = () => {
       category: "Hernia Discal",
       articleUrl: "/blog/ejercicios-que-no-debo-hacer-si-tengo-hernia-discal",
     },
+    {
+      title: "💪 Hernia discal: cómo se produce y cómo curarla sin cirugía",
+      excerpt: "La hernia discal no aparece por casualidad. Suele surgir en el punto de la columna que más se mueve, porque el resto de vértebras están bloqueadas. Entiende por qué aparece en un punto concreto, qué hace tu cuerpo para repararla y cómo empezar a curarla sin cirugía con entrenamiento y mejor biomecánica.",
+      videoUrl: "https://www.youtube.com/watch?v=k5pTs9aq4xE",
+      thumbnail: "https://img.youtube.com/vi/k5pTs9aq4xE/maxresdefault.jpg",
+      category: "Hernia Discal",
+      articleUrl: "/blog/hernia-discal-como-se-produce-y-como-curarla-sin-cirugia",
+    },
   ];
 
   return (
