@@ -110,6 +110,14 @@ const Blog = () => {
       category: "Hernia Discal",
       articleUrl: "/blog/hernias-discales-por-que-no-mejoras",
     },
+    {
+      title: "💪 5 ejercicios de respiración para aliviar el dolor de espalda",
+      excerpt: "Sesión corta de 5 ejercicios de respiración para el dolor de espalda, basada en trabajo de costillas, abdomen y control postural. Solo necesitas una colchoneta y un taco de yoga para seguir el paso a paso.",
+      videoUrl: "https://www.youtube.com/watch?v=25oN010hFKs",
+      thumbnail: "https://img.youtube.com/vi/25oN010hFKs/maxresdefault.jpg",
+      category: "Ejercicios",
+      articleUrl: "/blog/ejercicios-respiracion-dolor-espalda",
+    },
   ];
 
   return (
