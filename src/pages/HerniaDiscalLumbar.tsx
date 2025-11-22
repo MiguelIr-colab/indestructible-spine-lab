@@ -2,6 +2,8 @@ import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
 
 const HerniaDiscalLumbar = () => {
   return (
@@ -30,6 +32,13 @@ const HerniaDiscalLumbar = () => {
         
         <main className="pt-20">
           <article className="container mx-auto px-4 py-12 max-w-4xl">
+            <Button variant="ghost" asChild className="mb-8">
+              <Link to="/blog">
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                Volver al blog
+              </Link>
+            </Button>
+            
             <h1 className="text-4xl lg:text-5xl font-bold mb-8 text-[#FFD700]">
               Ejercicios para hernia discal lumbar: 7 movimientos para aliviar el dolor sin dañar tu espalda
             </h1>
@@ -46,6 +55,10 @@ const HerniaDiscalLumbar = () => {
                   allowFullScreen
                   className="w-full"
                 ></iframe>
+              </div>
+              
+              <div className="mb-8 text-sm text-muted-foreground flex items-center gap-2">
+                <span>⏱️ Tiempo de lectura: 10-12 minutos</span>
               </div>
 
               <div className="bg-[#1a1a1a] p-6 rounded-lg mb-8">
@@ -589,6 +602,16 @@ const HerniaDiscalLumbar = () => {
                 Un programa enfocado en personas con patología de columna y dolor crónico, trabaja justo eso:
                 <strong> no solo el disco roto, sino el patrón de movimiento que lo llevó a romperse</strong>.
               </p>
+            </div>
+
+            <div className="mt-12 p-6 bg-primary/10 rounded-lg">
+              <h3 className="text-2xl font-bold mb-4">¿Quieres eliminar el dolor lumbar?</h3>
+              <p className="mb-4">
+                Accede a nuestro programa completo de ejercicios personalizados para fortalecer tu columna lumbar de forma segura y progresiva.
+              </p>
+              <Button asChild size="lg">
+                <Link to="/programa">Ver programas</Link>
+              </Button>
             </div>
           </article>
         </main>

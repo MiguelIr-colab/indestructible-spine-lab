@@ -2,6 +2,8 @@ import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
 
 const HerniaDiscalComoSeProduceYComoCurarla = () => {
   return (
@@ -40,6 +42,13 @@ const HerniaDiscalComoSeProduceYComoCurarla = () => {
         
         <main className="pt-20">
           <article className="container mx-auto px-4 py-12 max-w-4xl">
+            <Button variant="ghost" asChild className="mb-8">
+              <Link to="/blog">
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                Volver al blog
+              </Link>
+            </Button>
+            
             <h1 className="text-4xl lg:text-5xl font-bold mb-8 text-[#FFD700]">
               Hernia discal: cómo se produce y cómo empezar a curarla sin cirugía
             </h1>
@@ -56,6 +65,10 @@ const HerniaDiscalComoSeProduceYComoCurarla = () => {
                   allowFullScreen
                   className="w-full"
                 ></iframe>
+              </div>
+              
+              <div className="mb-8 text-sm text-muted-foreground flex items-center gap-2">
+                <span>⏱️ Tiempo de lectura: 11-13 minutos</span>
               </div>
 
               <div className="bg-[#1a1a1a] p-6 rounded-lg mb-8">
@@ -681,6 +694,16 @@ const HerniaDiscalComoSeProduceYComoCurarla = () => {
                 <strong>La herramienta más potente contra el dolor crónico de espalda es la fuerza.
                 Fuerza y más fuerza, aplicada con criterio, progresión y buena biomecánica.</strong>
               </p>
+            </div>
+
+            <div className="mt-12 p-6 bg-primary/10 rounded-lg">
+              <h3 className="text-2xl font-bold mb-4">¿Quieres entender tu hernia discal?</h3>
+              <p className="mb-4">
+                Accede a nuestro programa completo de ejercicios personalizados para corregir tu biomecánica y fortalecer tu columna de forma segura y progresiva.
+              </p>
+              <Button asChild size="lg">
+                <Link to="/programa">Ver programas</Link>
+              </Button>
             </div>
           </article>
         </main>
