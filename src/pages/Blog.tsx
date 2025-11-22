@@ -78,6 +78,14 @@ const Blog = () => {
       category: "Hernia Discal",
       articleUrl: "/blog/ejercicios-hernia-discal-lumbar",
     },
+    {
+      title: "💪 Ejercicios que NO debo hacer si tengo hernia discal: guía clara para evitar dolor",
+      excerpt: "Si tienes una hernia discal o una protrusión, no todos los ejercicios son seguros. En esta guía entenderás por qué la orientación de tu hernia importa tanto, qué movimientos pueden agravar el dolor y cuáles son los gestos diarios que más castigan tu columna.",
+      videoUrl: "https://www.youtube.com/watch?v=vVQVIsGg2H4",
+      thumbnail: "https://img.youtube.com/vi/vVQVIsGg2H4/maxresdefault.jpg",
+      category: "Hernia Discal",
+      articleUrl: "/blog/ejercicios-que-no-debo-hacer-si-tengo-hernia-discal",
+    },
   ];
 
   return (

@@ -17,6 +17,7 @@ import HerniaDiscalReabsorber from "./pages/HerniaDiscalReabsorber";
 import HerniaDiscalCurar from "./pages/HerniaDiscalCurar";
 import HerniaDiscalEjerciciosEvitar from "./pages/HerniaDiscalEjerciciosEvitar";
 import HerniaDiscalLumbar from "./pages/HerniaDiscalLumbar";
+import EjerciciosQueNoDeboHacer from "./pages/EjerciciosQueNoDeboHacer";
 import EspaldaIndestructible from "./pages/EspaldaIndestructible";
 import CheckoutPage from "./pages/checkout/CheckoutPage";
 import Programa from "./pages/Programa";
@@ -52,6 +53,7 @@ const App = () => (
           <Route path="/blog/curar-hernia-discal-sin-cirugia" element={<HerniaDiscalCurar />} />
           <Route path="/blog/ejercicios-que-no-debo-hacer-hernia-discal" element={<HerniaDiscalEjerciciosEvitar />} />
           <Route path="/blog/ejercicios-hernia-discal-lumbar" element={<HerniaDiscalLumbar />} />
+          <Route path="/blog/ejercicios-que-no-debo-hacer-si-tengo-hernia-discal" element={<EjerciciosQueNoDeboHacer />} />
           <Route path="/espalda-indestructible" element={<EspaldaIndestructible />} />
           <Route path="/espalda-indestructible/:slug" element={<CheckoutPage />} />
           <Route path="/programa" element={<Programa />} />
