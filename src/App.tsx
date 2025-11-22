@@ -29,7 +29,7 @@ import EspaldaIndestructible from "./pages/EspaldaIndestructible";
 import CheckoutPage from "./pages/checkout/CheckoutPage";
 import Programa from "./pages/Programa";
 import Evento from "./pages/Evento";
-import Evento2 from "./pages/Evento2";
+import Eventoads from "./pages/Eventoads";
 import Thankyou from "./pages/Thankyou";
 import NotFound from "./pages/NotFound";
 import AvisoLegal from "./pages/AvisoLegal";
@@ -72,7 +72,7 @@ const App = () => (
           <Route path="/espalda-indestructible/:slug" element={<CheckoutPage />} />
           <Route path="/programa" element={<Programa />} />
           <Route path="/evento" element={<Evento />} />
-          <Route path="/evento2" element={<Evento2 />} />
+          <Route path="/eventoads" element={<Eventoads />} />
           <Route path="/thankyou" element={<Thankyou />} />
           <Route path="/aviso-legal" element={<AvisoLegal />} />
           <Route path="/politica-cookies" element={<PoliticaCookies />} />
