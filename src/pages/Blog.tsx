@@ -94,6 +94,14 @@ const Blog = () => {
       category: "Hernia Discal",
       articleUrl: "/blog/hernia-discal-como-se-produce-y-como-curarla-sin-cirugia",
     },
+    {
+      title: "💪 Ejercicio de natación terapéutica para hernia discal: ¿realmente es lo mejor para tu espalda?",
+      excerpt: "Durante años se ha repetido la frase 'tienes hernia discal, vete a nadar' como si fuera una solución universal. Pero si no dominas la técnica ni tienes una buena estabilidad de la columna, esa recomendación puede empeorar tu dolor.",
+      videoUrl: "https://www.youtube.com/watch?v=JN-O-Z0F4gc",
+      thumbnail: "https://img.youtube.com/vi/JN-O-Z0F4gc/maxresdefault.jpg",
+      category: "Hernia Discal",
+      articleUrl: "/blog/ejercicio-natacion-terapeutica-hernia-discal",
+    },
   ];
 
   return (
