@@ -89,7 +89,7 @@ const CheckoutForm = () => {
     const { error } = await stripe.confirmPayment({
       elements,
       confirmParams: {
-        return_url: `${window.location.origin}/thankyou`,
+        return_url: `${window.location.origin}/thankyou-ei`,
         receipt_email: formData.email,
       },
     });
