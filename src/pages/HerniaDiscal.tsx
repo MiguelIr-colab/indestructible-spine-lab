@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet";
 
 const HerniaDiscal = () => {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-background">
       <Helmet>
         <title>Cómo curar una hernia discal sin cirugía: guía completa paso a paso</title>
         <meta name="description" content="Cómo curar una hernia discal sin cirugía paso a paso. Aprende posturas para dormir, ejercicios específicos, errores habituales, alimentación y mentalidad para eliminar el dolor lumbar crónico." />
@@ -16,9 +16,9 @@ const HerniaDiscal = () => {
       </Helmet>
       <Header />
       <main className="pt-20">
-        <article className="py-20 bg-black">
+        <article className="py-20 bg-background">
           <div className="container mx-auto px-4 max-w-4xl">
-            <Button variant="ghost" asChild className="mb-8 text-white hover:text-yellow-400">
+            <Button variant="ghost" asChild className="mb-8">
               <Link to="/blog">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Volver al blog
@@ -26,7 +26,7 @@ const HerniaDiscal = () => {
             </Button>
 
             <header className="mb-8">
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6 text-yellow-400">
+              <h1 className="text-4xl lg:text-5xl font-bold mb-6 text-primary">
                 Cómo curar una hernia discal sin cirugía y recuperar tu vida paso a paso
               </h1>
             </header>
@@ -40,19 +40,23 @@ const HerniaDiscal = () => {
                 allowFullScreen
               ></iframe>
             </div>
+            
+            <div className="mb-8 text-sm text-muted-foreground flex items-center gap-2">
+              <span>⏱️ Tiempo de lectura: 12-15 minutos</span>
+            </div>
 
-            <div className="space-y-8">
-              <p className="text-xl text-gray-300 leading-relaxed">
+            <div className="space-y-8 text-foreground">
+              <p className="text-xl leading-relaxed mb-6">
                 En este artículo aprenderás cómo curar una hernia discal sin cirugía centrándote en lo que realmente marca la diferencia: estabilidad de la columna, entrenamiento específico, posturas correctas para dormir, alimentación adecuada y un cambio de mentalidad. No se trata de vivir "un poco mejor", sino de volver a hacer tu vida sin miedo al dolor lumbar.
               </p>
 
-              <div className="bg-yellow-400/10 border-l-4 border-yellow-400 p-4 rounded">
-                <p className="font-semibold text-gray-200">
+              <div className="bg-primary/10 border-l-4 border-primary p-4 rounded">
+                <p className="font-semibold">
                   ⚠️ Aviso importante: Este artículo resume y organiza el contenido de un vídeo educativo. No sustituye la valoración de un profesional sanitario.
                 </p>
               </div>
 
-              <section className="bg-gray-900 p-6 rounded-lg border border-gray-800">
+              <section className="bg-card p-6 rounded-lg border">
                 <h2 className="text-2xl font-bold mb-4 text-yellow-400">¿De verdad tu hernia discal es el problema principal?</h2>
                 <p className="mb-4 leading-relaxed text-gray-300">
                   Antes de hablar de ejercicios, operaciones o pastillas, hay una idea clave:
