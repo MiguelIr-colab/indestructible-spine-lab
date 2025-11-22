@@ -55,12 +55,12 @@ const Blog = () => {
       articleUrl: "/blog/hernia-discal-se-puede-reabsorber-sola-sin-cirugia",
     },
     {
-      title: "💪 Hernia Cervical #2: Guía completa de ejercicios y tratamiento",
-      excerpt: "Descubre cómo tratar la hernia cervical de forma efectiva. Esta guía completa te muestra las mejores estrategias para aliviar el dolor, recuperar movilidad y fortalecer la musculatura del cuello con ejercicios seguros y progresivos.",
-      videoUrl: "https://www.youtube.com/watch?v=xCuWalw7604",
-      thumbnail: "https://img.youtube.com/vi/xCuWalw7604/maxresdefault.jpg",
-      category: "Hernia Cervical",
-      articleUrl: "/blog/hernia-cervical-2",
+      title: "💪 Curar una hernia discal sin cirugía: así se regenera tu disco con movimiento y fuerza",
+      excerpt: "Descubre cómo una hernia discal puede curarse sin cirugía mediante movimiento, compresión progresiva y 7 ejercicios específicos para hernia cervical, dorsal y lumbar. Entiende el papel de tu sistema inmune y por qué el reposo absoluto puede frenar tu recuperación.",
+      videoUrl: "https://www.youtube.com/watch?v=VupbMbUlF9A",
+      thumbnail: "https://img.youtube.com/vi/VupbMbUlF9A/maxresdefault.jpg",
+      category: "Hernia Discal",
+      articleUrl: "/blog/curar-hernia-discal-sin-cirugia",
     },
     {
       title: "💪 Hernia Cervical #3: Ejercicios avanzados para fortalecer el cuello",
