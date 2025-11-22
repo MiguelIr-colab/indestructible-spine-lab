@@ -2,6 +2,8 @@ import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
 
 const EstenosisLumbarQueEsEjercicioseguros = () => {
   return (
@@ -56,6 +58,13 @@ const EstenosisLumbarQueEsEjercicioseguros = () => {
         
         <main className="pt-20">
           <article className="container mx-auto px-4 py-16 max-w-4xl">
+            <Button variant="ghost" asChild className="mb-8">
+              <Link to="/blog">
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                Volver al blog
+              </Link>
+            </Button>
+            
             <header className="mb-12">
               <h1 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
                 Estenosis lumbar: causas, síntomas y 3 ejercicios para mejorar sin riesgos
@@ -70,6 +79,9 @@ const EstenosisLumbarQueEsEjercicioseguros = () => {
                   allowFullScreen
                   className="rounded-lg"
                 ></iframe>
+              </div>
+              <div className="mb-8 text-sm text-muted-foreground flex items-center gap-2">
+                <span>⏱️ Tiempo de lectura: 8-10 minutos</span>
               </div>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 La <Link to="/blog/estenosis-del-canal-lumbar-5-ejercicios" className="text-primary hover:underline">estenosis lumbar</Link> es un estrechamiento del canal por donde pasa la médula espinal que puede provocar dolor, hormigueo y pérdida de fuerza en las piernas. En este artículo entenderás qué es, qué síntomas suele dar, cómo se diagnostica y, sobre todo, cómo empezar a mejorar con 3 ejercicios sencillos y seguros, centrados en ganar fuerza y estabilidad en la columna sin poner en riesgo tu espalda.

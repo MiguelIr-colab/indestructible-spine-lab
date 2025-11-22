@@ -2,6 +2,8 @@ import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
 
 const EjerciciosRespiracionDolorEspalda = () => {
   return (
@@ -52,6 +54,13 @@ const EjerciciosRespiracionDolorEspalda = () => {
         
         <main className="pt-20">
           <article className="container mx-auto px-4 py-16 max-w-4xl">
+            <Button variant="ghost" asChild className="mb-8">
+              <Link to="/blog">
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                Volver al blog
+              </Link>
+            </Button>
+            
             <header className="mb-12">
               <h1 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
                 5 ejercicios de respiración para aliviar el dolor de espalda (sesión guiada paso a paso)
@@ -66,6 +75,9 @@ const EjerciciosRespiracionDolorEspalda = () => {
                   allowFullScreen
                   className="rounded-lg"
                 ></iframe>
+              </div>
+              <div className="mb-8 text-sm text-muted-foreground flex items-center gap-2">
+                <span>⏱️ Tiempo de lectura: 7-9 minutos</span>
               </div>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 En este artículo aprenderás una sesión muy corta de 5 ejercicios de respiración para el dolor de espalda, basada en trabajo de costillas, abdomen y control postural. Solo necesitas una colchoneta y un taco de yoga (o cojín firme) para seguir el paso a paso y ayudar a tu columna a relajarse y sentirse más libre. Estos ejercicios complementan perfectamente <Link to="/blog/hernia-discal-como-se-produce-y-como-curarla-sin-cirugia" className="text-primary hover:underline">el trabajo para curar hernias discales sin cirugía</Link>.
