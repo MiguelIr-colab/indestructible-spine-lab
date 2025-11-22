@@ -22,6 +22,7 @@ import HerniaDiscalComoSeProduceYComoCurarla from "./pages/HerniaDiscalComoSePro
 import EjercicioNatacionTerapeuticaHerniaDiscal from "./pages/EjercicioNatacionTerapeuticaHerniaDiscal";
 import HerniasDiscalesPorQueNoMejoras from "./pages/HerniasDiscalesPorQueNoMejoras";
 import EjerciciosRespiracionDolorEspalda from "./pages/EjerciciosRespiracionDolorEspalda";
+import EstenosisLumbarQueEsEjerciciosseguros from "./pages/EstenosisLumbarQueEsEjerciciosseguros";
 import EspaldaIndestructible from "./pages/EspaldaIndestructible";
 import CheckoutPage from "./pages/checkout/CheckoutPage";
 import Programa from "./pages/Programa";
@@ -62,6 +63,7 @@ const App = () => (
           <Route path="/blog/ejercicio-natacion-terapeutica-hernia-discal" element={<EjercicioNatacionTerapeuticaHerniaDiscal />} />
           <Route path="/blog/hernias-discales-por-que-no-mejoras" element={<HerniasDiscalesPorQueNoMejoras />} />
           <Route path="/blog/ejercicios-respiracion-dolor-espalda" element={<EjerciciosRespiracionDolorEspalda />} />
+          <Route path="/blog/estenosis-lumbar-que-es-ejercicios-seguros" element={<EstenosisLumbarQueEsEjerciciosseguros />} />
           <Route path="/espalda-indestructible" element={<EspaldaIndestructible />} />
           <Route path="/espalda-indestructible/:slug" element={<CheckoutPage />} />
           <Route path="/programa" element={<Programa />} />

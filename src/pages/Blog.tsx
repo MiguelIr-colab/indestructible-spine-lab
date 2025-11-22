@@ -118,6 +118,14 @@ const Blog = () => {
       category: "Ejercicios",
       articleUrl: "/blog/ejercicios-respiracion-dolor-espalda",
     },
+    {
+      title: "💪 Estenosis lumbar: causas, síntomas y 3 ejercicios para mejorar",
+      excerpt: "La estenosis lumbar es un estrechamiento del canal por donde pasa la médula espinal que puede provocar dolor, hormigueo y pérdida de fuerza en las piernas. Aprende qué es, qué síntomas da y cómo empezar a mejorar con 3 ejercicios sencillos y seguros.",
+      videoUrl: "https://www.youtube.com/watch?v=g9uh1NdHqhQ",
+      thumbnail: "https://img.youtube.com/vi/g9uh1NdHqhQ/maxresdefault.jpg",
+      category: "Estenosis",
+      articleUrl: "/blog/estenosis-lumbar-que-es-ejercicios-seguros",
+    },
   ];
 
   return (
