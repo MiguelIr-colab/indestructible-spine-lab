@@ -1,17 +1,14 @@
 import { useRef, useEffect } from "react";
 import CountdownTimer from "@/components/CountdownTimer";
 import MinimalFooter from "@/components/MinimalFooter";
-
 const Eapuntate = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
-
   useEffect(() => {
     // Set video volume
     if (videoRef.current) {
       videoRef.current.volume = 0.5;
     }
   }, []);
-
   return <div className="min-h-screen bg-background">
       <main className="py-8 md:py-12">
         {/* VSL Section */}
@@ -25,23 +22,16 @@ const Eapuntate = () => {
               
               {/* Video Container - Smaller */}
               <div className="relative w-full max-w-3xl mx-auto aspect-video bg-muted rounded-lg overflow-hidden mb-8">
-                <video 
-                  ref={videoRef}
-                  src="https://res.cloudinary.com/draffep0n/video/upload/v1763053775/Landing_Evento_xsxre4.mp4"
-                  className="absolute inset-0 w-full h-full"
-                  controls
-                  controlsList="nodownload"
-                  autoPlay
-                />
+                <video ref={videoRef} src="https://res.cloudinary.com/draffep0n/video/upload/v1763053775/Landing_Evento_xsxre4.mp4" className="absolute inset-0 w-full h-full" controls controlsList="nodownload" autoPlay />
               </div>
 
               {/* Countdown Timer */}
               <div className="mb-8">
-                <CountdownTimer />
+                
               </div>
 
               {/* Form Section */}
-<div className="bg-card border border-border rounded-lg p-8 md:p-12">
+            <div className="bg-card border border-border rounded-lg p-8 md:p-12">
   <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
     ACCEDE PARA FORTALECER TU COLUMNA
   </h2>
@@ -49,41 +39,24 @@ const Eapuntate = () => {
   {/* Formulario Mailrelay embebido */}
   <div className="space-y-6">
     <div className="ipz-container max-w-lg mx-auto">
-      <iframe
-        data-skip-lazy=""
-        src="https://entrenaconrobertogalvan.ipzmarketing.com/f/e_QDvtOPmPI"
-        frameBorder="0"
-        scrolling="no"
-        width="100%"
-        className="ipz-iframe rounded-xl shadow-lg"
-        style={{
-          background: "transparent",
-          minHeight: "420px",
-          border: "none",
-        }}
-      ></iframe>
+      <iframe data-skip-lazy="" src="https://entrenaconrobertogalvan.ipzmarketing.com/f/e_QDvtOPmPI" frameBorder="0" scrolling="no" width="100%" className="ipz-iframe rounded-xl shadow-lg" style={{
+                    background: "transparent",
+                    minHeight: "420px",
+                    border: "none"
+                  }}></iframe>
     </div>
 
     <p className="text-center text-sm text-muted-foreground mt-4">
       Al enviar tus datos aceptas nuestra{" "}
-      <a
-        href="/politica-privacidad"
-        className="text-primary hover:underline"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href="/politica-privacidad" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
         política de privacidad
       </a>.
     </p>
   </div>
 
   {/* Script de Mailrelay */}
-  <script
-    data-cfasync="false"
-    type="text/javascript"
-    src="https://assets.ipzmarketing.com/assets/signup_form/iframe_v1.js"
-  ></script>
-</div>
+  <script data-cfasync="false" type="text/javascript" src="https://assets.ipzmarketing.com/assets/signup_form/iframe_v1.js"></script>
+            </div>
 
 
               {/* Next Steps Section */}
@@ -131,5 +104,4 @@ const Eapuntate = () => {
       <MinimalFooter />
     </div>;
 };
-
 export default Eapuntate;
