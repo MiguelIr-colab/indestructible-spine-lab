@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Link } from "react-router-dom";
 
 const HerniaDiscalComoSeProduceYComoCurarla = () => {
   return (
@@ -68,7 +69,7 @@ const HerniaDiscalComoSeProduceYComoCurarla = () => {
               </h2>
               
               <p className="text-white text-lg leading-relaxed mb-6">
-                Una hernia discal no es algo que aparece "de la nada" ni por un solo movimiento desafortunado. Para entenderlo, primero hay que mirar la columna como un todo.
+                Una hernia discal no es algo que aparece "de la nada" ni por un solo movimiento desafortunado. Para entenderlo, primero hay que mirar la columna como un todo. Si quieres saber <Link to="/blog/hernia-discal-curar" className="text-[#FFD700] hover:underline">cómo curar una hernia discal sin cirugía paso a paso</Link>, primero necesitas entender por qué se produce.
               </p>
 
               <p className="text-white text-lg leading-relaxed mb-6">
@@ -296,7 +297,7 @@ const HerniaDiscalComoSeProduceYComoCurarla = () => {
               </h2>
 
               <p className="text-white text-lg leading-relaxed mb-6">
-                Puede que pienses que "quizá lo que falta es reposo", pero el problema no es solo tiempo de descanso.
+                Puede que pienses que "quizá lo que falta es reposo", pero el problema no es solo tiempo de descanso. De hecho, <Link to="/blog/hernia-discal-reabsorber" className="text-[#FFD700] hover:underline">una hernia discal puede reabsorberse sola sin cirugía</Link>, pero no solo con reposo.
               </p>
 
               <p className="text-white text-lg leading-relaxed mb-6">

@@ -43,7 +43,7 @@ const HerniaDiscalEjerciciosEvitar = () => {
 
             <div className="space-y-8">
               <p className="text-xl text-gray-300 leading-relaxed">
-                Si tienes hernia discal o dolor crónico de espalda, no todo vale a la hora de moverte o entrenar. En este artículo verás qué ejercicios y gestos debes evitar, por qué el reposo, ciertos estiramientos, el calor local o algunas rutinas muy populares pueden estar frenando tu recuperación, y qué enfoque tiene más sentido según el tiempo que lleves con dolor.
+                Si tienes <Link to="/blog/hernia-discal-como-se-produce-y-como-curarla-sin-cirugia" className="text-yellow-400 hover:underline">hernia discal</Link> o dolor crónico de espalda, no todo vale a la hora de moverte o entrenar. En este artículo verás qué ejercicios y gestos debes evitar, por qué el reposo, ciertos estiramientos, el calor local o algunas rutinas muy populares pueden estar frenando tu recuperación, y qué enfoque tiene más sentido según el tiempo que lleves con dolor.
               </p>
 
               <section className="bg-gray-900 p-6 rounded-lg border border-gray-800">

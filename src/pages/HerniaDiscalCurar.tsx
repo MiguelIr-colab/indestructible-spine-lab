@@ -48,9 +48,9 @@ const HerniaDiscalCurar = () => {
 
               <section className="bg-gray-900 p-6 rounded-lg border border-gray-800">
                 <h2 className="text-2xl font-bold mb-4 text-yellow-400">Qué es una hernia discal y por qué puede regenerarse</h2>
-                <p className="mb-4 leading-relaxed text-gray-300">
-                  Cuando escuchas "hernia discal", es fácil pensar en algo roto para siempre, condenado a la cirugía. Sin embargo, tal y como explica Roberto Galbán, licenciado en Ciencias de la Actividad Física y del Deporte, una hernia discal puede recuperarse sin operar si se dan ciertas condiciones.
-                </p>
+              <p className="mb-4 leading-relaxed text-gray-300">
+                Cuando escuchas "hernia discal", es fácil pensar en algo roto para siempre, condenado a la cirugía. Sin embargo, tal y como explica Roberto Galbán, licenciado en Ciencias de la Actividad Física y del Deporte, <Link to="/blog/hernia-discal-como-se-produce-y-como-curarla-sin-cirugia" className="text-yellow-400 hover:underline">una hernia discal puede recuperarse sin operar</Link> si se dan ciertas condiciones.
+              </p>
 
                 <div className="bg-yellow-400/10 border-l-4 border-yellow-400 p-4 rounded mb-4">
                   <p className="font-semibold text-gray-200 mb-2">
@@ -231,7 +231,7 @@ const HerniaDiscalCurar = () => {
                 </div>
 
                 <p className="mb-4 leading-relaxed text-gray-300">
-                  Además, a largo plazo, no tener fuerza es un problema añadido. Cuanta menos fuerza tengas:
+                  Además, a largo plazo, no tener fuerza es un problema añadido. Cuanta menos fuerza tengas, más vulnerable estará tu columna. Por eso <Link to="/blog/entrenar-con-hernia-discal-riesgos-bien-hecho" className="text-yellow-400 hover:underline">entrenar con hernia discal no es peligroso</Link> si lo haces correctamente.
                 </p>
                 <ul className="space-y-2 mb-4 text-gray-300">
                   <li className="flex items-start gap-2">

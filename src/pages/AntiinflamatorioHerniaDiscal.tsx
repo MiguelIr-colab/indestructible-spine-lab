@@ -279,7 +279,7 @@ const AntiinflamatorioHerniaDiscal = () => {
                   <li>Fortalece la musculatura alrededor de tu columna.</li>
                   <li>Aumenta la estabilidad (lo que tu cuerpo está intentando conseguir con rigidez y dolor).</li>
                   <li>Mejora el rango de movimiento de cadera, columna y hombros.</li>
-                  <li>Envía a tu cerebro el mensaje de que puedes moverte sin romperte.</li>
+                  <li>Envía a tu cerebro el mensaje de que puedes moverte sin romperte. Si tienes dudas sobre si <Link to="/blog/entrenar-con-hernia-discal-riesgos-bien-hecho" className="text-yellow-400 hover:underline">entrenar con hernia discal es peligroso</Link>, ese artículo te lo aclara.</li>
                 </ul>
                 <p className="mb-4 leading-relaxed text-gray-300">
                   Con el tiempo:

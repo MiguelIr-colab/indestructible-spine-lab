@@ -41,12 +41,16 @@ const HerniaDiscalL5S1 = () => {
 
             <div className="prose prose-lg max-w-none">
               <p className="text-xl text-muted-foreground mb-8">
-                En este video de mi canal "Espalda Indestructible", te explico cuál es realmente el mejor ejercicio para tratar una hernia discal L5-S1 sin cirugía, y por qué muchos de los estiramientos que ves en internet podrían estar empeorando tu lesión sin que lo sepas.
+                En este video de mi canal "Espalda Indestructible", te explico cuál es realmente el mejor ejercicio para tratar una hernia discal L5-S1 sin cirugía, y por qué muchos de los estiramientos que ves en internet podrían estar empeorando tu lesión sin que lo sepas. Si quieres entender primero <Link to="/blog/hernia-discal-como-se-produce-y-como-curarla-sin-cirugia" className="text-primary hover:underline">cómo se produce una hernia discal y cómo curarla</Link>, empieza por ese artículo.
               </p>
 
               <h2 className="text-3xl font-bold text-card-foreground mt-12 mb-6">
                 Los ejercicios populares que debes evitar
               </h2>
+              
+              <p className="text-muted-foreground mb-6">
+                Antes de ver qué ejercicio funciona, es importante saber <Link to="/blog/ejercicios-que-no-debo-hacer-si-tengo-hernia-discal" className="text-primary hover:underline">qué ejercicios NO debes hacer si tienes hernia discal</Link> para no agravar tu situación.
+              </p>
               
               <p className="text-muted-foreground mb-6">
                 Comienzo mostrando los ejercicios más populares —como colgarse de una barra o usar tablas de inversión— y demuestro por qué no son seguros si tu disco intervertebral está dañado: aunque parecen aliviar temporalmente el dolor, en realidad aumentan la presión interna del disco cuando vuelves a caminar o moverte, provocando que la hernia vuelva a sobresalir.
@@ -92,6 +96,10 @@ const HerniaDiscalL5S1 = () => {
                   La herramienta más poderosa para una espalda sin dolor es la fuerza. 💥
                 </p>
               </div>
+
+              <p className="text-muted-foreground mb-6">
+                Si quieres más ejercicios específicos para la zona lumbar, consulta nuestra <Link to="/blog/ejercicios-hernia-discal-lumbar" className="text-primary hover:underline">guía completa de 7 ejercicios para hernia discal lumbar</Link>. Y si te preocupa si <Link to="/blog/entrenar-con-hernia-discal-riesgos-bien-hecho" className="text-primary hover:underline">entrenar con hernia discal es peligroso</Link>, ese artículo despejará todas tus dudas.
+              </p>
 
               <div className="text-center mt-12">
                 <Button size="lg" asChild>

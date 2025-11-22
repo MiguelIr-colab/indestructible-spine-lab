@@ -39,7 +39,7 @@ const EstenosisLumbar = () => {
 
               <h2 className="text-2xl font-bold mt-8 mb-4 text-card-foreground">¿Qué es la estenosis lumbar?</h2>
               <p className="mb-4">
-                Primero te aclaro qué es la estenosis lumbar y por qué aparece (artrosis, espondilolistesis, discopatías, degeneración…). No todo dolor en la zona de la resonancia se debe a la estenosis: muchas veces los síntomas típicos son entumecimiento, debilidad, torpeza al andar e incluso, en casos graves, pérdida de control de esfínteres.
+                Primero te aclaro qué es la estenosis lumbar y por qué aparece (artrosis, espondilolistesis, discopatías, degeneración…). No todo dolor en la zona de la resonancia se debe a la estenosis: muchas veces los síntomas típicos son entumecimiento, debilidad, torpeza al andar e incluso, en casos graves, pérdida de control de esfínteres. Si quieres entender en detalle <Link to="/blog/estenosis-lumbar-que-es-ejercicios-seguros" className="text-primary hover:underline">qué es la estenosis lumbar y 3 ejercicios seguros para mejorar</Link>, ese artículo te lo explica paso a paso.
               </p>
               <p className="mb-4">
                 Explico los 4 grados (A–D) y cuándo considerar cirugía (déficits neurológicos severos).
@@ -78,7 +78,11 @@ const EstenosisLumbar = () => {
 
               <h2 className="text-2xl font-bold mt-8 mb-4 text-card-foreground">Personalización es clave</h2>
               <p className="mb-4">
-                Insisto en que cada persona compensa distinto: dos pacientes con la misma estenosis pueden necesitar programas diferentes. Por eso, si tu dolor es crónico y ya probaste medicación y fisioterapia pasiva, mi programa Espalda Indestructible te guía con una progresión personalizada para quitar bloqueos, recuperar fuerza y dejar de depender del reposo.
+                Insisto en que cada persona compensa distinto: dos pacientes con la misma estenosis pueden necesitar programas diferentes. Por eso, si tu dolor es crónico y ya probaste medicación y fisioterapia pasiva, mi programa Espalda Indestructible te guía con una progresión personalizada para quitar bloqueos, recuperar fuerza y dejar de depender del reposo. Si además tienes <Link to="/blog/hernia-discal-como-se-produce-y-como-curarla-sin-cirugia" className="text-primary hover:underline">hernia discal</Link>, te recomiendo leer <Link to="/blog/hernias-discales-por-que-no-mejoras" className="text-primary hover:underline">por qué no mejoras</Link> para entender el enfoque completo.
+              </p>
+              
+              <p className="mb-4">
+                Para ejercicios más específicos de columna lumbar, consulta <Link to="/blog/ejercicios-hernia-discal-lumbar" className="text-primary hover:underline">estos 7 ejercicios para hernia discal lumbar</Link> que complementan perfectamente el trabajo de estenosis.
               </p>
 
               <div className="bg-destructive/10 border-l-4 border-destructive p-4 my-6">

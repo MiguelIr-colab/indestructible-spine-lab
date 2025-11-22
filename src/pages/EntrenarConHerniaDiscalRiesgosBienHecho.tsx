@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Link } from "react-router-dom";
 
 const EntrenarConHerniaDiscalRiesgosBienHecho = () => {
   return (
@@ -69,7 +70,7 @@ const EntrenarConHerniaDiscalRiesgosBienHecho = () => {
                 ></iframe>
               </div>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                ¿Te han dicho que entrenar con hernia discal es peligroso y que debes evitar esfuerzos, cargar peso o moverte "demasiado"? En este artículo entenderás por qué el verdadero problema no es el entrenamiento en sí, sino cómo se mueve tu columna, qué compensaciones has creado y si tu programa de ejercicio está pensado para mejorar tu biomecánica, ganar fuerza y estabilidad… o si solo estás "haciendo ejercicios sueltos" que no cambian nada de raíz.
+                ¿Te han dicho que <Link to="/blog/hernia-discal-como-se-produce-y-como-curarla-sin-cirugia" className="text-primary hover:underline">entrenar con hernia discal</Link> es peligroso y que debes evitar esfuerzos, cargar peso o moverte "demasiado"? En este artículo entenderás por qué el verdadero problema no es el entrenamiento en sí, sino cómo se mueve tu columna, qué compensaciones has creado y si tu programa de ejercicio está pensado para mejorar tu biomecánica, ganar fuerza y estabilidad… o si solo estás "haciendo ejercicios sueltos" que no cambian nada de raíz.
               </p>
               <div className="mt-6 p-4 bg-muted rounded-lg">
                 <p className="text-sm text-muted-foreground italic">

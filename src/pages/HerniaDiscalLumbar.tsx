@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Link } from "react-router-dom";
 
 const HerniaDiscalLumbar = () => {
   return (
@@ -58,7 +59,7 @@ const HerniaDiscalLumbar = () => {
               </h2>
               
               <p className="text-white text-lg leading-relaxed mb-6">
-                Cuando te hablan de hernia discal lumbar, lo habitual es que te enfoques solo en el disco roto: la L4-L5, la L5-S1, la protusión, la discopatía…
+                Cuando te hablan de hernia discal lumbar, lo habitual es que te enfoques solo en el disco roto: la L4-L5, la L5-S1, la protusión, la discopatía… Si aún no has leído <Link to="/blog/hernia-discal-como-se-produce-y-como-curarla-sin-cirugia" className="text-[#FFD700] hover:underline">cómo se produce una hernia discal y cómo curarla sin cirugía</Link>, ese artículo te dará la base que necesitas.
                 Y a partir de ahí empieces a buscar desesperadamente:
               </p>
 
@@ -261,7 +262,7 @@ const HerniaDiscalLumbar = () => {
 
               <p className="text-white text-lg leading-relaxed mb-6">
                 Aquí hay otro miedo muy frecuente:
-                "Si hago ejercicios, ¿me voy a hacer más daño?".
+                "Si hago ejercicios, ¿me voy a hacer más daño?". Si tienes esa duda, te recomiendo leer <Link to="/blog/entrenar-con-hernia-discal-riesgos-bien-hecho" className="text-[#FFD700] hover:underline">¿Entrenar con hernia discal es realmente peligroso?</Link> para entender mejor el tema.
               </p>
 
               <p className="text-white text-lg leading-relaxed mb-6">
@@ -298,7 +299,11 @@ const HerniaDiscalLumbar = () => {
               </ul>
 
               <p className="text-white text-lg leading-relaxed mb-6">
-                Lo que sigue son ejercicios globales, pensados para trabajar el cuerpo como un todo y disminuir las compensaciones, sin centrarse en una vértebra concreta.
+                Lo que sigue son ejercicios globales, pensados para trabajar el cuerpo como un todo y disminuir las compensaciones, sin centrarse en una vértebra concreta. Antes de empezar, consulta <Link to="/blog/ejercicios-que-no-debo-hacer-hernia-discal" className="text-[#FFD700] hover:underline">qué ejercicios NO debes hacer</Link> para evitar empeorar.
+              </p>
+              
+              <p className="text-white text-lg leading-relaxed mb-6">
+                Además, para complementar estos ejercicios, te recomiendo incluir <Link to="/blog/ejercicios-respiracion-dolor-espalda" className="text-[#FFD700] hover:underline">ejercicios de respiración para el dolor de espalda</Link> que ayudan a liberar tensión y mejorar el control del core.
               </p>
 
               <h2 className="text-3xl font-bold mt-12 mb-6 text-[#FFD700]">
