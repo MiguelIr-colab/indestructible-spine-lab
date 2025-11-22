@@ -126,6 +126,14 @@ const Blog = () => {
       category: "Estenosis",
       articleUrl: "/blog/estenosis-lumbar-que-es-ejercicios-seguros",
     },
+    {
+      title: "💪 Estiramientos hernia discal y ciática: ¿cuándo ayudan y cuándo aumentan el riesgo?",
+      excerpt: "Si tienes hernia discal o ciática, probablemente te han dicho que 'tienes que estirar más'. Pero abusar del estiramiento pasivo puede aumentar el riesgo de lesión. Descubre por qué la fuerza es la herramienta clave frente al dolor crónico.",
+      videoUrl: "https://www.youtube.com/watch?v=ihlOd8FaoEQ",
+      thumbnail: "https://img.youtube.com/vi/ihlOd8FaoEQ/maxresdefault.jpg",
+      category: "Hernia Discal",
+      articleUrl: "/blog/estiramientos-hernia-discal-ciatica-fuerza",
+    },
   ];
 
   return (
