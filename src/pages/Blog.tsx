@@ -102,6 +102,14 @@ const Blog = () => {
       category: "Hernia Discal",
       articleUrl: "/blog/ejercicio-natacion-terapeutica-hernia-discal",
     },
+    {
+      title: "💪 Hernias discales: por qué no mejoras y qué hacer de verdad",
+      excerpt: "Si llevas años con hernia discal, protusiones, estenosis o escoliosis, probando terapias, medicación y reposo sin mejorar, el problema no eres tú ni tu resonancia. El problema es el enfoque. Descubre por qué las terapias habituales fallan y qué hacer realmente según la ciencia.",
+      videoUrl: "https://www.youtube.com/watch?v=TYPMs1X_zRA",
+      thumbnail: "https://img.youtube.com/vi/TYPMs1X_zRA/maxresdefault.jpg",
+      category: "Hernia Discal",
+      articleUrl: "/blog/hernias-discales-por-que-no-mejoras",
+    },
   ];
 
   return (
