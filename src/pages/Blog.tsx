@@ -71,12 +71,12 @@ const Blog = () => {
       articleUrl: "/blog/ejercicios-que-no-debo-hacer-hernia-discal",
     },
     {
-      title: "💪 Hernia Cervical #4: Recuperación sin cirugía paso a paso",
-      excerpt: "La recuperación de una hernia cervical sin cirugía es posible. En este artículo encontrarás un plan paso a paso con ejercicios progresivos, consejos prácticos y estrategias para aliviar el dolor y recuperar tu calidad de vida.",
-      videoUrl: "https://www.youtube.com/watch?v=xCuWalw7604",
-      thumbnail: "https://img.youtube.com/vi/xCuWalw7604/maxresdefault.jpg",
-      category: "Hernia Cervical",
-      articleUrl: "/blog/hernia-cervical-4",
+      title: "💪 Ejercicios para hernia discal lumbar: 7 movimientos seguros para aliviar el dolor",
+      excerpt: "Si tienes una hernia discal lumbar y llevas tiempo con dolor, es normal que busques ejercicios especiales para tu resonancia. Pero la clave no está en el disco, sino en cómo se mueve tu cuerpo. Descubre 7 ejercicios globales, sencillos y seguros, para mejorar tu movilidad, estabilidad y fuerza.",
+      videoUrl: "https://www.youtube.com/watch?v=cM0O1VulYKk",
+      thumbnail: "https://img.youtube.com/vi/cM0O1VulYKk/maxresdefault.jpg",
+      category: "Hernia Discal",
+      articleUrl: "/blog/ejercicios-hernia-discal-lumbar",
     },
   ];
 
