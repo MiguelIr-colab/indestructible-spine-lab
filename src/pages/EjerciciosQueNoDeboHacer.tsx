@@ -1,6 +1,9 @@
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
 
 const EjerciciosQueNoDeboHacer = () => {
   return (
@@ -38,6 +41,13 @@ const EjerciciosQueNoDeboHacer = () => {
         
         <main className="pt-20">
           <article className="container mx-auto px-4 py-12 max-w-4xl">
+            <Button variant="ghost" asChild className="mb-8">
+              <Link to="/blog">
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                Volver al blog
+              </Link>
+            </Button>
+            
             <h1 className="text-4xl lg:text-5xl font-bold mb-8 text-[#FFD700]">
               Ejercicios que NO debes hacer si tienes una hernia discal
             </h1>
@@ -54,6 +64,10 @@ const EjerciciosQueNoDeboHacer = () => {
                   allowFullScreen
                   className="w-full"
                 ></iframe>
+              </div>
+              
+              <div className="mb-8 text-sm text-muted-foreground flex items-center gap-2">
+                <span>⏱️ Tiempo de lectura: 9-11 minutos</span>
               </div>
 
               <div className="bg-[#1a1a1a] p-6 rounded-lg mb-8">
@@ -432,6 +446,16 @@ const EjerciciosQueNoDeboHacer = () => {
               <p className="text-white text-lg leading-relaxed mb-6">
                 El profesional del vídeo insiste en que <strong>el ejercicio es parte de la solución</strong>. Pero para que realmente te ayude, primero necesitas dejar de hacer aquello que empeora tu hernia discal y tu dolor lumbar.
               </p>
+            </div>
+
+            <div className="mt-12 p-6 bg-primary/10 rounded-lg">
+              <h3 className="text-2xl font-bold mb-4">¿Quieres saber qué ejercicios SÍ hacer?</h3>
+              <p className="mb-4">
+                Accede a nuestro programa completo de ejercicios personalizados para fortalecer tu columna de forma segura y progresiva, evitando movimientos peligrosos.
+              </p>
+              <Button asChild size="lg">
+                <Link to="/programa">Ver programas</Link>
+              </Button>
             </div>
           </article>
         </main>

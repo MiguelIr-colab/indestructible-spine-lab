@@ -535,7 +535,7 @@ const HerniaCervicalC5C6 = () => {
                     Accede a nuestro programa completo de ejercicios personalizados para fortalecer tu columna cervical de forma segura y progresiva.
                   </p>
                   <Button asChild size="lg">
-                    <Link to="/tienda">Ver programas</Link>
+                    <Link to="/programa">Ver programas</Link>
                   </Button>
                 </div>
               </div>

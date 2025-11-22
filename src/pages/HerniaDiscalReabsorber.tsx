@@ -802,7 +802,7 @@ const HerniaDiscalReabsorber = () => {
 
               <div className="mt-8 text-center">
                 <Button size="lg" asChild className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold">
-                  <Link to="/tienda">
+                  <Link to="/programa">
                     Descubre nuestro programa completo
                   </Link>
                 </Button>

@@ -433,6 +433,16 @@ const HerniasDiscalesPorQueNoMejoras = () => {
                 La herramienta más potente que existe para eliminar un dolor crónico de columna es la fuerza: fuerza, fuerza y más fuerza.
               </p>
             </section>
+
+            <div className="mt-12 p-6 bg-primary/10 rounded-lg">
+              <h3 className="text-2xl font-bold mb-4">¿Quieres eliminar el dolor de espalda?</h3>
+              <p className="mb-4">
+                Accede a nuestro programa completo de ejercicios personalizados para fortalecer tu columna de forma segura y progresiva.
+              </p>
+              <Button asChild size="lg">
+                <Link to="/programa">Ver programas</Link>
+              </Button>
+            </div>
           </article>
         </main>
 
