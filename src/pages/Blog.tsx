@@ -63,12 +63,12 @@ const Blog = () => {
       articleUrl: "/blog/curar-hernia-discal-sin-cirugia",
     },
     {
-      title: "💪 Hernia Cervical #3: Ejercicios avanzados para fortalecer el cuello",
-      excerpt: "Aprende ejercicios avanzados para el tratamiento de la hernia cervical. Esta guía incluye progresiones seguras, técnicas de control motor y estrategias para fortalecer la musculatura profunda del cuello sin necesidad de cirugía.",
-      videoUrl: "https://www.youtube.com/watch?v=xCuWalw7604",
-      thumbnail: "https://img.youtube.com/vi/xCuWalw7604/maxresdefault.jpg",
-      category: "Hernia Cervical",
-      articleUrl: "/blog/hernia-cervical-3",
+      title: "💪 Ejercicios que NO debes hacer si tienes hernia discal o dolor crónico de espalda",
+      excerpt: "Descubre qué ejercicios no debes hacer si tienes hernia discal o dolor crónico de espalda, qué movimientos evitar y por qué algunos clásicos como natación, planchas o ciertos estiramientos pueden empeorar tus síntomas.",
+      videoUrl: "https://www.youtube.com/watch?v=-9NnW40dxAU",
+      thumbnail: "https://img.youtube.com/vi/-9NnW40dxAU/maxresdefault.jpg",
+      category: "Hernia Discal",
+      articleUrl: "/blog/ejercicios-que-no-debo-hacer-hernia-discal",
     },
     {
       title: "💪 Hernia Cervical #4: Recuperación sin cirugía paso a paso",
