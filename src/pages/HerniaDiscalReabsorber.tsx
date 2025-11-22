@@ -67,7 +67,7 @@ const HerniaDiscalReabsorber = () => {
                   </li>
                 </ul>
                 <p className="mb-4 leading-relaxed text-gray-300">
-                  Es decir, una protusión discal también es una hernia, solo que el material interno del disco (ese "gel") se ha desplazado de una forma u otra:
+                  Es decir, una protusión discal también es una hernia, solo que el material interno del disco (ese "gel") se ha desplazado de una forma u otra. Si quieres entender en profundidad <Link to="/blog/hernia-discal-como-se-produce-y-como-curarla-sin-cirugia" className="text-yellow-400 hover:underline">cómo se produce una hernia discal y cómo curarla</Link>, ese artículo te lo explica paso a paso.
                 </p>
                 <ul className="space-y-2 mb-4 text-gray-300">
                   <li className="flex items-start gap-2">
@@ -216,7 +216,7 @@ const HerniaDiscalReabsorber = () => {
                 </ul>
                 <div className="bg-yellow-400/10 border-l-4 border-yellow-400 p-4 rounded">
                   <p className="font-semibold text-gray-200">
-                    Por eso, el mensaje es: no se trata de machacarte, pero sí de empezar a moverte, aun con algo de dolor, de forma controlada y guiada.
+                    Por eso, el mensaje es: no se trata de machacarte, pero sí de empezar a moverte, aun con algo de dolor, de forma controlada y guiada. Aquí te explicamos <Link to="/blog/hernia-discal-curar" className="text-yellow-400 hover:underline">cómo curar una hernia discal con movimiento y fuerza</Link>.
                   </p>
                 </div>
 

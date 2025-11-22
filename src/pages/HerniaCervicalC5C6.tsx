@@ -31,9 +31,9 @@ const HerniaCervicalC5C6 = () => {
                 <h1 className="text-4xl lg:text-5xl font-bold mb-6 text-primary">
                   Hernia discal cervical C5 C6: tratamiento y 7 ejercicios que sí ayudan
                 </h1>
-                <p className="text-xl text-muted-foreground">
-                  Si te han diagnosticado hernia discal cervical C5 C6 (o protusión), esta guía te explica por qué aparece, cómo diferenciar fase aguda de crónica, cuándo valorar cirugía y 7 ejercicios que priorizan movilidad, estabilidad y fuerza para reducir el dolor y evitar recaídas.
-                </p>
+              <p className="mb-4 leading-relaxed">
+                Si te han diagnosticado hernia discal cervical C5 C6 (o protusión), esta guía te explica <Link to="/blog/hernia-discal-como-se-produce-y-como-curarla-sin-cirugia" className="text-primary hover:underline">por qué aparece una hernia discal</Link>, cómo diferenciar fase aguda de crónica, cuándo valorar cirugía y 7 ejercicios que priorizan movilidad, estabilidad y fuerza para reducir el dolor y evitar recaídas.
+              </p>
               </header>
 
               <div className="aspect-video mb-4">
@@ -111,15 +111,15 @@ const HerniaCervicalC5C6 = () => {
                   <div className="space-y-4">
                     <div className="border-l-4 border-primary pl-4">
                       <h3 className="font-bold text-lg mb-2 text-primary">Fase aguda (≈ 6–12 semanas)</h3>
-                      <p className="leading-relaxed">
-                        Dolor intenso y constante, difícil de aliviar con posturas. Aquí suele usarse medicación para paliar el dolor. Aun así, conviene iniciar movilidad y control específicos, para que el cerebro "entienda" que controlas la zona y deje de proteger con dolor.
-                      </p>
+                <p className="leading-relaxed">
+                  Dolor intenso y constante, difícil de aliviar con posturas. Aquí suele usarse medicación para paliar el dolor. Aun así, conviene iniciar movilidad y control específicos, para que el cerebro "entienda" que controlas la zona y deje de proteger con dolor. Para complementar esta fase, los <Link to="/blog/ejercicios-respiracion-dolor-espalda" className="text-primary hover:underline">ejercicios de respiración para el dolor de espalda</Link> pueden ser de gran ayuda.
+                </p>
                     </div>
                     <div className="border-l-4 border-secondary pl-4">
                       <h3 className="font-bold text-lg mb-2 text-secondary">Fase crónica</h3>
-                      <p className="leading-relaxed">
-                        El dolor persiste más allá del periodo agudo. Es momento de entrenar a conciencia: eliminar compensaciones, ganar movilidad, y sobre todo fuerza. La fuerza es la herramienta más potente para reducir dolor y prevenir nuevos episodios.
-                      </p>
+                <p className="leading-relaxed">
+                  El dolor persiste más allá del periodo agudo. Es momento de entrenar a conciencia: eliminar compensaciones, ganar movilidad, y sobre todo fuerza. La fuerza es la herramienta más potente para reducir dolor y prevenir nuevos episodios. Si llevas tiempo con dolor y no mejoras, lee <Link to="/blog/hernias-discales-por-que-no-mejoras" className="text-primary hover:underline">por qué no mejoras con hernias discales</Link>.
+                </p>
                     </div>
                   </div>
                 </section>

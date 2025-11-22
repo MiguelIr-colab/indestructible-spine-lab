@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Link } from "react-router-dom";
 
 const EstenosisLumbarQueEsEjercicioseguros = () => {
   return (
@@ -71,7 +72,7 @@ const EstenosisLumbarQueEsEjercicioseguros = () => {
                 ></iframe>
               </div>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                La estenosis lumbar es un estrechamiento del canal por donde pasa la médula espinal que puede provocar dolor, hormigueo y pérdida de fuerza en las piernas. En este artículo entenderás qué es, qué síntomas suele dar, cómo se diagnostica y, sobre todo, cómo empezar a mejorar con 3 ejercicios sencillos y seguros, centrados en ganar fuerza y estabilidad en la columna sin poner en riesgo tu espalda.
+                La <Link to="/blog/estenosis-del-canal-lumbar-5-ejercicios" className="text-primary hover:underline">estenosis lumbar</Link> es un estrechamiento del canal por donde pasa la médula espinal que puede provocar dolor, hormigueo y pérdida de fuerza en las piernas. En este artículo entenderás qué es, qué síntomas suele dar, cómo se diagnostica y, sobre todo, cómo empezar a mejorar con 3 ejercicios sencillos y seguros, centrados en ganar fuerza y estabilidad en la columna sin poner en riesgo tu espalda.
               </p>
             </header>
 

@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Link } from "react-router-dom";
 
 const EjerciciosRespiracionDolorEspalda = () => {
   return (
@@ -67,7 +68,7 @@ const EjerciciosRespiracionDolorEspalda = () => {
                 ></iframe>
               </div>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                En este artículo aprenderás una sesión muy corta de 5 ejercicios de respiración para el dolor de espalda, basada en trabajo de costillas, abdomen y control postural. Solo necesitas una colchoneta y un taco de yoga (o cojín firme) para seguir el paso a paso y ayudar a tu columna a relajarse y sentirse más libre.
+                En este artículo aprenderás una sesión muy corta de 5 ejercicios de respiración para el dolor de espalda, basada en trabajo de costillas, abdomen y control postural. Solo necesitas una colchoneta y un taco de yoga (o cojín firme) para seguir el paso a paso y ayudar a tu columna a relajarse y sentirse más libre. Estos ejercicios complementan perfectamente <Link to="/blog/hernia-discal-como-se-produce-y-como-curarla-sin-cirugia" className="text-primary hover:underline">el trabajo para curar hernias discales sin cirugía</Link>.
               </p>
               <div className="mt-6 p-4 bg-muted rounded-lg">
                 <p className="text-sm text-muted-foreground italic">
@@ -99,7 +100,7 @@ const EjerciciosRespiracionDolorEspalda = () => {
                 <li>Dejar que el cuerpo se derrumbe cuando sueltas el aire.</li>
               </ul>
               <p>
-                Toda la sesión se construye alrededor de un patrón muy sencillo:
+                Toda la sesión se construye alrededor de un patrón muy sencillo. Puedes complementar estos ejercicios de respiración con <Link to="/blog/estenosis-del-canal-lumbar-5-ejercicios" className="text-primary hover:underline">estos ejercicios para estenosis lumbar</Link>, <Link to="/blog/ejercicios-hernia-discal-lumbar" className="text-primary hover:underline">ejercicios para hernia discal lumbar</Link> o <Link to="/blog/entrenar-con-hernia-discal-riesgos-bien-hecho" className="text-primary hover:underline">entrenamiento con hernia discal</Link>:
               </p>
               <ul>
                 <li>Inspirar por la nariz durante unos 6 segundos, notando cómo se expanden las costillas.</li>

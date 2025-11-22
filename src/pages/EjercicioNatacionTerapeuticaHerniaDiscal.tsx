@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Link } from "react-router-dom";
 
 const EjercicioNatacionTerapeuticaHerniaDiscal = () => {
   return (
@@ -82,15 +83,15 @@ const EjercicioNatacionTerapeuticaHerniaDiscal = () => {
               <p>
                 ¿El problema? Que esa recomendación se da sin mirar cómo te mueves y sin entender qué está pasando en tu columna cuando entras al agua.
               </p>
-              <p>
+              <p className="font-semibold">
                 La natación no es buena ni mala por sí misma.<br />
-                Depende de:
+                Depende de cómo te mueves. Si quieres entender si <Link to="/blog/entrenar-con-hernia-discal-riesgos-bien-hecho" className="text-primary hover:underline">entrenar con hernia discal es peligroso</Link>, ese artículo te dará el contexto necesario.
               </p>
               <ul>
                 <li>Tu biomecánica (cómo se mueve realmente tu cuerpo).</li>
-                <li>Tu nivel de control y estabilidad de columna y cadera.</li>
+                <li>Tu nivel de control y estabilidad de columna y cadera. Para mejorar esto, consulta <Link to="/blog/ejercicios-hernia-discal-lumbar" className="text-primary hover:underline">estos ejercicios específicos para hernia discal lumbar</Link>.</li>
                 <li>La técnica de nado que utilizas.</li>
-                <li>El momento del proceso en el que te encuentras.</li>
+                <li>El momento del proceso en el que te encuentras. Si llevas tiempo con dolor y no mejoras, lee <Link to="/blog/hernias-discales-por-que-no-mejoras" className="text-primary hover:underline">por qué no mejoras con hernias discales</Link>.</li>
               </ul>
               <p>
                 Si todo esto no se tiene en cuenta, ese "ejercicio de natación terapéutica" puede convertirse, en la práctica, en un ejercicio agresivo para tu hernia discal.
@@ -98,7 +99,7 @@ const EjercicioNatacionTerapeuticaHerniaDiscal = () => {
 
               <h2>Qué es una hernia discal (sin tecnicismos)</h2>
               <p>
-                De forma sencilla, una hernia discal es una patología del disco intervertebral que puede tener distintos grados:
+                De forma sencilla, <Link to="/blog/hernia-discal-como-se-produce-y-como-curarla-sin-cirugia" className="text-primary hover:underline">una hernia discal</Link> es una patología del disco intervertebral que puede tener distintos grados:
               </p>
               <ul>
                 <li>Degeneración del disco.</li>
