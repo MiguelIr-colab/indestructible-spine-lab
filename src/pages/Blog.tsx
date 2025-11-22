@@ -15,12 +15,12 @@ const Blog = () => {
       articleUrl: "/blog/antiinflamatorio-hernia-discal",
     },
     {
-      title: "Ejercicios para Hernia Discal: Guía Completa 2025",
-      excerpt: "Aprende cómo aliviar el dolor lumbar y fortalecer tu espalda sin cirugía. Descubre los mejores ejercicios, posturas y hábitos para recuperar tu movilidad paso a paso.",
+      title: "💪 Cómo curar una hernia discal sin cirugía: guía completa paso a paso",
+      excerpt: "Aprende cómo curar una hernia discal sin cirugía centrándote en lo que realmente marca la diferencia: estabilidad de la columna, entrenamiento específico, posturas correctas para dormir, alimentación adecuada y un cambio de mentalidad.",
       videoUrl: "https://www.youtube.com/watch?v=8F0-ed6r8o0",
       thumbnail: "https://img.youtube.com/vi/8F0-ed6r8o0/maxresdefault.jpg",
       category: "Hernia Discal",
-      articleUrl: "/blog/hernia-discal",
+      articleUrl: "/blog/como-curar-hernia-discal-sin-cirugia",
     },
     {
       title: "El mejor ejercicio para la hernia discal L5-S1: fortalece tu espalda sin cirugía",

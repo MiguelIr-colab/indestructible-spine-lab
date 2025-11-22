@@ -40,7 +40,7 @@ const App = () => (
           <Route path="/equipo" element={<Equipo />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/antiinflamatorio-hernia-discal" element={<AntiinflamatorioHerniaDiscal />} />
-          <Route path="/blog/hernia-discal" element={<HerniaDiscal />} />
+          <Route path="/blog/como-curar-hernia-discal-sin-cirugia" element={<HerniaDiscal />} />
           <Route path="/blog/hernia-discal-l5-s1" element={<HerniaDiscalL5S1 />} />
           <Route path="/blog/estenosis-lumbar" element={<EstenosisLumbar />} />
           <Route path="/blog/hernia-cervical-c5-c6" element={<HerniaCervicalC5C6 />} />
