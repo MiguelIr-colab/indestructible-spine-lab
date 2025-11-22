@@ -5,7 +5,7 @@ import { toast } from "sonner";
 import { Mail, CheckCircle, AlertCircle } from "lucide-react";
 import MinimalFooter from "@/components/MinimalFooter";
 
-const Thankyou = () => {
+const Verifymail = () => {
   const [email, setEmail] = useState("");
   const [isResending, setIsResending] = useState(false);
 
@@ -139,4 +139,4 @@ const Thankyou = () => {
   );
 };
 
-export default Thankyou;
+export default Verifymail;

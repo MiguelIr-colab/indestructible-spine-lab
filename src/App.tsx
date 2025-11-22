@@ -31,7 +31,9 @@ import Programa from "./pages/Programa";
 import Evento from "./pages/Evento";
 import Eapuntate from "./pages/Eapuntate";
 import Eventoads from "./pages/Eventoads";
-import Thankyou from "./pages/Thankyou";
+import Verifymail from "./pages/Verifymail";
+import ThankYouEvento from "./pages/ThankYouEvento";
+import ThankYouEi from "./pages/ThankYouEi";
 import NotFound from "./pages/NotFound";
 import AvisoLegal from "./pages/AvisoLegal";
 import PoliticaCookies from "./pages/PoliticaCookies";
@@ -75,7 +77,9 @@ const App = () => (
           <Route path="/evento" element={<Evento />} />
           <Route path="/eapuntate" element={<Eapuntate />} />
           <Route path="/eventoads" element={<Eventoads />} />
-          <Route path="/thankyou" element={<Thankyou />} />
+          <Route path="/verifymail" element={<Verifymail />} />
+          <Route path="/thankyou-evento" element={<ThankYouEvento />} />
+          <Route path="/thankyou-ei" element={<ThankYouEi />} />
           <Route path="/aviso-legal" element={<AvisoLegal />} />
           <Route path="/politica-cookies" element={<PoliticaCookies />} />
           <Route path="/politica-privacidad" element={<PoliticaPrivacidad />} />
