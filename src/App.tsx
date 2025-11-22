@@ -29,6 +29,7 @@ import EspaldaIndestructible from "./pages/EspaldaIndestructible";
 import CheckoutPage from "./pages/checkout/CheckoutPage";
 import Programa from "./pages/Programa";
 import Evento from "./pages/Evento";
+import Eapuntate from "./pages/Eapuntate";
 import Eventoads from "./pages/Eventoads";
 import Thankyou from "./pages/Thankyou";
 import NotFound from "./pages/NotFound";
@@ -72,6 +73,7 @@ const App = () => (
           <Route path="/espalda-indestructible/:slug" element={<CheckoutPage />} />
           <Route path="/programa" element={<Programa />} />
           <Route path="/evento" element={<Evento />} />
+          <Route path="/eapuntate" element={<Eapuntate />} />
           <Route path="/eventoads" element={<Eventoads />} />
           <Route path="/thankyou" element={<Thankyou />} />
           <Route path="/aviso-legal" element={<AvisoLegal />} />
