@@ -22,7 +22,7 @@ const Eapuntate = () => {
               
               {/* Video Container - Smaller */}
               <div className="relative w-full max-w-3xl mx-auto aspect-video bg-muted rounded-lg overflow-hidden mb-8">
-                <video ref={videoRef} src="https://res.cloudinary.com/draffep0n/video/upload/v1763053775/Landing_Evento_xsxre4.mp4" className="absolute inset-0 w-full h-full" controls controlsList="nodownload" autoPlay />
+                <video ref={videoRef} src="https://res.cloudinary.com/draffep0n/video/upload/c_limit,w_720,f_auto,q_auto:eco/v1763053775/Landing_Evento_xsxre4.mp4" className="absolute inset-0 w-full h-full" controls controlsList="nodownload" preload="metadata" />
               </div>
 
               {/* Countdown Timer */}

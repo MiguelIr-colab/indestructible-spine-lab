@@ -28,11 +28,11 @@ const Eventoads = () => {
               <div className="relative w-full max-w-3xl mx-auto aspect-video bg-muted rounded-lg overflow-hidden mb-8">
                 <video 
                   ref={videoRef}
-                  src="https://res.cloudinary.com/draffep0n/video/upload/v1763053870/Landing_NO_Evento_ktfe5d.mp4"
+                  src="https://res.cloudinary.com/draffep0n/video/upload/c_limit,w_720,f_auto,q_auto:eco/v1763053870/Landing_NO_Evento_ktfe5d.mp4"
                   className="absolute inset-0 w-full h-full"
                   controls
                   controlsList="nodownload"
-                  autoPlay
+                  preload="metadata"
                 />
               </div>
 
