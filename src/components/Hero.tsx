@@ -90,9 +90,8 @@ const Hero = () => {
               src="https://res.cloudinary.com/draffep0n/video/upload/c_limit,w_720,f_auto,q_auto:eco/v1763053970/video_presentación_web_wh9yvf.mp4"
               className="w-full h-full object-contain"
               controls
-              autoPlay
-              loop
               playsInline
+              preload="metadata"
             />
           </div>
 
