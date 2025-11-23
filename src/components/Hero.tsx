@@ -87,7 +87,7 @@ const Hero = () => {
           <div className="relative lg:h-[500px] h-[200px] rounded-lg overflow-hidden lg:order-2 order-1 w-full">
             <video
               ref={videoRef}
-              src="https://res.cloudinary.com/draffep0n/video/upload/v1763053970/video_presentaci%C3%B3n_web_wh9yvf.mp4"
+              src="https://res.cloudinary.com/draffep0n/video/upload/c_limit,w_720,f_auto,q_auto:eco/v1763053970/video_presentación_web_wh9yvf.mp4"
               className="w-full h-full object-contain"
               controls
               autoPlay
