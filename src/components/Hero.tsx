@@ -130,7 +130,7 @@ const Hero = () => {
                 <Button 
                   variant="hero" 
                   className="text-[10px] leading-tight xs:text-xs sm:text-sm md:text-base lg:text-lg h-10 sm:h-11 md:h-12 lg:h-14 px-3 xs:px-4 sm:px-6 md:px-8 lg:px-12 w-full lg:w-auto break-words whitespace-normal"
-                  onClick={() => window.location.href = '/programa'}
+                  onClick={() => window.open('https://calendly.com/d/cnzd-y87-nk6/entrevista', '_blank')}
                 >
                   QUIERO UNA ENTREVISTA
                 </Button>
