@@ -4,7 +4,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { Star, Play } from "lucide-react";
 import { useEffect, useRef } from "react";
 import heroImage from "@/assets/hero-image-new.jpg";
-import heroBackground from "@/assets/hero-background-new.png";
+import heroBackground from "@/assets/hero-background-yoga.jpg";
 
 const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
