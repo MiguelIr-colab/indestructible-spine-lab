@@ -15,7 +15,7 @@ const ContactForm = () => {
     descripcionDolor: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
     if (!formData.nombre || !formData.email || !formData.tiempoDolor || !formData.pierdeFuerza || !formData.descripcionDolor) {
@@ -23,22 +23,33 @@ const ContactForm = () => {
       return;
     }
 
-    // Create email body
-    const emailBody = `
-Nombre: ${formData.nombre}
-Email: ${formData.email}
-¿Cuánto tiempo llevas con dolor?: ${formData.tiempoDolor}
-¿Pierdes fuerza o tienes incontinencia?: ${formData.pierdeFuerza}
+    const form = e.currentTarget;
+    const data = new FormData(form);
 
-Descripción del dolor:
-${formData.descripcionDolor}
-    `.trim();
+    // Añadimos los valores controlados de los radios por si acaso
+    data.set("tiempoDolor", formData.tiempoDolor);
+    data.set("pierdeFuerza", formData.pierdeFuerza);
 
-    // Send email using mailto (temporary solution - needs proper backend)
-    window.location.href = `mailto:espaldaindestructible@gmail.com?subject=Consulta desde web - ${formData.nombre}&body=${encodeURIComponent(emailBody)}`;
-    
-    toast.success("¡Gracias! Responderemos lo antes posible");
-    setFormData({ nombre: "", email: "", tiempoDolor: "", pierdeFuerza: "", descripcionDolor: "" });
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(data as any).toString(),
+      });
+
+      toast.success("¡Gracias! Responderemos lo antes posible");
+      setFormData({
+        nombre: "",
+        email: "",
+        tiempoDolor: "",
+        pierdeFuerza: "",
+        descripcionDolor: "",
+      });
+      form.reset();
+    } catch (error) {
+      console.error(error);
+      toast.error("Ha ocurrido un error al enviar el formulario");
+    }
   };
 
   return (
@@ -55,13 +66,46 @@ ${formData.descripcionDolor}
           </div>
 
           <div className="bg-card p-6 md:p-8 lg:p-12 rounded-lg shadow-[var(--shadow-card)]">
-            <form onSubmit={handleSubmit} className="space-y-4 lg:space-y-6">
+            {/* Hidden form for Netlify detection */}
+            <form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              hidden
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <input type="text" name="nombre" />
+              <input type="email" name="email" />
+              <input type="text" name="tiempoDolor" />
+              <input type="text" name="pierdeFuerza" />
+              <textarea name="descripcionDolor" />
+              <input type="text" name="bot-field" />
+            </form>
+
+            <form
+              onSubmit={handleSubmit}
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              data-netlify-recaptcha="true"
+              netlify-honeypot="bot-field"
+              className="space-y-4 lg:space-y-6"
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              
+              <p className="hidden">
+                <label>
+                  No rellenes este campo: <input name="bot-field" />
+                </label>
+              </p>
               <div>
                 <Label htmlFor="nombre" className="text-xs md:text-sm">
                   Nombre *
                 </Label>
                 <Input
                   id="nombre"
+                  name="nombre"
                   type="text"
                   placeholder="Tu nombre"
                   value={formData.nombre}
@@ -77,6 +121,7 @@ ${formData.descripcionDolor}
                 </Label>
                 <Input
                   id="email"
+                  name="email"
                   type="email"
                   placeholder="tu@email.com"
                   value={formData.email}
@@ -90,6 +135,7 @@ ${formData.descripcionDolor}
                 <Label className="text-xs md:text-sm mb-3 block">
                   ¿Cuánto tiempo llevas con dolor? *
                 </Label>
+                <input type="hidden" name="tiempoDolor" value={formData.tiempoDolor} />
                 <RadioGroup
                   value={formData.tiempoDolor}
                   onValueChange={(value) => setFormData({ ...formData, tiempoDolor: value })}
@@ -127,6 +173,7 @@ ${formData.descripcionDolor}
                 <Label className="text-xs md:text-sm mb-3 block">
                   ¿Pierdes fuerza o tienes incontinencia? *
                 </Label>
+                <input type="hidden" name="pierdeFuerza" value={formData.pierdeFuerza} />
                 <RadioGroup
                   value={formData.pierdeFuerza}
                   onValueChange={(value) => setFormData({ ...formData, pierdeFuerza: value })}
@@ -150,6 +197,7 @@ ${formData.descripcionDolor}
                 </Label>
                 <Textarea
                   id="descripcionDolor"
+                  name="descripcionDolor"
                   placeholder="Describe tu dolor..."
                   value={formData.descripcionDolor}
                   onChange={(e) => setFormData({ ...formData, descripcionDolor: e.target.value })}
@@ -157,6 +205,8 @@ ${formData.descripcionDolor}
                   required
                 />
               </div>
+
+              <div data-netlify-recaptcha="true" className="my-4" />
 
               <Button type="submit" variant="hero" className="w-full h-10 md:h-12 text-sm md:text-base" size="lg">
                 ENVIAR CONSULTA
