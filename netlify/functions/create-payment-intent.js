@@ -15,11 +15,19 @@ exports.handler = async (event, context) => {
     const amount = data.amount; // en céntimos (ej: 95000 = 950€)
     const currency = data.currency || "eur";
     const productName = data.productName || "Producto sin nombre";
+    const productSlug = data.productSlug;
 
     if (!amount) {
       return {
         statusCode: 400,
         body: JSON.stringify({ error: "Amount is required" }),
+      };
+    }
+
+    if (!productSlug) {
+      return {
+        statusCode: 400,
+        body: JSON.stringify({ error: "productSlug is required" }),
       };
     }
 
@@ -31,6 +39,7 @@ exports.handler = async (event, context) => {
       description: productName,
       metadata: {
         productName,
+        productSlug,
         originalAmount: amount,
       },
     });

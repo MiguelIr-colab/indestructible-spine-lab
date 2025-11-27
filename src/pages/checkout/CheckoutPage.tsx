@@ -62,6 +62,7 @@ const CheckoutPage = () => {
               amount: product.price * 100,
               currency: "eur",
               productName: `${product.name} - ${product.duration}`,
+              productSlug: slug,
             }),
           }
         );
@@ -119,6 +120,7 @@ const CheckoutPage = () => {
               <OrderSummary
                 product={product}
                 paymentIntentId={paymentIntentId}
+                productSlug={slug || ""}
               />
             </div>
           )}

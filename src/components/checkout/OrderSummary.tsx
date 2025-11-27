@@ -15,9 +15,10 @@ interface Product {
 interface OrderSummaryProps {
   product: Product;
   paymentIntentId: string;
+  productSlug: string;
 }
 
-const OrderSummary = ({ product, paymentIntentId }: OrderSummaryProps) => {
+const OrderSummary = ({ product, paymentIntentId, productSlug }: OrderSummaryProps) => {
   const { toast } = useToast();
   const [couponCode, setCouponCode] = useState("");
   const [appliedCoupon, setAppliedCoupon] = useState<{ code: string; discount: number } | null>(null);
@@ -46,7 +47,8 @@ const OrderSummary = ({ product, paymentIntentId }: OrderSummaryProps) => {
         body: JSON.stringify({
           paymentIntentId,
           couponCode: normalizedCode,
-          originalAmount: subtotal
+          originalAmount: subtotal,
+          productSlug
         })
       });
 
