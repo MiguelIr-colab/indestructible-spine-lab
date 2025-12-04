@@ -9,7 +9,7 @@ import OrderSummary from "@/components/checkout/OrderSummary";
 import { useToast } from "@/hooks/use-toast";
 
 const stripePromise = loadStripe(
-  "pk_live_51QiLdnLv0O1dNyb5yj8OC8mIlsw2JNRupZxGEsRsz7opO5P28NpNZIb4gIuTYpFjt9FhZ9rk5t7NN4bao8YWjt0c00izSQSz4q"
+  import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY as string
 );
 
 const products = {
