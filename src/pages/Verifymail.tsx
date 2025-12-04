@@ -18,9 +18,10 @@ const Verifymail = () => {
     }
 
     setIsResending(true);
+    const API_URL = import.meta.env.VITE_API_URL;
 
     try {
-      const response = await fetch('/api/mailrelay/resend', {
+      const response = await fetch(`${API_URL}/api/mailrelay/resend`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

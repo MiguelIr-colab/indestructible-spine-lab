@@ -86,8 +86,9 @@ const Evento = () => {
     }
 
     setIsSubmitting(true);
+    const API_URL = import.meta.env.VITE_API_URL;
     try {
-      const response = await fetch('/api/mailrelay/subscribe', {
+      const response = await fetch(`${API_URL}/api/mailrelay/subscribe`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

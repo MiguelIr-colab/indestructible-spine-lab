@@ -40,8 +40,9 @@ const OrderSummary = ({ product, paymentIntentId, productSlug }: OrderSummaryPro
     setIsApplying(true);
     setCouponError("");
 
+    const API_URL = import.meta.env.VITE_API_URL;
     try {
-      const response = await fetch("/.netlify/functions/apply-coupon", {
+      const response = await fetch(`${API_URL}/api/apply-coupon`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

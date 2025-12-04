@@ -52,9 +52,10 @@ const CheckoutPage = () => {
     }
 
     const createPaymentIntent = async () => {
+      const API_URL = import.meta.env.VITE_API_URL;
       try {
         const response = await fetch(
-          "/.netlify/functions/create-payment-intent",
+          `${API_URL}/api/create-payment-intent`,
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
