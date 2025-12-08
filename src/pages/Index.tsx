@@ -5,7 +5,6 @@ import HowItWorks from "@/components/HowItWorks";
 import VideoTestimonials from "@/components/VideoTestimonials";
 import ForWho from "@/components/ForWho";
 import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
@@ -19,7 +18,6 @@ const Index = () => {
         <ForWho />
       </main>
       <Footer />
-      <WhatsAppButton />
     </div>
   );
 };

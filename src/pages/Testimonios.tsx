@@ -1,7 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Testimonials from "@/components/Testimonials";
-import WhatsAppButton from "@/components/WhatsAppButton";
 
 const TestimoniosPage = () => {
   return (
@@ -11,7 +10,6 @@ const TestimoniosPage = () => {
         <Testimonials />
       </main>
       <Footer />
-      <WhatsAppButton />
     </div>
   );
 };
