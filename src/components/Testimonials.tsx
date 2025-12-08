@@ -1,8 +1,15 @@
+import { useState } from "react";
 import { Star, Play } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import testimonialFatima from "@/assets/testimonial-fatima.png";
 
 const Testimonials = () => {
+  const [playingVideos, setPlayingVideos] = useState<Record<number, boolean>>({});
+
+  const handlePlayVideo = (index: number) => {
+    setPlayingVideos(prev => ({ ...prev, [index]: true }));
+  };
   const testimonials = [
     {
       name: "ALFONSO",
@@ -103,6 +110,7 @@ const Testimonials = () => {
       quote: "Pasé de no poder andar sin agarrarme, con escoliosis y dos hernias discales, a vivir mi día a día sin dolor.",
       result: "Vivía con dolor diario y necesitaba calmantes. Tras trabajar fuerza con Espalda Indestructible ahora camina sola, con postura normal y sin dolor en su día a día.",
       rating: 5,
+      thumbnail: testimonialFatima,
     },
     {
       name: "CRISTINA",
@@ -281,19 +289,32 @@ const Testimonials = () => {
             <Card key={index} className="bg-[hsl(0_0%_5.5%)] border-border overflow-hidden hover:shadow-[var(--shadow-card)] transition-all h-full">
               <div className="flex flex-col h-full">
                 {/* Video Section */}
-                <div className="relative aspect-video bg-muted group cursor-pointer">
-                  <iframe
-                    className="w-full h-full"
-                    src={`https://www.youtube.com/embed/${testimonial.videoId}?list=PLgcEARhbMJ2boEJF9CIwMot1CCAwT5C2S&index=${testimonial.playlistIndex}`}
-                    title={`Testimonio de ${testimonial.name}`}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors flex items-center justify-center pointer-events-none">
-                    <div className="bg-primary/90 rounded-full p-3">
-                      <Play className="w-6 h-6 text-primary-foreground fill-current" />
+                <div className="relative aspect-video bg-muted">
+                  {testimonial.thumbnail && !playingVideos[index] ? (
+                    <div 
+                      className="relative w-full h-full cursor-pointer group"
+                      onClick={() => handlePlayVideo(index)}
+                    >
+                      <img 
+                        src={testimonial.thumbnail} 
+                        alt={`Testimonio de ${testimonial.name}`}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                        <div className="bg-primary/90 rounded-full p-4 group-hover:scale-110 transition-transform">
+                          <Play className="w-8 h-8 text-primary-foreground fill-current" />
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  ) : (
+                    <iframe
+                      className="w-full h-full"
+                      src={`https://www.youtube.com/embed/${testimonial.videoId}?list=PLgcEARhbMJ2boEJF9CIwMot1CCAwT5C2S&index=${testimonial.playlistIndex}${playingVideos[index] ? '&autoplay=1' : ''}`}
+                      title={`Testimonio de ${testimonial.name}`}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  )}
                 </div>
 
                 {/* Content Section */}
