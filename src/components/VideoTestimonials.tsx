@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { Star, Play } from "lucide-react";
-import testimonialFatima from "@/assets/testimonial-fatima.png";
+import testimonialFatima from "@/assets/testimonial-fatima.webp";
 import testimonialCristina from "@/assets/testimonial-cristina.png";
 import testimonialMariano from "@/assets/testimonial-mariano.png";
 import testimonialMiguelangel from "@/assets/testimonial-miguelangel.png";

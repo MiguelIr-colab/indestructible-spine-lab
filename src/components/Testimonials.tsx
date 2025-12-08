@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Star, Play } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import testimonialFatima from "@/assets/testimonial-fatima.png";
+import testimonialFatima from "@/assets/testimonial-fatima.webp";
 import testimonialLiliana from "@/assets/testimonial-liliana.png";
 import testimonialMariano from "@/assets/testimonial-mariano.png";
 import testimonialMiguelangel from "@/assets/testimonial-miguelangel.png";
