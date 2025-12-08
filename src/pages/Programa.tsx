@@ -2,7 +2,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import VideoTestimonials from "@/components/VideoTestimonials";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import heroImage from "@/assets/team-group-new.jpg";
 
 const Programa = () => {
@@ -136,7 +135,6 @@ const Programa = () => {
       </main>
 
       <Footer />
-      <WhatsAppButton />
     </div>
   );
 };

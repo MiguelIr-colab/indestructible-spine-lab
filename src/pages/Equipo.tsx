@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import { Card } from "@/components/ui/card";
 import teamRoberto from "@/assets/team-roberto.png";
 import teamMaria from "@/assets/team-maria.png";
@@ -96,7 +95,6 @@ const Equipo = () => {
         </section>
       </main>
       <Footer />
-      <WhatsAppButton />
     </div>;
 };
 export default Equipo;

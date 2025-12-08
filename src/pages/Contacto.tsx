@@ -1,7 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
-import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Contacto = () => {
   return (
@@ -11,7 +10,6 @@ const Contacto = () => {
         <ContactForm />
       </main>
       <Footer />
-      <WhatsAppButton />
     </div>
   );
 };

@@ -1,4 +1,3 @@
-import WhatsAppButton from "@/components/WhatsAppButton";
 import { useEffect } from "react";
 
 const Pdf = () => {
@@ -76,8 +75,6 @@ const Pdf = () => {
           </p>
         </div>
       </footer>
-      
-      <WhatsAppButton />
     </div>
   );
 };
