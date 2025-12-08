@@ -16,7 +16,12 @@ const countries = [
   "Francia", "Italia", "Portugal", "Reino Unido", "Suiza", "Estados Unidos", "Otro"
 ];
 
-const CheckoutForm = () => {
+interface CheckoutFormProps {
+  paymentIntentId: string;
+  productSlug: string;
+}
+
+const CheckoutForm = ({ paymentIntentId, productSlug }: CheckoutFormProps) => {
   const stripe = useStripe();
   const elements = useElements();
   const { toast } = useToast();
@@ -68,6 +73,25 @@ const CheckoutForm = () => {
     return Object.keys(newErrors).length === 0;
   };
 
+  const notifyPaymentSuccess = async () => {
+    try {
+      const API_URL = import.meta.env.VITE_API_URL;
+      await fetch(`${API_URL}/api/payment-success`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          paymentIntentId,
+          productSlug,
+          customerEmail: formData.email,
+          nombre: `${formData.firstName} ${formData.lastName}`.trim(),
+        }),
+      });
+    } catch (error) {
+      console.error("Error notifying payment success:", error);
+      // Don't block user flow - payment was already successful
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -86,12 +110,13 @@ const CheckoutForm = () => {
 
     setLoading(true);
 
-    const { error } = await stripe.confirmPayment({
+    const { error, paymentIntent } = await stripe.confirmPayment({
       elements,
       confirmParams: {
         return_url: `${window.location.origin}/thankyou-ei`,
         receipt_email: formData.email,
       },
+      redirect: "if_required",
     });
 
     if (error) {
@@ -101,6 +126,11 @@ const CheckoutForm = () => {
         variant: "destructive"
       });
       setLoading(false);
+    } else if (paymentIntent && paymentIntent.status === "succeeded") {
+      // Payment succeeded - notify backend for email
+      await notifyPaymentSuccess();
+      // Redirect to thank you page
+      window.location.href = `${window.location.origin}/thankyou-ei`;
     }
   };
 
