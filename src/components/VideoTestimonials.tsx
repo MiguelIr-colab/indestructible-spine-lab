@@ -1,8 +1,21 @@
+import { useState } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { Star, Play } from "lucide-react";
+import testimonialFatima from "@/assets/testimonial-fatima.png";
+import testimonialCristina from "@/assets/testimonial-cristina.png";
+import testimonialMariano from "@/assets/testimonial-mariano.png";
+import testimonialMiguelangel from "@/assets/testimonial-miguelangel.png";
+import testimonialDavid from "@/assets/testimonial-david.png";
+import testimonialDorle from "@/assets/testimonial-dorle.png";
 
 const VideoTestimonials = () => {
+  const [playingVideos, setPlayingVideos] = useState<Record<number, boolean>>({});
+
+  const handlePlayVideo = (index: number) => {
+    setPlayingVideos(prev => ({ ...prev, [index]: true }));
+  };
+
   const testimonials = [
     {
       name: "FÁTIMA",
@@ -13,6 +26,7 @@ const VideoTestimonials = () => {
       quote: "Pasé de no poder andar sin agarrarme, con escoliosis y dos hernias discales, a vivir mi día a día sin dolor.",
       result: "Vivía con dolor diario y necesitaba calmantes. Tras trabajar fuerza con Espalda Indestructible ahora camina sola, con postura normal y sin dolor en su día a día.",
       rating: 5,
+      thumbnail: testimonialFatima,
     },
     {
       name: "CRISTINA",
@@ -23,6 +37,7 @@ const VideoTestimonials = () => {
       quote: "Pensaba que solo la operación me salvaría y hoy, con una hernia discal L5-S1 central, hago entrenamiento de fuerza y vuelvo a trotar suave.",
       result: "En 12 semanas desaparecieron los calambres en las piernas y los pinchazos en la espalda y el dolor lumbar. Ha vuelto a caminar y ya puede trotar suave y entrenar con barra de 20 kg.",
       rating: 5,
+      thumbnail: testimonialCristina,
     },
     {
       name: "MARIANO",
@@ -33,6 +48,7 @@ const VideoTestimonials = () => {
       quote: "Pasé de vivir tumbado por una hernia discal L5-S1 izquierda y rectificación lumbar a volver a la bici y moto, al teletrabajo y al ejercicio con el programa Espalda Indestructible.",
       result: "Ha pasado de estar el 90% del día tumbado, con dolor lumbar y de pierna, a montar en bici 13 km sin dolor, ir en moto, hacer la compra y trabajar horas sentado.",
       rating: 5,
+      thumbnail: testimonialMariano,
     },
     {
       name: "MIGUEL ÁNGEL",
@@ -43,6 +59,7 @@ const VideoTestimonials = () => {
       quote: "De no poder levantarse de la cama, operado dos veces de hernia discal y con miedo a agacharse, a entrenar con fuerza y sin dolor crónico de espalda cargando la olla de la abuela.",
       result: "Tras 12 semanas con el programa espalda indestructible ya no tiene dolor crónico de espalda, ha evitado una tercera operación y puede levantar 30 kg sin miedo a agacharse.",
       rating: 5,
+      thumbnail: testimonialMiguelangel,
     },
     {
       name: "DAVID",
@@ -53,6 +70,7 @@ const VideoTestimonials = () => {
       quote: "Pasé de necesitar estar tumbado por el dolor a moverme, sentarme y caminar con confianza, sin miedo a que vuelva la ciática.",
       result: "Con el programa online individualizado pasó de dolor lumbar, ciática y adormecimiento del pie derecho a sentarse más de 4 horas, caminar varias horas y hacer su vida diaria sin dolor.",
       rating: 5,
+      thumbnail: testimonialDavid,
     },
     {
       name: "DORLE",
@@ -63,6 +81,7 @@ const VideoTestimonials = () => {
       quote: "Después de 28 años con dolor diario, hoy camino y trabajo horas seguidas sin miedo a que vuelva el dolor de espalda.",
       result: "Tras 28 años con dolor lumbar y cervical por discopatía degenerativa, ahora puede caminar y estar sentada horas, trabajar y hacer vida diaria casi sin dolor de espalda.",
       rating: 5,
+      thumbnail: testimonialDorle,
     },
   ];
 
@@ -96,19 +115,34 @@ const VideoTestimonials = () => {
               <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
                 <div className="bg-card rounded-lg overflow-hidden shadow-lg h-full">
                   {/* Video Section */}
-                  <div className="relative aspect-video bg-muted group cursor-pointer">
-                    <iframe
-                      className="w-full h-full"
-                      src={`https://www.youtube.com/embed/${testimonial.videoId}?list=PLgcEARhbMJ2boEJF9CIwMot1CCAwT5C2S&index=${testimonial.playlistIndex}`}
-                      title={`Testimonio de ${testimonial.name}`}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
-                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors flex items-center justify-center pointer-events-none">
-                      <div className="bg-primary/90 rounded-full p-3">
-                        <Play className="w-6 h-6 text-primary-foreground fill-current" />
+                  <div className="relative aspect-video bg-muted">
+                    {testimonial.thumbnail && !playingVideos[index] ? (
+                      <div 
+                        className="relative w-full h-full cursor-pointer group"
+                        onClick={() => handlePlayVideo(index)}
+                      >
+                        <img 
+                          src={testimonial.thumbnail} 
+                          alt={`Testimonio de ${testimonial.name}`}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                          <div className="bg-primary/90 rounded-full p-3 group-hover:scale-110 transition-transform">
+                            <Play className="w-6 h-6 text-primary-foreground fill-current" />
+                          </div>
+                        </div>
                       </div>
-                    </div>
+                    ) : (
+                      <iframe
+                        className="w-full h-full"
+                        src={`https://www.youtube.com/embed/${testimonial.videoId}?list=PLgcEARhbMJ2boEJF9CIwMot1CCAwT5C2S&index=${testimonial.playlistIndex}${playingVideos[index] ? '&autoplay=1' : ''}`}
+                        title={`Testimonio de ${testimonial.name}`}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    )}
                   </div>
 
                   {/* Content Section */}
@@ -122,14 +156,14 @@ const VideoTestimonials = () => {
                       </span>
                     </div>
 
-                    <div className="bg-primary/10 p-2 lg:p-3 rounded-lg">
-                      <p className="text-foreground font-medium italic text-xs lg:text-sm">"{testimonial.quote}"</p>
-                    </div>
-
                     <div className="flex gap-0.5 lg:gap-1">
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} className="w-3 h-3 lg:w-4 lg:h-4 fill-primary text-primary" />
                       ))}
+                    </div>
+
+                    <div className="bg-primary/10 p-2 lg:p-3 rounded-lg">
+                      <p className="text-foreground font-medium italic text-xs lg:text-sm">"{testimonial.quote}"</p>
                     </div>
 
                     <div>
