@@ -124,7 +124,7 @@ const VideoTestimonials = () => {
                         <img 
                           src={testimonial.thumbnail} 
                           alt={`Testimonio de ${testimonial.name}`}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-cover scale-110"
                           loading="lazy"
                           decoding="async"
                         />
