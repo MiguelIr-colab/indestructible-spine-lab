@@ -347,6 +347,8 @@ const Testimonials = () => {
                         src={testimonial.thumbnail} 
                         alt={`Testimonio de ${testimonial.name}`}
                         className="w-full h-full object-cover"
+                        loading="lazy"
+                        decoding="async"
                       />
                       <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors flex items-center justify-center">
                         <div className="bg-primary/90 rounded-full p-4 group-hover:scale-110 transition-transform">
