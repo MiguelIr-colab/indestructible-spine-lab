@@ -3,6 +3,9 @@ import { Star, Play } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import testimonialFatima from "@/assets/testimonial-fatima.png";
+import testimonialLiliana from "@/assets/testimonial-liliana.png";
+import testimonialMariano from "@/assets/testimonial-mariano.png";
+import testimonialMiguelangel from "@/assets/testimonial-miguelangel.png";
 
 const Testimonials = () => {
   const [playingVideos, setPlayingVideos] = useState<Record<number, boolean>>({});
@@ -131,6 +134,7 @@ const Testimonials = () => {
       quote: "Pasé de vivir tumbado por una hernia discal L5-S1 izquierda y rectificación lumbar a volver a la bici y moto, al teletrabajo y al ejercicio con el programa Espalda Indestructible.",
       result: "Ha pasado de estar el 90% del día tumbado, con dolor lumbar y de pierna, a montar en bici 13 km sin dolor, ir en moto, hacer la compra y trabajar horas sentado.",
       rating: 5,
+      thumbnail: testimonialMariano,
     },
     {
       name: "MIGUEL ÁNGEL",
@@ -141,6 +145,7 @@ const Testimonials = () => {
       quote: "De no poder levantarse de la cama, operado dos veces de hernia discal y con miedo a agacharse, a entrenar con fuerza y sin dolor crónico de espalda cargando la olla de la abuela.",
       result: "Tras 12 semanas con el programa espalda indestructible ya no tiene dolor crónico de espalda, ha evitado una tercera operación y puede levantar 30 kg sin miedo a agacharse.",
       rating: 5,
+      thumbnail: testimonialMiguelangel,
     },
     {
       name: "DAVID",
@@ -241,6 +246,7 @@ const Testimonials = () => {
       quote: "Tras 4 años con protrusiones y dolor lumbar crónico, entendí que la fuerza podía devolverme la espalda y la vida.",
       result: "Tras 3 años y 9 meses de dolor lumbar por protrusiones L4-L5, hoy se sienta horas sin dolor, trapea, carga peso y levanta hasta 40 kg con seguridad y confianza.",
       rating: 5,
+      thumbnail: testimonialLiliana,
     },
     {
       name: "JOSE",
