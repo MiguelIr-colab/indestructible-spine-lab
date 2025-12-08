@@ -14,7 +14,7 @@ const Footer = () => {
     resources: [
       { label: "Equipo", href: "/equipo" },
       { label: "Blog", href: "/blog" },
-      { label: "Contacto", href: "/#preguntame" },
+      { label: "Contacto", href: "/contacto" },
     ],
   };
 
