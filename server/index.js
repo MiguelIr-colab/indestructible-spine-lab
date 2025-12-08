@@ -3,12 +3,43 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const Stripe = require("stripe");
+const nodemailer = require("nodemailer");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Initialize Stripe with secret key
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+
+// Configure nodemailer transporter
+const transporter = nodemailer.createTransport({
+  host: process.env.SMTP_HOST,
+  port: parseInt(process.env.SMTP_PORT, 10) || 587,
+  secure: process.env.SMTP_SECURE === "true",
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASSWORD,
+  },
+});
+
+/**
+ * Reusable function to send notification emails
+ * @param {string} subject - Email subject
+ * @param {string} text - Plain text content
+ * @param {string} html - HTML content (optional)
+ * @returns {Promise<object>} - Nodemailer send result
+ */
+async function sendNotificationEmail(subject, text, html) {
+  const mailOptions = {
+    from: process.env.SMTP_USER,
+    to: process.env.MAIL_TO,
+    subject,
+    text,
+    html: html || text,
+  };
+
+  return transporter.sendMail(mailOptions);
+}
 
 // CORS configuration
 const allowedOrigins = [
@@ -206,3 +237,6 @@ app.post("/api/mailrelay/resend", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+// Export for potential testing
+module.exports = { app, sendNotificationEmail };
