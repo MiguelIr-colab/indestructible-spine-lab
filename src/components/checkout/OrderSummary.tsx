@@ -22,12 +22,11 @@ const OrderSummary = ({ product, paymentIntentId, productSlug }: OrderSummaryPro
   const { toast } = useToast();
   const [couponCode, setCouponCode] = useState("");
   const [appliedCoupon, setAppliedCoupon] = useState<{ code: string; discount: number } | null>(null);
+  const [finalPrice, setFinalPrice] = useState(product.price);
   const [isApplying, setIsApplying] = useState(false);
   const [couponError, setCouponError] = useState("");
 
   const subtotal = product.price;
-  const discount = appliedCoupon ? appliedCoupon.discount : 0;
-  const total = Math.max(0, subtotal - discount);
 
   const handleApplyCoupon = async () => {
     const normalizedCode = couponCode.trim().toUpperCase();
@@ -57,6 +56,7 @@ const OrderSummary = ({ product, paymentIntentId, productSlug }: OrderSummaryPro
 
       if (data.valid) {
         setAppliedCoupon({ code: normalizedCode, discount: data.discount });
+        setFinalPrice(data.finalPrice);
         toast({
           title: "Cupón aplicado",
           description: `Se ha aplicado un descuento de ${data.discount.toFixed(2)}€`,
@@ -74,6 +74,7 @@ const OrderSummary = ({ product, paymentIntentId, productSlug }: OrderSummaryPro
 
   const handleRemoveCoupon = () => {
     setAppliedCoupon(null);
+    setFinalPrice(product.price);
     setCouponCode("");
     setCouponError("");
     toast({
@@ -104,7 +105,7 @@ const OrderSummary = ({ product, paymentIntentId, productSlug }: OrderSummaryPro
 
         {appliedCoupon && (
           <div className="flex justify-between text-green-600">
-            <span>Cupón {appliedCoupon.code}</span>
+            <span>Descuento aplicado</span>
             <span>-{appliedCoupon.discount.toFixed(2)}€</span>
           </div>
         )}
@@ -113,11 +114,11 @@ const OrderSummary = ({ product, paymentIntentId, productSlug }: OrderSummaryPro
 
         <div className="flex justify-between text-lg font-bold text-card-foreground">
           <span>Total</span>
-          <span>{total.toFixed(2)}€</span>
+          <span>{finalPrice.toFixed(2)}€</span>
         </div>
 
         <Card className="p-4 bg-muted/30 border-muted">
-          <h3 className="font-semibold mb-3 text-card-foreground">Cupón</h3>
+          <h3 className="font-semibold mb-3 text-card-foreground">¿Tienes un cupón?</h3>
           <div className="space-y-2">
             <Input
               placeholder="Introduce tu código"
@@ -139,7 +140,7 @@ const OrderSummary = ({ product, paymentIntentId, productSlug }: OrderSummaryPro
                 className="w-full"
                 disabled={isApplying}
               >
-                {isApplying ? "Aplicando..." : "Aplicar"}
+                {isApplying ? "Aplicando..." : "Aplicar cupón"}
               </Button>
             ) : (
               <Button
@@ -153,9 +154,8 @@ const OrderSummary = ({ product, paymentIntentId, productSlug }: OrderSummaryPro
           </div>
         </Card>
 
-        <div className="text-sm text-muted-foreground space-y-1 pt-4">
+        <div className="text-sm text-muted-foreground pt-4">
           <p>• Solo se puede aplicar un cupón por pedido</p>
-          <p>• Cupones disponibles: 50K50, 100k100, 200k200</p>
         </div>
       </div>
     </div>

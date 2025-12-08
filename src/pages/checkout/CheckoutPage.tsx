@@ -44,7 +44,6 @@ const CheckoutPage = () => {
 
   const product = slug ? products[slug as keyof typeof products] : null;
 
-  // Mantiene tu vista EXACTA — solo añade la lógica del cupón
   useEffect(() => {
     if (!product) {
       navigate("/espalda-indestructible");
@@ -113,11 +112,14 @@ const CheckoutPage = () => {
               {/* Stripe Form */}
               {clientSecret && (
                 <Elements options={options} stripe={stripePromise}>
-                  <CheckoutForm />
+                  <CheckoutForm 
+                    paymentIntentId={paymentIntentId}
+                    productSlug={slug || ""}
+                  />
                 </Elements>
               )}
 
-              {/* Order Summary con precio FINAL */}
+              {/* Order Summary */}
               <OrderSummary
                 product={product}
                 paymentIntentId={paymentIntentId}
@@ -134,5 +136,3 @@ const CheckoutPage = () => {
 };
 
 export default CheckoutPage;
-
-
