@@ -41,6 +41,32 @@ async function sendNotificationEmail(subject, text, html) {
   return transporter.sendMail(mailOptions);
 }
 
+/**
+ * Verify reCAPTCHA v3 token
+ * @param {string} token - reCAPTCHA token from frontend
+ * @returns {Promise<{success: boolean, score?: number, error?: string}>}
+ */
+async function verifyRecaptcha(token) {
+  try {
+    const response = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`,
+    });
+
+    const data = await response.json();
+
+    if (!data.success) {
+      return { success: false, error: "reCAPTCHA verification failed" };
+    }
+
+    return { success: true, score: data.score };
+  } catch (error) {
+    console.error("reCAPTCHA verification error:", error);
+    return { success: false, error: "reCAPTCHA verification error" };
+  }
+}
+
 // CORS configuration
 const allowedOrigins = [
   "http://localhost:5173",
@@ -73,6 +99,132 @@ app.use(express.json());
 // Health check
 app.get("/api/health", (req, res) => {
   res.json({ status: "ok", timestamp: new Date().toISOString() });
+});
+
+// Contact form endpoint
+app.post("/api/contact", async (req, res) => {
+  try {
+    const { nombre, email, tiempoDolor, pierdeFuerza, descripcionDolor, website, recaptchaToken } = req.body;
+
+    // Honeypot check - if website field is filled, it's a bot
+    if (website && website.trim() !== "") {
+      // Return success to not give hints to bots
+      return res.json({ success: true });
+    }
+
+    // Validate required fields
+    if (!nombre || !email || !tiempoDolor || !pierdeFuerza || !descripcionDolor) {
+      return res.status(400).json({ success: false, error: "Faltan campos obligatorios" });
+    }
+
+    // Validate reCAPTCHA
+    if (!recaptchaToken) {
+      return res.status(400).json({ success: false, error: "reCAPTCHA token required" });
+    }
+
+    const recaptchaResult = await verifyRecaptcha(recaptchaToken);
+
+    if (!recaptchaResult.success) {
+      return res.status(400).json({ success: false, error: "reCAPTCHA failed" });
+    }
+
+    // Check score threshold (0.5 is recommended minimum)
+    if (recaptchaResult.score < 0.5) {
+      console.log(`reCAPTCHA low score: ${recaptchaResult.score} for email: ${email}`);
+      return res.status(400).json({ success: false, error: "reCAPTCHA failed" });
+    }
+
+    // Prepare email content
+    const tiempoDolorLabels = {
+      "semanas": "Semanas",
+      "casi-3-meses": "Casi 3 meses",
+      "entre-3-6-meses": "Entre 3 y 6 meses",
+      "mas-6-meses": "Más de 6 meses",
+      "mas-1-año": "Más de 1 año",
+      "mas-3-años": "Más de 3 años",
+    };
+
+    const subject = "Nuevo formulario de contacto - ESPALDA INDESTRUCTIBLE";
+
+    const text = `
+Nuevo mensaje del formulario de contacto:
+
+Nombre: ${nombre}
+Email: ${email}
+Tiempo con dolor: ${tiempoDolorLabels[tiempoDolor] || tiempoDolor}
+¿Pierde fuerza o tiene incontinencia?: ${pierdeFuerza === "si" ? "Sí" : "No"}
+
+Descripción del dolor:
+${descripcionDolor}
+
+---
+reCAPTCHA Score: ${recaptchaResult.score}
+Enviado: ${new Date().toLocaleString("es-ES", { timeZone: "Europe/Madrid" })}
+    `.trim();
+
+    const html = `
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+    .header { background: #1a1a1a; color: #fff; padding: 20px; text-align: center; border-radius: 8px 8px 0 0; }
+    .content { background: #f9f9f9; padding: 20px; border-radius: 0 0 8px 8px; }
+    .field { margin-bottom: 15px; }
+    .label { font-weight: bold; color: #555; }
+    .value { margin-top: 5px; }
+    .description { background: #fff; padding: 15px; border-left: 4px solid #f97316; margin-top: 5px; }
+    .footer { margin-top: 20px; font-size: 12px; color: #888; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2 style="margin: 0;">Nuevo Formulario de Contacto</h2>
+      <p style="margin: 5px 0 0 0; opacity: 0.8;">ESPALDA INDESTRUCTIBLE</p>
+    </div>
+    <div class="content">
+      <div class="field">
+        <div class="label">Nombre:</div>
+        <div class="value">${nombre}</div>
+      </div>
+      <div class="field">
+        <div class="label">Email:</div>
+        <div class="value"><a href="mailto:${email}">${email}</a></div>
+      </div>
+      <div class="field">
+        <div class="label">Tiempo con dolor:</div>
+        <div class="value">${tiempoDolorLabels[tiempoDolor] || tiempoDolor}</div>
+      </div>
+      <div class="field">
+        <div class="label">¿Pierde fuerza o tiene incontinencia?</div>
+        <div class="value">${pierdeFuerza === "si" ? "Sí" : "No"}</div>
+      </div>
+      <div class="field">
+        <div class="label">Descripción del dolor:</div>
+        <div class="description">${descripcionDolor.replace(/\n/g, "<br>")}</div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>reCAPTCHA Score: ${recaptchaResult.score}</p>
+      <p>Enviado: ${new Date().toLocaleString("es-ES", { timeZone: "Europe/Madrid" })}</p>
+    </div>
+  </div>
+</body>
+</html>
+    `.trim();
+
+    // Send email
+    await sendNotificationEmail(subject, text, html);
+
+    console.log(`Contact form submitted successfully from: ${email}`);
+    res.json({ success: true });
+  } catch (error) {
+    console.error("Contact form error:", error);
+    res.status(500).json({ success: false, error: "Error al enviar el mensaje" });
+  }
 });
 
 // Create Payment Intent

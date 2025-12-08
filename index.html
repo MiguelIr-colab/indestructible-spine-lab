@@ -20,10 +20,29 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@espalda_indestructible" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <!-- reCAPTCHA v3 -->
+    <script src="https://www.google.com/recaptcha/api.js?render=RECAPTCHA_SITE_KEY_PLACEHOLDER" async defer></script>
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Replace placeholder with actual site key from environment
+      (function() {
+        var scripts = document.getElementsByTagName('script');
+        for (var i = 0; i < scripts.length; i++) {
+          if (scripts[i].src && scripts[i].src.includes('recaptcha') && scripts[i].src.includes('RECAPTCHA_SITE_KEY_PLACEHOLDER')) {
+            var newScript = document.createElement('script');
+            newScript.src = scripts[i].src.replace('RECAPTCHA_SITE_KEY_PLACEHOLDER', '%VITE_RECAPTCHA_SITE_KEY%' || '');
+            newScript.async = true;
+            newScript.defer = true;
+            scripts[i].parentNode.replaceChild(newScript, scripts[i]);
+            break;
+          }
+        }
+      })();
+    </script>
   </body>
 </html>
