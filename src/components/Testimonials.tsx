@@ -15,6 +15,16 @@ import testimonialRosario from "@/assets/testimonial-rosario.png";
 import testimonialCarlos from "@/assets/testimonial-carlos.png";
 import testimonialRosi from "@/assets/testimonial-rosi.png";
 import testimonialAriel from "@/assets/testimonial-ariel.png";
+import testimonialRamon from "@/assets/testimonial-ramon.png";
+import testimonialAbdelah from "@/assets/testimonial-abdelah.png";
+import testimonialSilvia from "@/assets/testimonial-silvia.png";
+import testimonialJose from "@/assets/testimonial-jose.png";
+import testimonialEli from "@/assets/testimonial-eli.png";
+import testimonialAlfonso from "@/assets/testimonial-alfonso.png";
+import testimonialMatias from "@/assets/testimonial-matias.png";
+import testimonialGemma from "@/assets/testimonial-gemma.png";
+import testimonialSergio from "@/assets/testimonial-sergio.png";
+import testimonialDavid from "@/assets/testimonial-david.png";
 
 const Testimonials = () => {
   const [playingVideos, setPlayingVideos] = useState<Record<number, boolean>>({});
@@ -32,6 +42,7 @@ const Testimonials = () => {
       quote: "Vivía con dolor cada día. En pocas semanas volví a correr y moverme sin miedo.",
       result: "Eliminó el dolor tras 10 años y volvió a correr, trabajar y disfrutar sin limitaciones.",
       rating: 5,
+      thumbnail: testimonialAlfonso,
     },
     {
       name: "EDUARDO",
@@ -53,6 +64,7 @@ const Testimonials = () => {
       quote: "Vivía limitada por el dolor. Ahora entreno, trabajo y disfruto de mi cuerpo.",
       result: "Ganó estabilidad, confianza y una espalda fuerte sin recurrir a terapias pasivas.",
       rating: 5,
+      thumbnail: testimonialEli,
     },
     {
       name: "SERGIO",
@@ -63,6 +75,7 @@ const Testimonials = () => {
       quote: "Pasé de vivir con miedo al movimiento a disfrutar entrenando sin dolor.",
       result: "Reforzó su espalda, eliminó el dolor y recuperó su vida activa.",
       rating: 5,
+      thumbnail: testimonialSergio,
     },
     {
       name: "GEMMA",
@@ -73,6 +86,7 @@ const Testimonials = () => {
       quote: "Pensé que me operaría. Hoy no tengo dolor y vuelvo a dormir tranquila.",
       result: "Recuperó movilidad cervical y eliminó el dolor en pocas semanas.",
       rating: 5,
+      thumbnail: testimonialGemma,
     },
     {
       name: "MATÍAS",
@@ -83,6 +97,7 @@ const Testimonials = () => {
       quote: "Tenía cirugía programada. El entrenamiento me devolvió la vida.",
       result: "Canceló su operación y volvió a moverse sin dolor ni limitaciones.",
       rating: 5,
+      thumbnail: testimonialMatias,
     },
     {
       name: "RAMÓN",
@@ -93,6 +108,7 @@ const Testimonials = () => {
       quote: "Vivía con dolor constante. Hoy camino, trabajo y duermo sin molestias.",
       result: "Recuperó movilidad y fuerza, sin necesidad de medicación.",
       rating: 5,
+      thumbnail: testimonialRamon,
     },
     {
       name: "ABDELAH",
@@ -103,6 +119,7 @@ const Testimonials = () => {
       quote: "No podía ni sentarme. Ahora trabajo, duermo bien y entreno sin miedo.",
       result: "Eliminó el dolor y recuperó fuerza y confianza en pocas semanas.",
       rating: 5,
+      thumbnail: testimonialAbdelah,
     },
     {
       name: "SILVIA",
@@ -113,6 +130,7 @@ const Testimonials = () => {
       quote: "Llevaba años con dolor. Entrenar fue lo único que me devolvió la libertad.",
       result: "Redujo el dolor a cero y volvió a jugar al pádel y disfrutar de su vida activa.",
       rating: 5,
+      thumbnail: testimonialSilvia,
     },
     {
       name: "FÁTIMA",
@@ -166,6 +184,7 @@ const Testimonials = () => {
       quote: "Pasé de necesitar estar tumbado por el dolor a moverme, sentarme y caminar con confianza, sin miedo a que vuelva la ciática.",
       result: "Con el programa online individualizado pasó de dolor lumbar, ciática y adormecimiento del pie derecho a sentarse más de 4 horas, caminar varias horas y hacer su vida diaria sin dolor.",
       rating: 5,
+      thumbnail: testimonialDavid,
     },
     {
       name: "DORLE",
@@ -275,6 +294,7 @@ const Testimonials = () => {
       quote: "Tenía una hernia discal, otra casi hernia con rectificación lumbar y llevaba más de 10 años con dolor de espalda; ahora hay días enteros que ni me acuerdo del dolor gracias al entrenamiento online de fuerza.",
       result: "Tras más de 10 años con dolor diario de espalda, pasa de no poder estar de pie ni caminar a trabajar 10 h, correr y entrenar fuerza y peso muerto online casi sin dolor.",
       rating: 5,
+      thumbnail: testimonialJose,
     },
     {
       name: "SALVADOR",
