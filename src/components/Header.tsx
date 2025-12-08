@@ -12,6 +12,7 @@ const Header = () => {
     { label: "TESTIMONIOS", href: "/testimonios" },
     { label: "EQUIPO", href: "/equipo" },
     { label: "BLOG", href: "/blog" },
+    { label: "PREGÚNTANOS", href: "/contacto" },
     { label: "TIENDA", href: "/espalda-indestructible" },
   ];
 
