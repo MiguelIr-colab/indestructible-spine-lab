@@ -6,6 +6,15 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 
+declare global {
+  interface Window {
+    grecaptcha: {
+      ready: (callback: () => void) => void;
+      execute: (siteKey: string, options: { action: string }) => Promise<string>;
+    };
+  }
+}
+
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     nombre: "",
@@ -13,7 +22,9 @@ const ContactForm = () => {
     tiempoDolor: "",
     pierdeFuerza: "",
     descripcionDolor: "",
+    website: "", // honeypot field
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -23,32 +34,51 @@ const ContactForm = () => {
       return;
     }
 
-    const form = e.currentTarget;
-    const data = new FormData(form);
-
-    // Añadimos los valores controlados de los radios por si acaso
-    data.set("tiempoDolor", formData.tiempoDolor);
-    data.set("pierdeFuerza", formData.pierdeFuerza);
+    setIsSubmitting(true);
 
     try {
-      await fetch("/", {
+      // Get reCAPTCHA token
+      const siteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
+      if (!siteKey) {
+        throw new Error("reCAPTCHA site key not configured");
+      }
+
+      const token = await window.grecaptcha.execute(siteKey, { action: "contact" });
+
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/contact`, {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(data as any).toString(),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          nombre: formData.nombre,
+          email: formData.email,
+          tiempoDolor: formData.tiempoDolor,
+          pierdeFuerza: formData.pierdeFuerza,
+          descripcionDolor: formData.descripcionDolor,
+          website: formData.website,
+          recaptchaToken: token,
+        }),
       });
 
-      toast.success("¡Gracias! Responderemos lo antes posible");
-      setFormData({
-        nombre: "",
-        email: "",
-        tiempoDolor: "",
-        pierdeFuerza: "",
-        descripcionDolor: "",
-      });
-      form.reset();
+      const result = await response.json();
+
+      if (result.success) {
+        toast.success("¡Gracias! Responderemos lo antes posible");
+        setFormData({
+          nombre: "",
+          email: "",
+          tiempoDolor: "",
+          pierdeFuerza: "",
+          descripcionDolor: "",
+          website: "",
+        });
+      } else {
+        toast.error(result.error || "Ha ocurrido un error al enviar el formulario");
+      }
     } catch (error) {
-      console.error(error);
+      console.error("Contact form error:", error);
       toast.error("Ha ocurrido un error al enviar el formulario");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -66,39 +96,25 @@ const ContactForm = () => {
           </div>
 
           <div className="bg-card p-6 md:p-8 lg:p-12 rounded-lg shadow-[var(--shadow-card)]">
-            {/* Hidden form for Netlify detection */}
-            <form
-              name="contact"
-              method="POST"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
-              hidden
-            >
-              <input type="hidden" name="form-name" value="contact" />
-              <input type="text" name="nombre" />
-              <input type="email" name="email" />
-              <input type="text" name="tiempoDolor" />
-              <input type="text" name="pierdeFuerza" />
-              <textarea name="descripcionDolor" />
-              <input type="text" name="bot-field" />
-            </form>
-
             <form
               onSubmit={handleSubmit}
-              name="contact"
-              method="POST"
-              data-netlify="true"
-              data-netlify-recaptcha="true"
-              netlify-honeypot="bot-field"
               className="space-y-4 lg:space-y-6"
             >
-              <input type="hidden" name="form-name" value="contact" />
-              
-              <p className="hidden">
+              {/* Honeypot field - hidden from users */}
+              <div className="hidden" aria-hidden="true">
                 <label>
-                  No rellenes este campo: <input name="bot-field" />
+                  No rellenes este campo:
+                  <input
+                    type="text"
+                    name="website"
+                    value={formData.website}
+                    onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
                 </label>
-              </p>
+              </div>
+
               <div>
                 <Label htmlFor="nombre" className="text-xs md:text-sm">
                   Nombre *
@@ -135,7 +151,6 @@ const ContactForm = () => {
                 <Label className="text-xs md:text-sm mb-3 block">
                   ¿Cuánto tiempo llevas con dolor? *
                 </Label>
-                <input type="hidden" name="tiempoDolor" value={formData.tiempoDolor} />
                 <RadioGroup
                   value={formData.tiempoDolor}
                   onValueChange={(value) => setFormData({ ...formData, tiempoDolor: value })}
@@ -173,7 +188,6 @@ const ContactForm = () => {
                 <Label className="text-xs md:text-sm mb-3 block">
                   ¿Pierdes fuerza o tienes incontinencia? *
                 </Label>
-                <input type="hidden" name="pierdeFuerza" value={formData.pierdeFuerza} />
                 <RadioGroup
                   value={formData.pierdeFuerza}
                   onValueChange={(value) => setFormData({ ...formData, pierdeFuerza: value })}
@@ -206,14 +220,30 @@ const ContactForm = () => {
                 />
               </div>
 
-              <div data-netlify-recaptcha="true" className="my-4" />
-
-              <Button type="submit" variant="hero" className="w-full h-10 md:h-12 text-sm md:text-base" size="lg">
-                ENVIAR CONSULTA
+              <Button 
+                type="submit" 
+                variant="hero" 
+                className="w-full h-10 md:h-12 text-sm md:text-base" 
+                size="lg"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "ENVIANDO..." : "ENVIAR CONSULTA"}
               </Button>
 
               <p className="text-xs md:text-sm text-muted-foreground text-center">
                 * Todos los campos son obligatorios
+              </p>
+              
+              <p className="text-[10px] text-muted-foreground/60 text-center">
+                Este sitio está protegido por reCAPTCHA y se aplican la{" "}
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">
+                  Política de Privacidad
+                </a>{" "}
+                y los{" "}
+                <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">
+                  Términos de Servicio
+                </a>{" "}
+                de Google.
               </p>
             </form>
           </div>
