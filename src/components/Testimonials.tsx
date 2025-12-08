@@ -25,6 +25,8 @@ import testimonialMatias from "@/assets/testimonial-matias.png";
 import testimonialGemma from "@/assets/testimonial-gemma.png";
 import testimonialSergio from "@/assets/testimonial-sergio.png";
 import testimonialDavid from "@/assets/testimonial-david.png";
+import testimonialCristina from "@/assets/testimonial-cristina.png";
+import testimonialSalvador from "@/assets/testimonial-salvador.png";
 
 const Testimonials = () => {
   const [playingVideos, setPlayingVideos] = useState<Record<number, boolean>>({});
@@ -152,6 +154,7 @@ const Testimonials = () => {
       quote: "Pensaba que solo la operación me salvaría y hoy, con una hernia discal L5-S1 central, hago entrenamiento de fuerza y vuelvo a trotar suave.",
       result: "En 12 semanas desaparecieron los calambres en las piernas y los pinchazos en la espalda y el dolor lumbar. Ha vuelto a caminar y ya puede trotar suave y entrenar con barra de 20 kg.",
       rating: 5,
+      thumbnail: testimonialCristina,
     },
     {
       name: "MARIANO",
@@ -305,6 +308,7 @@ const Testimonials = () => {
       quote: "Pensé que con 3 abombamientos discales L3-S1 y dolor de espalda crónico, a mis 53 años tenía que dejar el deporte; hoy entreno fuerte, hago surf y me muevo sin miedo.",
       result: "Tras 1-2 meses de entrenamiento online, reduce el dolor lumbar a cero, puede entrenar con pesas hasta 50 kg, hacer surf y deporte aeróbico varios días seguidos sin recaídas.",
       rating: 5,
+      thumbnail: testimonialSalvador,
     },
   ];
 
