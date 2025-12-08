@@ -6,6 +6,15 @@ import testimonialFatima from "@/assets/testimonial-fatima.png";
 import testimonialLiliana from "@/assets/testimonial-liliana.png";
 import testimonialMariano from "@/assets/testimonial-mariano.png";
 import testimonialMiguelangel from "@/assets/testimonial-miguelangel.png";
+import testimonialJuanandres from "@/assets/testimonial-juanandres.png";
+import testimonialGema from "@/assets/testimonial-gema.png";
+import testimonialManuel from "@/assets/testimonial-manuel.png";
+import testimonialDorle from "@/assets/testimonial-dorle.png";
+import testimonialEduardo from "@/assets/testimonial-eduardo.png";
+import testimonialRosario from "@/assets/testimonial-rosario.png";
+import testimonialCarlos from "@/assets/testimonial-carlos.png";
+import testimonialRosi from "@/assets/testimonial-rosi.png";
+import testimonialAriel from "@/assets/testimonial-ariel.png";
 
 const Testimonials = () => {
   const [playingVideos, setPlayingVideos] = useState<Record<number, boolean>>({});
@@ -33,6 +42,7 @@ const Testimonials = () => {
       quote: "Tras años de tratamientos fallidos, descubrí que la fuerza era mi medicina.",
       result: "Eliminó el dolor lumbar y volvió a entrenar y trabajar sin miedo.",
       rating: 5,
+      thumbnail: testimonialEduardo,
     },
     {
       name: "ELI",
@@ -166,6 +176,7 @@ const Testimonials = () => {
       quote: "Después de 28 años con dolor diario, hoy camino y trabajo horas seguidas sin miedo a que vuelva el dolor de espalda.",
       result: "Tras 28 años con dolor lumbar y cervical por discopatía degenerativa, ahora puede caminar y estar sentada horas, trabajar y hacer vida diaria casi sin dolor de espalda.",
       rating: 5,
+      thumbnail: testimonialDorle,
     },
     {
       name: "MANUEL",
@@ -176,6 +187,7 @@ const Testimonials = () => {
       quote: "Pensé que no volvería a agacharme ni a conducir tranquilo por mi espalda, y ahora entreno y vivo el día a día sin miedo al dolor.",
       result: "En 6 meses desapareció el dolor lumbar y la parestesia, y ahora puede agacharse, coger peso y entrenar sin dolor.",
       rating: 5,
+      thumbnail: testimonialManuel,
     },
     {
       name: "GEMA",
@@ -186,6 +198,7 @@ const Testimonials = () => {
       quote: "Pensé que viviría siempre con dolor lumbar y ciático, y ahora puedo vestirme, trabajar, viajar y saltar horas sin que mi espalda se queje.",
       result: "Recupera su vida diaria: se viste sin dolor, trabaja sentada, camina rápido, corre y salta horas en conciertos y viajes en autobús sin molestias lumbares ni ciáticas.",
       rating: 5,
+      thumbnail: testimonialGema,
     },
     {
       name: "ARIEL",
@@ -196,6 +209,7 @@ const Testimonials = () => {
       quote: "Pensé que el dolor lumbar sería para siempre; hoy puedo trabajar sentado y viajar en coche sin miedo.",
       result: "Tras 2 años con protrusión L4-L5, ahora lleva casi 3 semanas sin dolor, trabaja sentado en reuniones largas y viaja 5 h en coche sin molestias.",
       rating: 5,
+      thumbnail: testimonialAriel,
     },
     {
       name: "JUAN ANDRÉS",
@@ -206,6 +220,7 @@ const Testimonials = () => {
       quote: "De un dolor lumbar 8/10 por hernia L5 S1 y espondiloartrosis a olvidarse del dolor crónico gracias al programa Espalda indestructible y al entrenamiento de fuerza.",
       result: "Tras medio año con dolor lumbar intenso y fisioterapia sin resultados, ahora hace vida normal, se ata los zapatos y estornuda sin miedo.",
       rating: 5,
+      thumbnail: testimonialJuanandres,
     },
     {
       name: "ROSI",
@@ -216,6 +231,7 @@ const Testimonials = () => {
       quote: "Con cinco hernias discales, estenosis de canal y artrosis, el entrenamiento me ha permitido volver a caminar y cocinar de pie sin miedo y sin medicación.",
       result: "En 3 meses pasó de caer a los 600 pasos a caminar kilómetros, cocinar de pie, cargar la bombona y dormir bien, sin medicación, con mucha más fuerza y confianza.",
       rating: 5,
+      thumbnail: testimonialRosi,
     },
     {
       name: "CARLOS",
@@ -226,6 +242,7 @@ const Testimonials = () => {
       quote: "Pensé que la ciática, la hernia operada y la osteoporosis serían de por vida;  hoy entreno sin dolor de espalda.",
       result: "En 2 meses y medio en el programa Indestructible pasó de crisis de ciática diarias y miedo a trabajar a estar casi siempre sin dolor, hacer peso muerto con 45 kg y salir en moto sin limitaciones.",
       rating: 5,
+      thumbnail: testimonialCarlos,
     },
     {
       name: "ROSARIO",
@@ -236,6 +253,7 @@ const Testimonials = () => {
       quote: "Pensé que viviría siempre con dolor lumbar, glúteo y pie dormidos por la hernia y la estenosis, pero he vuelto a caminar, dormir y hacer mi vida casi normal.",
       result: "Tras entrenar online, camina sola una hora, sube escaleras sin dolor lumbar, ha dejado la medicación y vuelve a coser y dormir con tranquilidad.",
       rating: 5,
+      thumbnail: testimonialRosario,
     },
     {
       name: "LILIANA",
