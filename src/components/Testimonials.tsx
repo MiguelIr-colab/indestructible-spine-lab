@@ -350,9 +350,9 @@ const Testimonials = () => {
                         loading="lazy"
                         decoding="async"
                       />
-                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors flex items-center justify-center">
-                        <div className="bg-primary/90 rounded-full p-4 group-hover:scale-110 transition-transform">
-                          <Play className="w-8 h-8 text-primary-foreground fill-current" />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="border-2 border-white rounded-full p-4 group-hover:scale-110 transition-transform bg-transparent">
+                          <Play className="w-8 h-8 text-white fill-white" />
                         </div>
                       </div>
                     </div>
