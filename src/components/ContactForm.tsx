@@ -247,6 +247,22 @@ const ContactForm = () => {
               </p>
             </form>
           </div>
+
+          {/* WhatsApp contact alternative */}
+          <div className="mt-8 text-center">
+            <p className="text-muted-foreground text-sm md:text-base">
+              O contáctanos por teléfono al{" "}
+              <a 
+                href="tel:+17542739543" 
+                className="text-primary font-semibold hover:underline"
+              >
+                +1 754 273 9543
+              </a>
+              <span className="block text-xs md:text-sm mt-1 text-muted-foreground/70">
+                (Solo llamadas, próximamente WhatsApp también)
+              </span>
+            </p>
+          </div>
         </div>
       </div>
     </section>
