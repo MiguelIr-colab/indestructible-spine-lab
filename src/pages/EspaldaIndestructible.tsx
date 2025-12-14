@@ -6,22 +6,22 @@ import { Button } from "@/components/ui/button";
 const EspaldaIndestructible = () => {
   const products = [{
     name: "ESPALDA INDESTRUCTIBLE",
-    price: "950,00€",
-    priceAmount: 950,
+    price: "997,00€",
+    priceAmount: 997,
     duration: "12 semanas",
     slug: "12-semanas",
     popular: false
   }, {
     name: "ESPALDA INDESTRUCTIBLE",
-    price: "1.695,00€",
-    priceAmount: 1695,
+    price: "1.749,00€",
+    priceAmount: 1749,
     duration: "6 meses",
     slug: "6-meses",
     popular: true
   }, {
     name: "ESPALDA INDESTRUCTIBLE",
-    price: "2.795,00€",
-    priceAmount: 2795,
+    price: "2.859,00€",
+    priceAmount: 2859,
     duration: "1 año",
     slug: "1-ano",
     popular: false
