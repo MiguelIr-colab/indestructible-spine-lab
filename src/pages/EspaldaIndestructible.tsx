@@ -62,7 +62,7 @@ const EspaldaIndestructible = () => {
                     variant={product.popular ? "default" : "outline"} 
                     className="w-full" 
                     size="lg"
-                    onClick={() => window.location.href = `/espalda-indestructible/${product.slug}`}
+                    onClick={() => window.location.href = `/tienda/${product.slug}`}
                   >
                     COMPRAR AHORA
                   </Button>
