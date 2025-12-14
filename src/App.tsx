@@ -72,8 +72,8 @@ const App = () => (
           <Route path="/blog/estenosis-lumbar-que-es-ejercicios-seguros" element={<EstenosisLumbarQueEsEjerciciosseguros />} />
           <Route path="/blog/estiramientos-hernia-discal-ciatica-fuerza" element={<EstiramientosHerniaDiscalCiaticaFuerza />} />
           <Route path="/blog/entrenar-con-hernia-discal-riesgos-bien-hecho" element={<EntrenarConHerniaDiscalRiesgosBienHecho />} />
-          <Route path="/espalda-indestructible" element={<EspaldaIndestructible />} />
-          <Route path="/espalda-indestructible/:slug" element={<CheckoutPage />} />
+          <Route path="/tienda" element={<EspaldaIndestructible />} />
+          <Route path="/tienda/:slug" element={<CheckoutPage />} />
           <Route path="/programa" element={<Programa />} />
           <Route path="/evento" element={<Evento />} />
           <Route path="/eapuntate" element={<Eapuntate />} />

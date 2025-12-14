@@ -46,7 +46,7 @@ const CheckoutPage = () => {
 
   useEffect(() => {
     if (!product) {
-      navigate("/espalda-indestructible");
+      navigate("/tienda");
       return;
     }
 
