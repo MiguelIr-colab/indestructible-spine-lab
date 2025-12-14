@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
@@ -146,6 +147,11 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-[hsl(var(--light-gray))]">
+      <Helmet>
+        <title>Blog - Espalda Indestructible</title>
+        <meta name="description" content="Artículos, guías y videos sobre hernia discal, estenosis lumbar, ciática y ejercicios para eliminar el dolor de espalda." />
+        <link rel="canonical" href="https://espaldaindestructible.com/blog" />
+      </Helmet>
       <Header />
       <main className="pt-20">
         <section className="py-20 bg-[hsl(var(--light-gray))]">

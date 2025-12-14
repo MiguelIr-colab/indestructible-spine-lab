@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
@@ -7,6 +8,7 @@ import teamCarlos from "@/assets/team-carlos.png";
 import teamHugo from "@/assets/team-hugo.png";
 import teamKevin from "@/assets/team-kevin.png";
 import teamLaura from "@/assets/team-laura.png";
+
 const Equipo = () => {
   const teamMembers = [{
     name: "Roberto Galván",
@@ -46,6 +48,11 @@ const Equipo = () => {
     image: teamLaura
   }];
   return <div className="min-h-screen bg-[hsl(var(--light-gray))]">
+      <Helmet>
+        <title>Nuestro Equipo - Espalda Indestructible</title>
+        <meta name="description" content="Conoce al equipo de profesionales especializados en patologías de columna y dolor neuropático de Espalda Indestructible." />
+        <link rel="canonical" href="https://espaldaindestructible.com/equipo" />
+      </Helmet>
       <Header />
       <main className="pt-20">
         <section className="py-20 bg-[hsl(var(--light-gray))]">

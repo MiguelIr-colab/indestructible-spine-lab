@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -11,6 +12,11 @@ const Programa = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Programa Espalda Indestructible - Entrenamiento personalizado</title>
+        <meta name="description" content="Programa de entrenamiento personalizado para eliminar el dolor crónico de espalda. Plan 100% adaptado a tu condición con seguimiento semanal." />
+        <link rel="canonical" href="https://espaldaindestructible.com/programa" />
+      </Helmet>
       <Header />
       
       <main>
