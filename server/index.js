@@ -262,6 +262,14 @@ app.post("/api/create-payment-intent", async (req, res) => {
   }
 });
 
+// Custom coupons configuration (fixed discounts with minimum purchase requirements)
+const CUSTOM_COUPONS = {
+  "K47NA": { discount: 47, minAmount: 900 },
+  "50K50": { discount: 50, minAmount: 900 },
+  "K102NA": { discount: 102, minAmount: 1600 },
+  "K202NA": { discount: 202, minAmount: 1600 },
+};
+
 // Apply Coupon
 app.post("/api/apply-coupon", async (req, res) => {
   try {
@@ -287,7 +295,41 @@ app.post("/api/apply-coupon", async (req, res) => {
       }
     }
 
-    // Find promotion code by code
+    // Check if it's a custom coupon first
+    const customCoupon = CUSTOM_COUPONS[upperCode];
+    if (customCoupon) {
+      // Validate minimum purchase amount
+      if (originalAmount < customCoupon.minAmount) {
+        return res.json({
+          valid: false,
+          error: `Este cupón requiere una compra mínima de ${customCoupon.minAmount}€.`,
+        });
+      }
+
+      const discountAmount = customCoupon.discount;
+      const finalAmount = Math.max(0, originalAmount - discountAmount);
+      const finalAmountCents = Math.round(finalAmount * 100);
+
+      // Update Payment Intent with new amount
+      await stripe.paymentIntents.update(paymentIntentId, {
+        amount: finalAmountCents,
+        metadata: {
+          productSlug,
+          appliedCoupon: upperCode,
+          originalAmount: Math.round(originalAmount * 100),
+          discountAmount: Math.round(discountAmount * 100),
+          finalAmount: finalAmountCents,
+        },
+      });
+
+      return res.json({
+        valid: true,
+        discount: discountAmount,
+        finalPrice: finalAmount,
+      });
+    }
+
+    // Find promotion code by code (Stripe coupons)
     const promotionCodes = await stripe.promotionCodes.list({
       code: couponCode,
       active: true,
