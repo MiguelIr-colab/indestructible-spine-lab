@@ -22,14 +22,14 @@ const products = {
   "6-meses": {
     name: "ESPALDA INDESTRUCTIBLE",
     duration: "6 meses",
-    price: 1749,
-    priceFormatted: "1.749,00€",
+    price: 1797,
+    priceFormatted: "1.797,00€",
   },
   "1-ano": {
     name: "ESPALDA INDESTRUCTIBLE",
     duration: "1 año",
-    price: 2859,
-    priceFormatted: "2.859,00€",
+    price: 2897,
+    priceFormatted: "2.897,00€",
   },
 };
 
