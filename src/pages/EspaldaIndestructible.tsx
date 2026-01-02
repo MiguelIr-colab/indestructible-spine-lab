@@ -13,15 +13,15 @@ const EspaldaIndestructible = () => {
     popular: false
   }, {
     name: "ESPALDA INDESTRUCTIBLE",
-    price: "1.749,00€",
-    priceAmount: 1749,
+    price: "1.797,00€",
+    priceAmount: 1797,
     duration: "6 meses",
     slug: "6-meses",
     popular: true
   }, {
     name: "ESPALDA INDESTRUCTIBLE",
-    price: "2.859,00€",
-    priceAmount: 2859,
+    price: "2.897,00€",
+    priceAmount: 2897,
     duration: "1 año",
     slug: "1-ano",
     popular: false
