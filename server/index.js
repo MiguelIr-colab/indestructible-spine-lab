@@ -298,6 +298,16 @@ app.post("/api/apply-coupon", async (req, res) => {
     // Check if it's a custom coupon first
     const customCoupon = CUSTOM_COUPONS[upperCode];
     if (customCoupon) {
+      // Special validation for K102NA and K202NA - only valid for 6-meses and 1-ano
+      if (upperCode === "K102NA" || upperCode === "K202NA") {
+        if (productSlug !== "6-meses" && productSlug !== "1-ano") {
+          return res.json({
+            valid: false,
+            error: "Este cupón solo se puede usar en los planes de 6 meses o 1 año.",
+          });
+        }
+      }
+
       // Validate minimum purchase amount
       if (originalAmount < customCoupon.minAmount) {
         return res.json({
