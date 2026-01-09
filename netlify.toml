@@ -1,13 +1,32 @@
 [build]
   publish = "dist"
+  command = "npm run build"
   functions = "netlify/functions"
 
+# Asegura que robots y sitemap se sirvan como ficheros (aunque haya SPA fallback)
+[[redirects]]
+  from = "/robots.txt"
+  to = "/robots.txt"
+  status = 200
+
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap.xml"
+  status = 200
+
+# Si Google insiste con un sitemap viejo:
+[[redirects]]
+  from = "/sitemap.rss"
+  to = "/sitemap.xml"
+  status = 301
+
+# Netlify function para Mailrelay
 [[redirects]]
   from = "/api/mailrelay/subscribe"
   to = "/.netlify/functions/subscribe"
   status = 200
 
-# SPA fallback - must be last
+# SPA fallback - debe ser el último
 [[redirects]]
   from = "/*"
   to = "/index.html"
