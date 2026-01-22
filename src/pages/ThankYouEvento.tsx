@@ -23,10 +23,10 @@ const ThankYouEvento = () => {
               
               <div className="bg-card border border-border rounded-lg p-8 mb-8">
                 <p className="text-lg text-foreground mb-6">
-                  Gracias por registrarte. Tu inscripción se ha realizado correctamente.
+                  Únete al Grupo, pinchando en el botón verde
                 </p>
-                <p className="text-foreground mb-8">
-                  Únete a nuestro grupo privado de WhatsApp para recibir actualizaciones exclusivas y conectar con otros miembros.
+                <p className="text-foreground mb-8 font-semibold">
+                  SÓLO si entras al Grupo TENDRÁS acceso a TODOS los ENLACES
                 </p>
                 
                 <Button 
