@@ -35,7 +35,7 @@ const ThankYouEvento = () => {
                   asChild
                 >
                   <a 
-                    href="https://chat.whatsapp.com/LwJ64VwJhGqLs3WRxykWbC?mode=wwt" 
+                    href="https://chat.whatsapp.com/F5wgDwv8irTE3l5mGWx9Vn" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
