@@ -161,7 +161,7 @@ const Evento = () => {
         className="ipz-iframe rounded-xl shadow-lg"
         style={{
           background: "transparent",
-          minHeight: "500px",
+          minHeight: "420px",
           border: "none",
         }}
       ></iframe>
