@@ -154,7 +154,7 @@ const Evento = () => {
     <div className="ipz-container max-w-lg mx-auto">
       <iframe
         data-skip-lazy=""
-        src="https://entrenaconrobertogalvan.ipzmarketing.com/f/YhjKrjm3hkY"
+        src="https://entrenaconrobertogalvan.ipzmarketing.com/f/eOO2aPOsX1A"
         frameBorder="0"
         scrolling="no"
         width="100%"
