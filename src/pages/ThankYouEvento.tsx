@@ -18,7 +18,7 @@ const ThankYouEvento = () => {
 
               {/* Main Message */}
               <h1 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-                ¡Registro Completado con Éxito!
+                Únete al Grupo pinchando en el botón verde
               </h1>
               
               <div className="bg-card border border-border rounded-lg p-8 mb-8">
