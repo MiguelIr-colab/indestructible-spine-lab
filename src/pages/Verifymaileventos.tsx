@@ -5,7 +5,7 @@ import { toast } from "sonner";
 import { Mail, CheckCircle, AlertCircle } from "lucide-react";
 import MinimalFooter from "@/components/MinimalFooter";
 
-const Verifymail = () => {
+const Verifymaileventos = () => {
   const [email, setEmail] = useState("");
   const [isResending, setIsResending] = useState(false);
 
@@ -60,7 +60,7 @@ const Verifymail = () => {
               {/* Main Message */}
               <div className="text-center mb-12">
                 <h1 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-                  ¡Gracias por registrarte!
+                  Ya casi estás dentro
                 </h1>
                 <div className="bg-card border border-border rounded-lg p-8">
                   <Mail className="w-12 h-12 text-primary mx-auto mb-4" />
@@ -68,7 +68,7 @@ const Verifymail = () => {
                     Hemos enviado un correo para confirmar tu dirección.
                   </p>
                   <p className="text-foreground">
-                    <strong>Ábrelo para terminar la verificación</strong> y acceder al video y al grupo de WhatsApp.
+                    <strong>Ábrelo y confirma para entrar al grupo de WhatsApp</strong>
                   </p>
                 </div>
               </div>
@@ -140,4 +140,4 @@ const Verifymail = () => {
   );
 };
 
-export default Verifymail;
+export default Verifymaileventos;
