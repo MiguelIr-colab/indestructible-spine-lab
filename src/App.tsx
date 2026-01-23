@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Testimonios from "./pages/Testimonios";
 import Pdf from "./pages/Pdf";
+import Pdf2 from "./pages/Pdf2";
 import Equipo from "./pages/Equipo";
 import Blog from "./pages/Blog";
 import AntiinflamatorioHerniaDiscal from "./pages/AntiinflamatorioHerniaDiscal";
@@ -54,6 +55,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/testimonios" element={<Testimonios />} />
           <Route path="/pdf" element={<Pdf />} />
+          <Route path="/pdf2" element={<Pdf2 />} />
           <Route path="/equipo" element={<Equipo />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/antiinflamatorio-hernia-discal" element={<AntiinflamatorioHerniaDiscal />} />
