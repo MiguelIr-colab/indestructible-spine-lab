@@ -31,32 +31,23 @@ const Eapuntate = () => {
               </div>
 
               {/* Form Section */}
-            <div className="bg-card border border-border rounded-lg p-8 md:p-12 lg:px-20 xl:px-28 mt-8">
-  <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12">
-    ACCEDE PARA FORTALECER TU COLUMNA
-  </h2>
+              <div className="bg-card border border-border rounded-lg p-8 md:p-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+                  ACCEDE PARA FORTALECER TU COLUMNA
+                </h2>
 
-  {/* Formulario Mailrelay embebido */}
-  <div className="space-y-6">
-    <div className="ipz-container max-w-md mx-auto">
-      <iframe data-skip-lazy="" src="https://entrenaconrobertogalvan.ipzmarketing.com/f/e_QDvtOPmPI" frameBorder="0" scrolling="no" width="100%" className="ipz-iframe rounded-xl shadow-lg" style={{
-                    background: "transparent",
-                    minHeight: "420px",
-                    border: "none"
-                  }}></iframe>
-    </div>
-
-    <p className="text-center text-sm text-muted-foreground mt-4">
-      Al enviar tus datos aceptas nuestra{" "}
-      <a href="/politica-privacidad" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
-        política de privacidad
-      </a>.
-    </p>
-  </div>
-
-  {/* Script de Mailrelay */}
-  <script data-cfasync="false" type="text/javascript" src="https://assets.ipzmarketing.com/assets/signup_form/iframe_v1.js"></script>
-            </div>
+                <div className="w-full">
+                  <iframe
+                    data-skip-lazy=""
+                    src="https://entrenaconrobertogalvan.ipzmarketing.com/f/e_QDvtOPmPI"
+                    frameBorder="0"
+                    scrolling="no"
+                    width="100%"
+                    className="ipz-iframe min-h-[400px]"
+                    title="Formulario de registro"
+                  />
+                </div>
+              </div>
 
 
               {/* Next Steps Section */}
