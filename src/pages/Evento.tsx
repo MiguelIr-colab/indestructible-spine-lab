@@ -144,14 +144,14 @@ const Evento = () => {
               </div>
 
               {/* Form Section */}
-<div className="bg-card border border-border rounded-lg p-8 md:p-12">
-  <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+<div className="bg-card border border-border rounded-lg p-8 md:p-12 lg:px-20 xl:px-28 mt-8">
+  <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12">
     ACCEDE PARA FORTALECER TU COLUMNA
   </h2>
 
   {/* Formulario Mailrelay embebido */}
   <div className="space-y-6">
-    <div className="ipz-container max-w-lg mx-auto">
+    <div className="ipz-container max-w-md mx-auto">
       <iframe
         data-skip-lazy=""
         src="https://entrenaconrobertogalvan.ipzmarketing.com/f/eOO2aPOsX1A"
