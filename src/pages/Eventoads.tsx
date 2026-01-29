@@ -50,7 +50,7 @@ const Eventoads = () => {
                 <div className="w-full">
                   <iframe 
                     data-skip-lazy="" 
-                    src="https://entrenaconrobertogalvan.ipzmarketing.com/f/WVVPeSjVMug" 
+                    src="https://entrenaconrobertogalvan.ipzmarketing.com/f/1rq7mzph8T0" 
                     frameBorder="0" 
                     scrolling="no" 
                     width="100%" 
