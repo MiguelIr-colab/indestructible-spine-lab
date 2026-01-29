@@ -36,6 +36,7 @@ import Verifymaileventos from "./pages/Verifymaileventos";
 import Verifymailpdf from "./pages/Verifymailpdf";
 import ThankYouEvento from "./pages/ThankYouEvento";
 import ThankYouEapuntate from "./pages/ThankYouEapuntate";
+import ThankYouEventoads from "./pages/ThankYouEventoads";
 import ThankYouEi from "./pages/ThankYouEi";
 import NotFound from "./pages/NotFound";
 import AvisoLegal from "./pages/AvisoLegal";
@@ -86,6 +87,7 @@ const App = () => (
           <Route path="/verifymailpdf" element={<Verifymailpdf />} />
           <Route path="/thankyou-evento" element={<ThankYouEvento />} />
           <Route path="/thankyou-eapuntate" element={<ThankYouEapuntate />} />
+          <Route path="/thankyou-eventoads" element={<ThankYouEventoads />} />
           <Route path="/thankyou-ei" element={<ThankYouEi />} />
           <Route path="/aviso-legal" element={<AvisoLegal />} />
           <Route path="/politica-cookies" element={<PoliticaCookies />} />
