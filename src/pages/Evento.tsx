@@ -152,7 +152,7 @@ const Evento = () => {
                 <div className="w-full">
                   <iframe
                     data-skip-lazy=""
-                    src="https://entrenaconrobertogalvan.ipzmarketing.com/f/eOO2aPOsX1A"
+                    src="https://entrenaconrobertogalvan.ipzmarketing.com/f/YhjKrjm3hkY"
                     frameBorder="0"
                     scrolling="no"
                     width="100%"
