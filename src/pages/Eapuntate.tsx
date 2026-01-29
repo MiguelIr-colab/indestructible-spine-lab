@@ -39,7 +39,7 @@ const Eapuntate = () => {
                 <div className="w-full">
                   <iframe
                     data-skip-lazy=""
-                    src="https://entrenaconrobertogalvan.ipzmarketing.com/f/e_QDvtOPmPI"
+                    src="https://entrenaconrobertogalvan.ipzmarketing.com/f/rshM64GHwHQ"
                     frameBorder="0"
                     scrolling="no"
                     width="100%"
