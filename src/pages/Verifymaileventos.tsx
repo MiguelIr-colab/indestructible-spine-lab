@@ -1,49 +1,7 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { toast } from "sonner";
 import { Mail, CheckCircle, AlertCircle } from "lucide-react";
 import MinimalFooter from "@/components/MinimalFooter";
 
 const Verifymaileventos = () => {
-  const [email, setEmail] = useState("");
-  const [isResending, setIsResending] = useState(false);
-
-  const handleResend = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!email) {
-      toast.error("Por favor ingresa tu email");
-      return;
-    }
-
-    setIsResending(true);
-    const API_URL = import.meta.env.VITE_API_URL;
-
-    try {
-      const response = await fetch(`${API_URL}/api/mailrelay/resend`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-      });
-
-      if (response.ok) {
-        toast.success("Correo de confirmación reenviado");
-        setEmail("");
-      } else {
-        const data = await response.json();
-        toast.error(data.message || "Error al reenviar el correo");
-      }
-    } catch (error) {
-      console.error('Error resending email:', error);
-      toast.error("Error al conectar con el servidor");
-    } finally {
-      setIsResending(false);
-    }
-  };
-
   return (
     <div className="min-h-screen bg-background">
       <main className="py-8 md:py-12">
@@ -74,7 +32,7 @@ const Verifymaileventos = () => {
               </div>
 
               {/* UX Tips */}
-              <div className="bg-muted/50 border border-border rounded-lg p-6 mb-12">
+              <div className="bg-muted/50 border border-border rounded-lg p-6">
                 <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-foreground">
                   <AlertCircle className="w-5 h-5 text-primary" />
                   Consejos importantes
@@ -99,37 +57,6 @@ const Verifymaileventos = () => {
                     </span>
                   </li>
                 </ul>
-              </div>
-
-              {/* Resend Form */}
-              <div className="bg-card border border-border rounded-lg p-8">
-                <h3 className="text-xl font-bold mb-4 text-center text-foreground">
-                  ¿No te llegó el correo?
-                </h3>
-                <form onSubmit={handleResend} className="space-y-4">
-                  <div>
-                    <label htmlFor="resend-email" className="block text-sm font-medium text-foreground mb-2">
-                      Email
-                    </label>
-                    <Input
-                      id="resend-email"
-                      type="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder="tu@email.com"
-                      className="bg-background border-input"
-                      required
-                    />
-                  </div>
-                  <Button 
-                    type="submit" 
-                    size="lg" 
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold"
-                    disabled={isResending}
-                  >
-                    {isResending ? "REENVIANDO..." : "REENVIAR CONFIRMACIÓN"}
-                  </Button>
-                </form>
               </div>
             </div>
           </div>
