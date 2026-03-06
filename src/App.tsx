@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import WhatsAppButton from "./components/WhatsAppButton";
 import Index from "./pages/Index";
 import Testimonios from "./pages/Testimonios";
@@ -47,6 +48,16 @@ import DeclaracionAccesibilidad from "./pages/DeclaracionAccesibilidad";
 import Contacto from "./pages/Contacto";
 
 const queryClient = new QueryClient();
+
+const MetaPixelPageView = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'PageView');
+    }
+  }, [pathname]);
+  return null;
+};
 
 const ConditionalWhatsApp = () => {
   const { pathname } = useLocation();
