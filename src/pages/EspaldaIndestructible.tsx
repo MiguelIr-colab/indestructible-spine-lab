@@ -79,7 +79,7 @@ const EspaldaIndestructible = () => {
               <Button 
                 variant="default" 
                 size="lg"
-                onClick={() => window.open('https://calendly.com/d/cnzd-y87-nk6/entrevista', '_blank')}
+                onClick={() => window.open('https://calendly.com/entrenaconrobertogalvan/30m', '_blank')}
               >
                 AGENDAR LLAMADA
               </Button>
