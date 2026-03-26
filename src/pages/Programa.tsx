@@ -7,7 +7,7 @@ import heroImage from "@/assets/team-group-new.jpg";
 
 const Programa = () => {
   const handleCalendlyClick = () => {
-    window.open('https://calendly.com/d/cnzd-y87-nk6/entrevista', '_blank');
+    window.open('https://calendly.com/entrenaconrobertogalvan/30m', '_blank');
   };
 
   return (
