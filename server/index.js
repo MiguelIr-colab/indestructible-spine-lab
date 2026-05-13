@@ -265,9 +265,9 @@ app.post("/api/create-payment-intent", async (req, res) => {
 // Custom coupons configuration (fixed discounts with minimum purchase requirements)
 const CUSTOM_COUPONS = {
   "K47NA": { discount: 47, minAmount: 900 },
-  "50K50": { discount: 50, minAmount: 900 },
   "K102NA": { discount: 102, minAmount: 1600 },
   "K202NA": { discount: 202, minAmount: 1600 },
+  "K147NA": { discount: 147, minAmount: 1600 },
 };
 
 // Apply Coupon
@@ -285,21 +285,11 @@ app.post("/api/apply-coupon", async (req, res) => {
     // Convert to uppercase for comparison
     const upperCode = couponCode.toUpperCase();
 
-    // Special validation for 200K100 coupon - only valid for 1-ano
-    if (upperCode === "200K100") {
-      if (productSlug !== "1-ano") {
-        return res.json({
-          valid: false,
-          error: "Este cupón solo se puede usar en el plan de 1 año.",
-        });
-      }
-    }
-
     // Check if it's a custom coupon first
     const customCoupon = CUSTOM_COUPONS[upperCode];
     if (customCoupon) {
-      // Special validation for K102NA and K202NA - only valid for 6-meses and 1-ano
-      if (upperCode === "K102NA" || upperCode === "K202NA") {
+      // Special validation for K102NA, K202NA and K147NA - only valid for 6-meses and 1-ano
+      if (upperCode === "K102NA" || upperCode === "K202NA" || upperCode === "K147NA") {
         if (productSlug !== "6-meses" && productSlug !== "1-ano") {
           return res.json({
             valid: false,
